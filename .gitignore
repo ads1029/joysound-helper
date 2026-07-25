@@ -2,5 +2,6 @@ node_modules/
 dist/
 coverage/
 .cache/
+.vercel/
 *.tsbuildinfo
 .DS_Store
