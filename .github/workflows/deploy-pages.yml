@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 检出代码
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: 安装 Bun
         uses: oven-sh/setup-bun@v2
@@ -43,13 +43,13 @@ jobs:
         run: bun run build
 
       - name: 配置 GitHub Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: 上传站点
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
       - name: 发布站点
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
