@@ -1,0 +1,55 @@
+name: 部署 GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.17
+
+      - name: 安装依赖
+        run: bun install --frozen-lockfile
+
+      - name: 运行代码检查
+        run: bun run lint
+
+      - name: 运行测试
+        run: bun run test
+
+      - name: 构建站点
+        run: bun run build
+
+      - name: 配置 GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: 上传站点
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: 发布站点
+        id: deployment
+        uses: actions/deploy-pages@v4
