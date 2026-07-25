@@ -2,6 +2,14 @@
 
 一个没有后端的静态 React 应用。用户输入完整歌名后，应用直接在浏览器中查询随网页打包的歌曲数据，并展示支持 JOYSOUND X1 的点歌编号。
 
+## 在线访问
+
+- Vercel（主站）：[https://joysound-helper.vercel.app](https://joysound-helper.vercel.app)
+- GitHub Pages：[https://ads1029.github.io/joysound-helper/](https://ads1029.github.io/joysound-helper/)
+- GitHub 仓库：[https://github.com/ads1029/joysound-helper](https://github.com/ads1029/joysound-helper)
+
+推送到 `main` 分支后，Vercel 会通过 Git 集成自动部署主站；GitHub Actions 会依次运行代码检查、测试和构建，成功后更新 GitHub Pages。
+
 ## 技术栈
 
 - Vite 8

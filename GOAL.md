@@ -16,6 +16,18 @@
 - 已将热门 Sitemap 的 2,355 个唯一候选页面及其 `lastmod` 全部记录到 `src/data/generated/joysound-popular-index.json`。
 - 已实现生成数据与手工数据的自动合并、重复/冲突检测和索引覆盖率审计；3 页验证数据的审计结果为 3/2,355（0.13%）、0 冲突。
 - 项目负责人已于 2026-07-25 确认取得大规模采集及生成数据二次使用授权；因目标网站存在反爬机制，全量任务采用单线程、5 秒基础间隔加 0～2 秒随机抖动，并在每 100 个真实请求后强制冷却 2 分钟。
+- 源码已发布到公开 GitHub 仓库，并通过 GitHub Pages 与 Vercel 提供两个生产站点；`main` 分支已接入两套自动部署流程。
+
+## 发布与交付
+
+状态：已完成
+
+- GitHub 仓库：<https://github.com/ads1029/joysound-helper>
+- Vercel 主站：<https://joysound-helper.vercel.app>
+- GitHub Pages：<https://ads1029.github.io/joysound-helper/>
+- GitHub Pages 使用 `.github/workflows/deploy-pages.yml`，在 `main` 分支更新后运行 lint、测试、构建和部署。
+- Vercel 项目 `joysound-helper` 已连接同一 GitHub 仓库，`main` 分支更新会自动部署生产环境。
+- 两个站点的发布验收标准为：部署状态成功、首页返回 HTTP 200、构建产物的脚本和样式资源可从对应站点路径加载。
 
 ## 歌曲采集架构
 
@@ -112,6 +124,7 @@
 - [x] 定义首批人工录入的验证标准：以 JOYSOUND 官方歌曲页为准，只收录页面明确列出 JOYSOUND X1 的版本。
 - [x] 为歌曲 ID、版本 ID、曲号、来源链接和 X1 状态建立基础自动化校验。
 - [x] 建立以 2,355 条固定候选索引为分母的热门清单覆盖率统计。
+- [x] 发布 GitHub 仓库，并建立 GitHub Pages 与 Vercel 双站点自动部署。
 - [ ] 完成全部详情采集，使审计结果达到 `processedCandidates=2355`、`pendingCandidates=0`、`errorPages=0`、`conflictCount=0` 和 `crawlReady=true`。
 - [ ] 每次歌曲数据更新后同步本页的实际覆盖率、歌曲数和版本数。
 
