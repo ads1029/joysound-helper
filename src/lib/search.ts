@@ -1,5 +1,8 @@
 import type { Song, SongVariant, VersionType } from "../types";
-import { normalizeSearchText } from "./normalize";
+import {
+  normalizeKanjiOnlyText,
+  normalizeSearchText,
+} from "./normalize";
 
 const VERSION_PRIORITY: Record<VersionType, number> = {
   standard: 1,
@@ -66,8 +69,21 @@ export function searchSongs(
     return [];
   }
 
-  return allSongs
-    .filter((song) => normalizeSearchText(song.title) === query)
+  const exactMatches = allSongs.filter(
+    (song) => normalizeSearchText(song.title) === query,
+  );
+  const kanjiQuery = normalizeKanjiOnlyText(rawQuery);
+  const canUseKanjiOnlySearch =
+    Array.from(kanjiQuery).length >= 2 && kanjiQuery === query;
+  // 完整歌名优先；回退搜索至少需要两个汉字，避免单字查询返回过多结果。
+  const matchedSongs =
+    exactMatches.length > 0 || !canUseKanjiOnlySearch
+      ? exactMatches
+      : allSongs.filter(
+          (song) => normalizeKanjiOnlyText(song.title).includes(kanjiQuery),
+        );
+
+  return matchedSongs
     .map(toSearchResult)
     .filter((song): song is SearchResult => song !== null);
 }

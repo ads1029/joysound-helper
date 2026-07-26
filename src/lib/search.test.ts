@@ -27,9 +27,31 @@ describe("searchSongs", () => {
     expect(searchSongs(songs, "夜に驅ける")[0]?.title).toBe("夜に駆ける");
   });
 
-  it("does not do partial or translated-title matching", () => {
-    expect(searchSongs(songs, "千本")).toEqual([]);
+  it("matches a kanji-only query after removing kana from the title", () => {
+    expect(searchSongs(songs, "残酷天使").map((song) => song.title)).toContain(
+      "残酷な天使のテーゼ",
+    );
+    expect(searchSongs(songs, "夜驱").map((song) => song.title)).toContain(
+      "夜に駆ける",
+    );
+    expect(searchSongs(songs, "青夏").map((song) => song.title)).toContain(
+      "青と夏",
+    );
+  });
+
+  it("fuzzy-matches a title from a kanji-only fragment", () => {
+    expect(searchSongs(songs, "千本").map((song) => song.title)).toContain(
+      "千本桜",
+    );
+    expect(searchSongs(songs, "本樱").map((song) => song.title)).toContain(
+      "千本桜",
+    );
+  });
+
+  it("does not fuzzy-match one kanji, kana, or a translated title", () => {
+    expect(searchSongs(songs, "千")).toEqual([]);
     expect(searchSongs(songs, "一千棵樱花树")).toEqual([]);
+    expect(searchSongs(songs, "残酷な天使")).toEqual([]);
   });
 
   it("lists the catalog in romaji order with ten songs per page", () => {
