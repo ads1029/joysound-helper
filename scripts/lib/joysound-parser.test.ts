@@ -52,6 +52,16 @@ const songPageFixture = `<!doctype html>
   </body>
 </html>`;
 
+const musicVideoPageFixture = `<!doctype html>
+<html lang="ja">
+  <head>
+    <title>[ミュージックビデオ観放題]黒毛和牛上塩タン焼680円／大塚 愛-楽曲検索 | JOYSOUND.com</title>
+  </head>
+  <body>
+    <h1>この曲を楽しむ</h1>
+  </body>
+</html>`;
+
 describe("parseSitemapXml", () => {
   it("只读取官方歌曲链接与更新时间", () => {
     expect(parseSitemapXml(sitemapFixture)).toEqual([
@@ -92,6 +102,20 @@ describe("parseJoysoundSongPage", () => {
       },
     ]);
     expect(validateCrawlSongs([song])).toEqual([]);
+  });
+
+  it("从ミュージックビデオ観放題页面标题提取歌曲信息", () => {
+    const song = parseJoysoundSongPage(
+      musicVideoPageFixture,
+      "https://www.joysound.com/web/search/song/5850298",
+    );
+
+    expect(song).toMatchObject({
+      id: "joysound-5850298",
+      title: "黒毛和牛上塩タン焼680円",
+      artist: "大塚 愛",
+      variants: [],
+    });
   });
 
   it("校验重复来源页面", () => {

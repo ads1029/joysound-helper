@@ -47,7 +47,9 @@ bun run preview
 歌曲数据位于：
 
 ```text
-src/data/songs.ts
+src/data/songs.ts                              # 前端生产入口
+src/data/manual-songs.ts                       # 手工核心曲库
+src/data/generated/joysound-expanded-catalog.json # 审计后的最终合并曲库
 ```
 
 每首歌曲包含：
@@ -58,13 +60,17 @@ src/data/songs.ts
 - 一个或多个点歌版本
 - X1 支持状态
 
-应用目前包含 20 首歌曲和 60 个 X1 版本。修改歌曲数据后重新构建网页即可，不需要数据库迁移。
+应用目前包含 5,620 首歌曲和 10,761 个 X1 版本。修改歌曲数据后重新构建网页即可，不需要数据库迁移。
 
 批量歌曲元数据采集工具位于 `scripts/crawl-joysound.ts`。开始使用前请阅读 [JOYSOUND 元数据采集指南](./CRAWLER.md)，并确认大规模采集和数据二次使用已经获得授权。
 
-热门 Sitemap 当前的完整候选快照位于 `src/data/generated/joysound-popular-index.json`，共记录 2,355 个唯一歌曲页面及其更新时间。该索引只包含页面链接，不代表详情数据已经完成采集或接入。
+热门 Sitemap 的固定候选快照位于 `src/data/generated/joysound-popular-index.json`，共记录 2,355 个唯一歌曲页面及其更新时间。首次全量采集已处理全部候选：成功 2,353 页，另有 2 个官方索引失效页面，无请求错误或数据冲突。
 
-每批采集后运行 `bun run audit:joysound`，可生成与手工数据合并后的本地 JSON、逐页状态、覆盖率和冲突报告。全部热门候选完成后使用 `bun run audit:joysound -- --require-complete` 执行严格验收。
+每批采集后运行 `bun run audit:joysound`，可生成与手工数据合并后的本地 JSON、逐页状态、覆盖率和冲突报告。全部热门候选完成后使用 `bun run audit:joysound -- --require-complete` 执行严格验收；运行 `bun run review:joysound` 会以 5～7 秒串行间隔等距复核 20 首，并写入可追踪的复核报告。
+
+`bun run discover:joysound -- --confirm-authorized-discovery` 会先从官方综合、年龄、歌手、动漫和 Vocaloid 榜单生成白名单，再由详情采集器读取曲号。本轮白名单共有 839 个去重歌曲页面，其中 27 个原已收录、812 个新增页面现已全部采集并接入；严格审计覆盖 812/812，来源复核 20/20 一致。
+
+`bun run discover:expanded -- --confirm-authorized-discovery` 将 95 位保留歌手扩展到官方热门前 30 首，并补充 1996～2011 平成榜。扩展阶段新增的 2,435 个页面已全部采集并接入，共增加 5,607 个 X1 版本；严格审计覆盖 2,435/2,435，来源复核 20/20 一致。
 
 ## 中日汉字对照表
 

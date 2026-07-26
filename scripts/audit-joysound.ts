@@ -1,7 +1,10 @@
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 
-import { songs as productionSongs } from "../src/data/songs";
+import popularCatalog from "../src/data/generated/joysound-popular-catalog.json";
+import rankedCatalog from "../src/data/generated/joysound-ranked-catalog.json";
+import { manualSongs } from "../src/data/manual-songs";
+import type { Song } from "../src/types";
 import type {
   CatalogSnapshot,
   CrawlCheckpoint,
@@ -19,9 +22,20 @@ const DEFAULT_CHECKPOINT_PATH =
 const DEFAULT_OUTPUT_PATH =
   "src/data/generated/joysound-popular-catalog.json";
 
-type PopularIndex = {
+type CandidateIndex = {
   schemaVersion: number;
-  generatedAt: string;
+  generatedAt?: string;
+  sitemapUrl?: string;
+  totalEntries?: number;
+  entries: Array<{
+    url: string;
+    lastModified?: string;
+    alreadyInProductionCatalog?: boolean;
+  }>;
+};
+
+type AuditIndex = {
+  schemaVersion: number;
   sitemapUrl: string;
   totalEntries: number;
   entries: Array<{
@@ -34,6 +48,8 @@ type CliOptions = {
   indexPath: string;
   checkpointPath: string;
   outputPath: string;
+  baseline: "manual" | "popular" | "ranked";
+  newOnly: boolean;
   requireComplete: boolean;
   help: boolean;
 };
@@ -46,14 +62,19 @@ async function main() {
     return;
   }
 
-  const index = await readJson<PopularIndex>(options.indexPath);
+  const candidateIndex = await readJson<CandidateIndex>(options.indexPath);
+  const index = normalizeIndex(
+    candidateIndex,
+    options.indexPath,
+    options.newOnly,
+  );
   const checkpoint = await readJson<CrawlCheckpoint>(options.checkpointPath);
   validateInputs(index, checkpoint);
 
   const snapshot = createCatalogSnapshot(
     index,
     checkpoint,
-    productionSongs,
+    selectBaselineSongs(options.baseline),
   );
   const songErrors = validateCrawlSongs(snapshot.songs);
 
@@ -73,7 +94,64 @@ async function main() {
   }
 }
 
-function validateInputs(index: PopularIndex, checkpoint: CrawlCheckpoint) {
+function selectBaselineSongs(
+  baseline: CliOptions["baseline"],
+): Song[] {
+  if (baseline === "ranked") {
+    return rankedCatalog.songs as Song[];
+  }
+  if (baseline === "popular") {
+    return popularCatalog.songs as Song[];
+  }
+  return manualSongs;
+}
+
+function normalizeIndex(
+  index: CandidateIndex,
+  indexPath: string,
+  newOnly: boolean,
+): AuditIndex {
+  if (index.schemaVersion !== 1 || !Array.isArray(index.entries)) {
+    throw new Error("候选索引格式无效或版本不受支持");
+  }
+
+  if (typeof index.sitemapUrl === "string") {
+    if (newOnly) {
+      throw new Error("--new-only 只适用于本地榜单候选索引");
+    }
+
+    return {
+      schemaVersion: index.schemaVersion,
+      sitemapUrl: index.sitemapUrl,
+      totalEntries: index.totalEntries ?? index.entries.length,
+      entries: index.entries.map(({ url, lastModified }) => ({
+        url,
+        ...(lastModified ? { lastModified } : {}),
+      })),
+    };
+  }
+
+  const entries = index.entries
+    .filter(
+      (entry) =>
+        !newOnly || entry.alreadyInProductionCatalog === false,
+    )
+    .map(({ url, lastModified }) => ({
+      url,
+      ...(lastModified ? { lastModified } : {}),
+    }));
+
+  return {
+    schemaVersion: index.schemaVersion,
+    sitemapUrl:
+      `local-index:${resolve(indexPath)}` +
+      `${newOnly ? "#new-only" : ""}`,
+    totalEntries: entries.length,
+    entries,
+  };
+}
+
+function validateInputs(index: AuditIndex, checkpoint: CrawlCheckpoint) {
   if (
     index.schemaVersion !== 1 ||
     typeof index.sitemapUrl !== "string" ||
@@ -127,6 +205,8 @@ function parseCliOptions(args: string[]): CliOptions {
     indexPath: DEFAULT_INDEX_PATH,
     checkpointPath: DEFAULT_CHECKPOINT_PATH,
     outputPath: DEFAULT_OUTPUT_PATH,
+    baseline: "manual",
+    newOnly: false,
     requireComplete: false,
     help: false,
   };
@@ -134,6 +214,8 @@ function parseCliOptions(args: string[]): CliOptions {
   for (const argument of args) {
     if (argument === "--require-complete") {
       options.requireComplete = true;
+    } else if (argument === "--new-only") {
+      options.newOnly = true;
     } else if (argument === "--help" || argument === "-h") {
       options.help = true;
     } else if (argument.startsWith("--index=")) {
@@ -142,6 +224,19 @@ function parseCliOptions(args: string[]): CliOptions {
       options.checkpointPath = argument.slice("--checkpoint=".length);
     } else if (argument.startsWith("--output=")) {
       options.outputPath = argument.slice("--output=".length);
+    } else if (argument.startsWith("--baseline=")) {
+      const baseline = argument.slice("--baseline=".length);
+
+      if (
+        baseline !== "manual" &&
+        baseline !== "popular" &&
+        baseline !== "ranked"
+      ) {
+        throw new Error(
+          "baseline 必须是 manual、popular 或 ranked",
+        );
+      }
+      options.baseline = baseline;
     } else {
       throw new Error(`未知参数：${argument}`);
     }
@@ -208,6 +303,8 @@ function printHelp() {
   --index=PATH          候选索引，默认 ${DEFAULT_INDEX_PATH}
   --checkpoint=PATH     采集检查点，默认 ${DEFAULT_CHECKPOINT_PATH}
   --output=PATH         合并曲库与报告，默认 ${DEFAULT_OUTPUT_PATH}
+  --new-only            审计本地榜单索引中尚未进入生产曲库的页面
+  --baseline=TYPE       合并基线：manual（默认）、popular 或 ranked
   --require-complete    有待处理、错误或冲突时以失败状态退出
   --help                显示帮助
 `);

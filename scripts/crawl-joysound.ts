@@ -10,6 +10,7 @@ import type {
 import {
   parseJoysoundSongPage,
   parseSitemapXml,
+  type SitemapEntry,
   validateCrawlSongs,
 } from "./lib/joysound-parser";
 
@@ -22,15 +23,17 @@ const DEFAULT_LIMIT = 20;
 const DEFAULT_DELAY_MS = 5_000;
 const DEFAULT_JITTER_MS = 2_000;
 const DEFAULT_BATCH_SIZE = 100;
-const DEFAULT_BATCH_PAUSE_MS = 120_000;
+const DEFAULT_BATCH_PAUSE_MIN_MS = 45_000;
+const DEFAULT_BATCH_PAUSE_MAX_MS = 60_000;
 const LARGE_RUN_THRESHOLD = 50;
 const MINIMUM_DELAY_MS = 3_000;
-const MINIMUM_LARGE_RUN_BATCH_PAUSE_MS = 60_000;
+const MINIMUM_LARGE_RUN_BATCH_PAUSE_MS = 45_000;
 const RATE_LIMIT_BACKOFF_MS = 60_000;
 const SCHEMA_VERSION = 1;
 
 type CliOptions = {
   sitemapUrl: string;
+  inputIndexPath?: string;
   outputPath: string;
   checkpointPath: string;
   offset: number;
@@ -38,13 +41,24 @@ type CliOptions = {
   delayMs: number;
   jitterMs: number;
   batchSize: number;
-  batchPauseMs: number;
+  batchPauseMinMs: number;
+  batchPauseMaxMs: number;
   retries: number;
   dryRun: boolean;
   indexOnly: boolean;
+  newOnly: boolean;
   refresh: boolean;
   confirmAuthorizedLargeRun: boolean;
   help: boolean;
+};
+
+type CandidateIndex = {
+  schemaVersion: number;
+  entries: Array<{
+    url: string;
+    lastModified?: string;
+    alreadyInProductionCatalog?: boolean;
+  }>;
 };
 
 class HttpStatusError extends Error {
@@ -66,14 +80,14 @@ async function main() {
 
   validateOptions(options);
 
-  console.log(`读取 Sitemap：${options.sitemapUrl}`);
-  const sitemapXml = await fetchText(options.sitemapUrl, options.retries);
-  const entries = parseSitemapXml(sitemapXml);
+  const input = await loadInput(options);
+  const entries = input.entries;
 
   if (entries.length === 0) {
-    throw new Error("Sitemap 中没有找到有效的 JOYSOUND 歌曲链接");
+    throw new Error("输入中没有找到有效的 JOYSOUND 歌曲链接");
   }
 
+  console.log(`输入来源：${input.label}`);
   console.log(`发现 ${entries.length} 个官方歌曲页面`);
 
   if (options.dryRun) {
@@ -92,7 +106,7 @@ async function main() {
     await writeJsonAtomic(options.outputPath, {
       schemaVersion: SCHEMA_VERSION,
       generatedAt: new Date().toISOString(),
-      sitemapUrl: options.sitemapUrl,
+      sitemapUrl: input.sourceIdentifier,
       totalEntries: entries.length,
       entries: selectedEntries,
     });
@@ -105,7 +119,7 @@ async function main() {
   const selectedEntries = selectEntries(entries, options);
   const checkpoint = await loadCheckpoint(
     options.checkpointPath,
-    options.sitemapUrl,
+    input.sourceIdentifier,
   );
   let lastRequestAt = 0;
   let requestCount = 0;
@@ -129,10 +143,15 @@ async function main() {
       requestCount > 0 &&
       requestCount % options.batchSize === 0
     ) {
-      console.log(
-        `已完成 ${requestCount} 个真实请求，冷却 ${options.batchPauseMs}ms`,
+      const batchPauseMs = randomIntegerInclusive(
+        options.batchPauseMinMs,
+        options.batchPauseMaxMs,
       );
-      await sleep(options.batchPauseMs);
+      console.log(
+        `已完成 ${requestCount} 个真实请求，` +
+          `随机冷却 ${batchPauseMs}ms`,
+      );
+      await sleep(batchPauseMs);
       lastRequestAt = 0;
     }
 
@@ -209,7 +228,7 @@ async function main() {
   const generatedOutput = {
     schemaVersion: SCHEMA_VERSION,
     generatedAt: new Date().toISOString(),
-    sitemapUrl: options.sitemapUrl,
+    sitemapUrl: input.sourceIdentifier,
     songs,
     stats: summarizeCheckpoint(checkpoint),
   };
@@ -229,10 +248,12 @@ function parseCliOptions(args: string[]): CliOptions {
     delayMs: DEFAULT_DELAY_MS,
     jitterMs: DEFAULT_JITTER_MS,
     batchSize: DEFAULT_BATCH_SIZE,
-    batchPauseMs: DEFAULT_BATCH_PAUSE_MS,
+    batchPauseMinMs: DEFAULT_BATCH_PAUSE_MIN_MS,
+    batchPauseMaxMs: DEFAULT_BATCH_PAUSE_MAX_MS,
     retries: 3,
     dryRun: false,
     indexOnly: false,
+    newOnly: false,
     refresh: false,
     confirmAuthorizedLargeRun: false,
     help: false,
@@ -245,6 +266,8 @@ function parseCliOptions(args: string[]): CliOptions {
       options.dryRun = true;
     } else if (argument === "--index-only") {
       options.indexOnly = true;
+    } else if (argument === "--new-only") {
+      options.newOnly = true;
     } else if (argument === "--refresh") {
       options.refresh = true;
     } else if (argument === "--confirm-authorized-large-run") {
@@ -253,6 +276,8 @@ function parseCliOptions(args: string[]): CliOptions {
       options.help = true;
     } else if (argument?.startsWith("--sitemap=")) {
       options.sitemapUrl = argument.slice("--sitemap=".length);
+    } else if (argument?.startsWith("--input-index=")) {
+      options.inputIndexPath = argument.slice("--input-index=".length);
     } else if (argument?.startsWith("--output=")) {
       options.outputPath = argument.slice("--output=".length);
     } else if (argument?.startsWith("--checkpoint=")) {
@@ -271,9 +296,21 @@ function parseCliOptions(args: string[]): CliOptions {
         argument.slice("--batch-size=".length),
       );
     } else if (argument?.startsWith("--batch-pause-ms=")) {
-      options.batchPauseMs = parseIntegerOption(
+      const batchPauseMs = parseIntegerOption(
         "batch-pause-ms",
         argument.slice("--batch-pause-ms=".length),
+      );
+      options.batchPauseMinMs = batchPauseMs;
+      options.batchPauseMaxMs = batchPauseMs;
+    } else if (argument?.startsWith("--batch-pause-min-ms=")) {
+      options.batchPauseMinMs = parseIntegerOption(
+        "batch-pause-min-ms",
+        argument.slice("--batch-pause-min-ms=".length),
+      );
+    } else if (argument?.startsWith("--batch-pause-max-ms=")) {
+      options.batchPauseMaxMs = parseIntegerOption(
+        "batch-pause-max-ms",
+        argument.slice("--batch-pause-max-ms=".length),
       );
     } else if (argument?.startsWith("--retries=")) {
       options.retries = parseIntegerOption("retries", argument.slice(10));
@@ -286,14 +323,24 @@ function parseCliOptions(args: string[]): CliOptions {
 }
 
 function validateOptions(options: CliOptions) {
-  const sitemapUrl = new URL(options.sitemapUrl);
+  if (!options.inputIndexPath) {
+    const sitemapUrl = new URL(options.sitemapUrl);
 
-  if (
-    sitemapUrl.protocol !== "https:" ||
-    sitemapUrl.hostname !== "www.joysound.com" ||
-    !sitemapUrl.pathname.startsWith("/sitemap/")
-  ) {
-    throw new Error("Sitemap 必须是 www.joysound.com/sitemap/ 下的 HTTPS 链接");
+    if (
+      sitemapUrl.protocol !== "https:" ||
+      sitemapUrl.hostname !== "www.joysound.com" ||
+      !sitemapUrl.pathname.startsWith("/sitemap/")
+    ) {
+      throw new Error(
+        "Sitemap 必须是 www.joysound.com/sitemap/ 下的 HTTPS 链接",
+      );
+    }
+  }
+  if (options.inputIndexPath && options.indexOnly) {
+    throw new Error("--input-index 不能与 --index-only 同时使用");
+  }
+  if (options.newOnly && !options.inputIndexPath) {
+    throw new Error("--new-only 必须与 --input-index 同时使用");
   }
   if (options.offset < 0 || options.limit < 1) {
     throw new Error("offset 不能为负数，limit 必须大于 0");
@@ -304,11 +351,17 @@ function validateOptions(options: CliOptions) {
   if (
     options.jitterMs < 0 ||
     options.batchSize < 1 ||
-    options.batchPauseMs < 0 ||
+    options.batchPauseMinMs < 0 ||
+    options.batchPauseMaxMs < 0 ||
     options.retries < 0
   ) {
     throw new Error(
-      "jitter-ms、batch-pause-ms 和 retries 不能为负数，batch-size 必须大于 0",
+      "jitter-ms、批次冷却时间和 retries 不能为负数，batch-size 必须大于 0",
+    );
+  }
+  if (options.batchPauseMaxMs < options.batchPauseMinMs) {
+    throw new Error(
+      "batch-pause-max-ms 不能低于 batch-pause-min-ms",
     );
   }
   const isLargeRun =
@@ -328,11 +381,76 @@ function validateOptions(options: CliOptions) {
     isLargeRun &&
     !options.dryRun &&
     !options.indexOnly &&
-    options.batchPauseMs < MINIMUM_LARGE_RUN_BATCH_PAUSE_MS
+    options.batchPauseMinMs <
+      MINIMUM_LARGE_RUN_BATCH_PAUSE_MS
   ) {
     throw new Error(
-      `大规模采集的 batch-pause-ms 不能低于 ${MINIMUM_LARGE_RUN_BATCH_PAUSE_MS}`,
+      `大规模采集的 batch-pause-min-ms 不能低于 ${MINIMUM_LARGE_RUN_BATCH_PAUSE_MS}`,
     );
+  }
+}
+
+async function loadInput(options: CliOptions): Promise<{
+  label: string;
+  sourceIdentifier: string;
+  entries: SitemapEntry[];
+}> {
+  if (options.inputIndexPath) {
+    const absolutePath = resolve(options.inputIndexPath);
+    const index = JSON.parse(
+      await readFile(absolutePath, "utf8"),
+    ) as CandidateIndex;
+
+    if (index.schemaVersion !== SCHEMA_VERSION || !Array.isArray(index.entries)) {
+      throw new Error("本地候选索引格式无效或版本不受支持");
+    }
+
+    const selectedEntries = index.entries
+      .filter(
+        (entry) =>
+          !options.newOnly || !entry.alreadyInProductionCatalog,
+      )
+      .map((entry) => ({
+        url: entry.url,
+        ...(entry.lastModified
+          ? { lastModified: entry.lastModified }
+          : {}),
+      }));
+    validateLocalEntries(selectedEntries);
+
+    return {
+      label:
+        `${absolutePath}` +
+        `${options.newOnly ? "（仅生产曲库未收录项）" : ""}`,
+      sourceIdentifier:
+        `local-index:${absolutePath}${options.newOnly ? "#new-only" : ""}`,
+      entries: selectedEntries,
+    };
+  }
+
+  console.log(`读取 Sitemap：${options.sitemapUrl}`);
+  const sitemapXml = await fetchText(
+    options.sitemapUrl,
+    options.retries,
+  );
+
+  return {
+    label: options.sitemapUrl,
+    sourceIdentifier: options.sitemapUrl,
+    entries: parseSitemapXml(sitemapXml),
+  };
+}
+
+function validateLocalEntries(entries: SitemapEntry[]) {
+  const validUrlPattern =
+    /^https:\/\/www\.joysound\.com\/web\/search\/song\/\d+$/;
+  const urls = entries.map((entry) => entry.url);
+
+  if (urls.some((url) => !validUrlPattern.test(url))) {
+    throw new Error("本地候选索引包含无效的 JOYSOUND 歌曲链接");
+  }
+  if (new Set(urls).size !== urls.length) {
+    throw new Error("本地候选索引包含重复歌曲链接");
   }
 }
 
@@ -476,6 +594,13 @@ function sleep(milliseconds: number) {
   );
 }
 
+function randomIntegerInclusive(minimum: number, maximum: number) {
+  return (
+    minimum +
+    Math.floor(Math.random() * (maximum - minimum + 1))
+  );
+}
+
 function printHelp() {
   console.log(`JOYSOUND 元数据采集器
 
@@ -485,12 +610,16 @@ function printHelp() {
 参数：
   --dry-run                         只读取 Sitemap，不请求歌曲页面
   --index-only                      将 Sitemap 候选项写入 JSON，不请求歌曲页面
+  --input-index=PATH                从本地候选 JSON 读取歌曲链接
+  --new-only                        仅使用本地索引中未进入生产曲库的歌曲
   --offset=N                        从第 N 个候选项开始，默认 0
   --limit=N                         最多处理 N 个页面，默认 ${DEFAULT_LIMIT}
   --delay-ms=N                      请求基础间隔，默认 ${DEFAULT_DELAY_MS}ms
   --jitter-ms=N                     随机附加间隔，默认 ${DEFAULT_JITTER_MS}ms
   --batch-size=N                    每批真实请求数，默认 ${DEFAULT_BATCH_SIZE}
-  --batch-pause-ms=N                批次间冷却时间，默认 ${DEFAULT_BATCH_PAUSE_MS}ms
+  --batch-pause-min-ms=N            最短批次冷却，默认 ${DEFAULT_BATCH_PAUSE_MIN_MS}ms
+  --batch-pause-max-ms=N            最长批次冷却，默认 ${DEFAULT_BATCH_PAUSE_MAX_MS}ms
+  --batch-pause-ms=N                使用固定冷却时间，兼容旧命令
   --retries=N                       429/5xx 最大重试次数，默认 3
   --refresh                         忽略已有成功检查点
   --sitemap=URL                     指定官方 Sitemap

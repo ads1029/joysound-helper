@@ -54,10 +54,17 @@ export function parseJoysoundSongPage(
       .toArray()
       .map((element) => $(element).text()),
   );
+  const musicVideoMetadata = readMusicVideoMetadata(
+    $("title").first().text().trim(),
+  );
   const title =
-    recording?.name?.trim() || $("h1").first().text().trim();
+    recording?.name?.trim() ||
+    musicVideoMetadata?.title ||
+    $("h1").first().text().trim();
   const artist =
-    readArtistName(recording?.byArtist) || readArtistFromTable(html);
+    readArtistName(recording?.byArtist) ||
+    musicVideoMetadata?.artist ||
+    readArtistFromTable(html);
 
   if (!title || !artist) {
     throw new Error(`无法解析歌曲标题或歌手：${sourceUrl}`);
@@ -95,6 +102,23 @@ export function parseJoysoundSongPage(
     artist,
     sourceUrl,
     variants: [...variantsByNumber.values()],
+  };
+}
+
+function readMusicVideoMetadata(
+  pageTitle: string,
+): { title: string; artist: string } | undefined {
+  const match = pageTitle.match(
+    /^\[ミュージックビデオ観放題\](.+)／(.+)-楽曲検索 \| JOYSOUND\.com$/,
+  );
+
+  if (!match) {
+    return undefined;
+  }
+
+  return {
+    title: match[1].trim(),
+    artist: match[2].trim(),
   };
 }
 

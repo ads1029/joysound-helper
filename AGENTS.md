@@ -11,7 +11,7 @@
 - `src/main.tsx` 负责挂载应用，`src/App.tsx` 管理主要搜索流程。
 - `src/components/` 存放可复用的界面组件。
 - `src/lib/` 存放搜索与文本标准化逻辑，测试以 `*.test.ts` 就近放置。
-- `src/data/songs.ts` 存放随前端打包的歌曲数据。
+- `src/data/songs.ts` 是前端曲库入口，`src/data/manual-songs.ts` 保存手工核心数据，`src/data/generated/` 保存采集、审计和复核 JSON。
 - `src/types.ts` 定义共享类型，`src/styles.css` 存放全局样式。
 
 生产构建输出到 `dist/`。Vite、Vitest、ESLint 和 TypeScript 配置均位于仓库根目录。
@@ -32,6 +32,8 @@ bun run test:watch   # 监听文件变化并重复测试
 bun run lint         # 检查 TypeScript 与 React 代码规范
 bun run build        # 类型检查并生成生产构建
 bun run preview      # 本地预览 dist/ 构建结果
+bun run audit:joysound -- --require-complete # 严格审计曲库
+bun run discover:joysound -- --confirm-authorized-discovery # 生成榜单白名单
 ```
 
 提交 Pull Request 前，应运行 `bun run lint && bun run test && bun run build`。
@@ -46,13 +48,15 @@ Vitest 使用 Node 环境。测试文件与被测模块同目录，并采用 `na
 
 ## 数据与配置
 
-保持应用无后端运行：歌曲数据直接编译进客户端，不应在运行时请求 JOYSOUND。修改 `src/data/songs.ts` 时，应保留官方歌名、来源链接、唯一 ID 和准确的 X1 支持状态。禁止提交密钥、凭据或本地环境配置。
+保持应用无后端运行：歌曲数据直接编译进客户端，不应在运行时请求 JOYSOUND。`src/data/songs.ts` 只导出审计后的生产曲库，手工数据修改在 `src/data/manual-songs.ts` 完成。歌曲必须保留官方歌名、来源链接、唯一 ID 和准确的 X1 支持状态。禁止提交密钥、凭据或本地环境配置。
 
 批量采集工具位于 `scripts/crawl-joysound.ts`，操作前必须阅读 `CRAWLER.md`。大规模采集及生成数据的二次使用必须先取得授权；禁止使用代理池、IP 轮换或其他方式绕过限流与封禁。每轮采集必须完整执行定义范围、采集、校验、复核、去重接入和文档更新闭环，并在 `GOAL.md` 的“采集轮次记录”中追加结果。
 
-每个采集批次结束后必须运行 `bun run audit:joysound`，根据完整候选索引检查覆盖率、失败项和冲突；全量结果必须通过 `bun run audit:joysound -- --require-complete`。不得把“已生成 JSON”或“命令未报错”单独视为完成依据。
+每个采集批次结束后必须运行 `bun run audit:joysound`，根据完整候选索引检查覆盖率、失败项和冲突；全量结果必须通过 `bun run audit:joysound -- --require-complete`，并用 `bun run review:joysound` 复核至少 20 首。不得把“已生成 JSON”或“命令未报错”单独视为完成依据。
 
-目标网站存在反爬机制。详情采集保持单线程，默认使用 5 秒基础间隔和 0～2 秒随机抖动；不得低于 3 秒。每 100 个真实请求默认冷却 2 分钟，大规模任务的批次冷却不得低于 1 分钟。遇到 403 或重复 429 必须停止并保留检查点，不得通过更换 IP 继续请求。
+目标网站存在反爬机制。详情采集保持单线程，默认使用 5 秒基础间隔和 0～2 秒随机抖动；不得低于 3 秒。每 100 个真实请求随机冷却 45～60 秒，大规模任务的最短批次冷却不得低于 45 秒。遇到 403 或重复 429 必须停止并保留检查点，不得通过更换 IP 继续请求。
+
+`discover:joysound` 每 50 个入口页随机冷却 45～60 秒；它只能提取预先认可的综合、年龄、歌手、动漫和 Vocaloid 榜单链接，不得把演歌、洋乐或 K-POP 分类重新混入候选。
 
 ## 提交与 Pull Request
 

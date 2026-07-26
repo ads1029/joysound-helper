@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-25T22:11:37.979Z",
+  "inputPath": "src/data/generated/joysound-expanded-songs.json",
+  "sampleMethod": "按生成曲库位置等距抽取",
+  "delayPolicy": {
+    "delayMs": 5000,
+    "jitterMs": 2000,
+    "concurrency": 1
+  },
+  "sampleSize": 20,
+  "passed": true,
+  "samples": [
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/10009",
+      "title": "大好きだよ。",
+      "artist": "大塚 愛",
+      "songNumbers": [
+        "10012",
+        "320077",
+        "900113",
+        "902647"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:09:27.967Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1055615",
+      "title": "+1",
+      "artist": "優里",
+      "songNumbers": [
+        "630603"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:09:35.260Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/109200",
+      "title": "花の名",
+      "artist": "BUMP OF CHICKEN",
+      "songNumbers": [
+        "189267",
+        "25590",
+        "327597",
+        "905337"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:09:41.001Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1136007",
+      "title": "TRUE LOVE",
+      "artist": "Snow Man",
+      "songNumbers": [
+        "641639",
+        "718675"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:09:48.715Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1189042",
+      "title": "Love me forever!",
+      "artist": "Ado",
+      "songNumbers": [
+        "662736"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:09:55.350Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/146424",
+      "title": "アルクアラウンド",
+      "artist": "サカナクション",
+      "songNumbers": [
+        "139525",
+        "715932",
+        "910747"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:10:02.009Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/172088",
+      "title": "世界上唯一的花(世界に一つだけの花 Chinese Version)",
+      "artist": "SMAP",
+      "songNumbers": [
+        "29195"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:10:09.077Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/20251",
+      "title": "ギリギリchop",
+      "artist": "B'z",
+      "songNumbers": [
+        "20278",
+        "904214"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:10:16.871Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/23568",
+      "title": "HEAT CAPACITY",
+      "artist": "T.M.Revolution",
+      "songNumbers": [
+        "24438"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:10:23.955Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/26501",
+      "title": "宝島",
+      "artist": "コブクロ",
+      "songNumbers": [
+        "28609",
+        "900177",
+        "905947"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:10:31.774Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/38168",
+      "title": "Myself",
+      "artist": "長渕剛",
+      "songNumbers": [
+        "53272",
+        "906893"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:10:37.864Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/4310",
+      "title": "CROSS ROAD",
+      "artist": "Mr.Children",
+      "songNumbers": [
+        "322608",
+        "4310",
+        "714597",
+        "902105"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:10:44.171Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/56824",
+      "title": "行かないで",
+      "artist": "玉置浩二",
+      "songNumbers": [
+        "75951"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:10:50.799Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/61",
+      "title": "キ・ツ・イ",
+      "artist": "玉置浩二",
+      "songNumbers": [
+        "61"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:10:57.112Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/725287",
+      "title": "そっけない",
+      "artist": "RADWIMPS",
+      "songNumbers": [
+        "193716",
+        "434824",
+        "975823"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:11:03.426Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/831751",
+      "title": "周波数",
+      "artist": "SEKAI NO OWARI",
+      "songNumbers": [
+        "485450",
+        "976217"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:11:10.627Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/882383",
+      "title": "夜のピエロ",
+      "artist": "Ado",
+      "songNumbers": [
+        "491001",
+        "716631"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:11:17.952Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/922065",
+      "title": "ダンスホール",
+      "artist": "Mrs. GREEN APPLE",
+      "songNumbers": [
+        "193739",
+        "348903",
+        "499083",
+        "976694"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:11:25.066Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/96392",
+      "title": "ミーファイユー",
+      "artist": "BEGIN",
+      "songNumbers": [
+        "23488",
+        "717945"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:11:31.348Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/998410",
+      "title": "I Wish",
+      "artist": "なにわ男子",
+      "songNumbers": [
+        "621725",
+        "718949"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T22:11:37.979Z",
+      "differences": []
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 
+import { manualSongs } from "../data/manual-songs";
 import { songs } from "../data/songs";
 import type { Song } from "../types";
 import {
@@ -32,7 +33,7 @@ describe("searchSongs", () => {
   });
 
   it("lists the catalog in romaji order with ten songs per page", () => {
-    const catalog = listSongsByRomaji(songs);
+    const catalog = listSongsByRomaji(manualSongs);
 
     expect(catalog.slice(0, CATALOG_PAGE_SIZE)).toHaveLength(10);
     expect(catalog.slice(CATALOG_PAGE_SIZE)).toHaveLength(10);

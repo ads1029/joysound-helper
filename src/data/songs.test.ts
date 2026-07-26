@@ -1,16 +1,21 @@
 import { describe, expect, it } from "vitest";
 
+import catalog from "./generated/joysound-expanded-catalog.json";
+import { manualSongs } from "./manual-songs";
 import { songs } from "./songs";
 
 describe("songs", () => {
-  it("收录当前歌曲与 X1 版本基线", () => {
+  it("收录审计通过的完整生产曲库", () => {
     const variantCount = songs.reduce(
       (count, song) => count + song.variants.length,
       0,
     );
 
-    expect(songs).toHaveLength(20);
-    expect(variantCount).toBe(60);
+    expect(catalog.crawlReady).toBe(true);
+    expect(songs).toHaveLength(5620);
+    expect(songs).toHaveLength(catalog.summary.mergedSongs);
+    expect(variantCount).toBe(10761);
+    expect(variantCount).toBe(catalog.summary.mergedVariants);
   });
 
   it("歌曲和版本标识保持唯一", () => {
@@ -24,8 +29,8 @@ describe("songs", () => {
     expect(new Set(songNumbers).size).toBe(songNumbers.length);
   });
 
-  it("每首前端歌曲都有可用于排序的罗马音", () => {
-    for (const song of songs) {
+  it("手工维护的核心歌曲保留罗马音排序信息", () => {
+    for (const song of manualSongs) {
       expect(song.romaji).toMatch(/[a-z]/i);
     }
   });

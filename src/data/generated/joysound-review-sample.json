@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-25T07:24:11.643Z",
+  "inputPath": "src/data/generated/joysound-songs.json",
+  "sampleMethod": "按生成曲库位置等距抽取",
+  "delayPolicy": {
+    "delayMs": 5000,
+    "jitterMs": 2000,
+    "concurrency": 1
+  },
+  "sampleSize": 20,
+  "passed": true,
+  "samples": [
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000416",
+      "title": "Diamond Days",
+      "artist": "セブンティーン",
+      "songNumbers": [
+        "539024"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:21:59.209Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1120189",
+      "title": "DIVE IN (TZUYU)",
+      "artist": "TWICE",
+      "songNumbers": [
+        "539029"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:22:06.666Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1149018",
+      "title": "100万回生まれ変わっても",
+      "artist": "Gero",
+      "songNumbers": [
+        "647921"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:22:14.191Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1162570",
+      "title": "運命前夜",
+      "artist": "アンティーカ",
+      "songNumbers": [
+        "648059"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:22:20.685Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1166099",
+      "title": "その手に触れるキセキまで《本人映像》",
+      "artist": "東方LostWord feat.根本凪 × TUMENECO",
+      "songNumbers": [
+        "825575"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:22:28.371Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1169482",
+      "title": "Believers",
+      "artist": "timelesz",
+      "songNumbers": [
+        "647660"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:22:34.133Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1171203",
+      "title": "超惑星Xへの旅",
+      "artist": "夢限大みゅーたいぷ",
+      "songNumbers": [
+        "648095"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:22:40.649Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1172747",
+      "title": "Mighty Beast",
+      "artist": "timelesz",
+      "songNumbers": [
+        "647745"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:22:48.417Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1174119",
+      "title": "離れても好きな人 feat. Sugar Goose，Albert Connor & REKID",
+      "artist": "SPICY CHOCOLATE",
+      "songNumbers": [
+        "649295"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:22:54.337Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1175063",
+      "title": "ガラスの靴",
+      "artist": "Ryosuke Yamada",
+      "songNumbers": [
+        "648150"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:23:01.681Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1176528",
+      "title": "Never ending shine",
+      "artist": "ゴジュウレオン/百夜陸王 (鈴木秀脩)",
+      "songNumbers": [
+        "648447"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:23:09.356Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1177368",
+      "title": "MerryMe《本人映像》",
+      "artist": "寺西優真",
+      "songNumbers": [
+        "826214"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:23:16.816Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1178488",
+      "title": "君にやられた!",
+      "artist": "日向坂46",
+      "songNumbers": [
+        "648883"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:23:24.516Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1179567",
+      "title": "八月の匂い",
+      "artist": "山内総一郎 & KREVA",
+      "songNumbers": [
+        "649085"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:23:30.710Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1180566",
+      "title": "1・2&3 legged race 4you《本人映像》",
+      "artist": "ミュージカル「ヘタリア～The world is wonderful～」",
+      "songNumbers": [
+        "826348"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:23:36.589Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1181731",
+      "title": "Puppet",
+      "artist": "なとり",
+      "songNumbers": [
+        "649339"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:23:44.190Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1183268",
+      "title": "三分半の創世",
+      "artist": "初星学園",
+      "songNumbers": [
+        "648952"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:23:50.859Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1185103",
+      "title": "[サビカラ]CHA-LA HEAD-CHA-LA",
+      "artist": "影山ヒロノブ",
+      "songNumbers": [
+        "649189"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:23:58.381Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/660802",
+      "title": "まぼろし",
+      "artist": "中森明菜",
+      "songNumbers": [
+        "648705"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:24:04.732Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/999272",
+      "title": "Fellowship Anthem",
+      "artist": "HEY-SMITH",
+      "songNumbers": [
+        "648592"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T07:24:11.643Z",
+      "differences": []
+    }
+  ]
+}

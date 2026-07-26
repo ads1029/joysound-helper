@@ -1,0 +1,285 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-25T16:37:11.832Z",
+  "inputPath": "src/data/generated/joysound-ranked-songs.json",
+  "sampleMethod": "按生成曲库位置等距抽取",
+  "delayPolicy": {
+    "delayMs": 5000,
+    "jitterMs": 2000,
+    "concurrency": 1
+  },
+  "sampleSize": 20,
+  "passed": true,
+  "samples": [
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/10029",
+      "title": "黒毛和牛上塩タン焼680円",
+      "artist": "大塚 愛",
+      "songNumbers": [
+        "10032",
+        "190018",
+        "342407",
+        "902651"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:35:12.106Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/104333",
+      "title": "夢をかなえてドラえもん",
+      "artist": "mao",
+      "songNumbers": [
+        "163495",
+        "195297",
+        "910947"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:35:19.311Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1087401",
+      "title": "君セン!",
+      "artist": "iLiFE!",
+      "songNumbers": [
+        "330886",
+        "635346"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:35:25.344Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1143475",
+      "title": "好きすぎて滅!",
+      "artist": "M!LK",
+      "songNumbers": [
+        "330910",
+        "642168",
+        "718722",
+        "981045"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:35:30.919Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1192099",
+      "title": "Promised Future",
+      "artist": "Oriens",
+      "songNumbers": [
+        "662474"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:35:36.671Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/147756",
+      "title": "会いたかった",
+      "artist": "AKB48",
+      "songNumbers": [
+        "188879",
+        "190473",
+        "320544",
+        "909276",
+        "92151"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:35:42.684Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/185102",
+      "title": "やさしくなりたい",
+      "artist": "斉藤和義",
+      "songNumbers": [
+        "29531",
+        "320637",
+        "340706",
+        "761822",
+        "912301"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:35:49.093Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/2226",
+      "title": "雪國",
+      "artist": "吉幾三",
+      "songNumbers": [
+        "13950",
+        "189559",
+        "193610",
+        "2226",
+        "320008",
+        "901659"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:35:55.481Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/255516",
+      "title": "サマータイムレコード",
+      "artist": "じん feat.IA",
+      "songNumbers": [
+        "726510",
+        "914596"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:36:02.884Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/341",
+      "title": "長良川艶歌",
+      "artist": "五木ひろし",
+      "songNumbers": [
+        "16760",
+        "188215",
+        "23046",
+        "320407",
+        "341"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:36:09.087Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/417647",
+      "title": "アイのシナリオ",
+      "artist": "CHiCO with HoneyWorks",
+      "songNumbers": [
+        "330122",
+        "343573",
+        "671724",
+        "702418",
+        "974648"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:36:16.123Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/563606",
+      "title": "THE DAY",
+      "artist": "ポルノグラフィティ",
+      "songNumbers": [
+        "156757",
+        "330247",
+        "346674",
+        "975194"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:36:22.529Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/619286",
+      "title": "メーベル",
+      "artist": "バルーン",
+      "songNumbers": [
+        "694850",
+        "714563",
+        "975826"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:36:28.183Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/697487",
+      "title": "ロングホープ・フィリア",
+      "artist": "菅田将暉",
+      "songNumbers": [
+        "193498",
+        "347586",
+        "430732",
+        "975740"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:36:35.167Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/764544",
+      "title": "お願いマッスル",
+      "artist": "紗倉ひびき(CV:ファイルーズあい)、街雄鳴造(CV:石川界人)",
+      "songNumbers": [
+        "441787",
+        "716430",
+        "976169"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:36:42.090Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/834724",
+      "title": "NAVIGATOR",
+      "artist": "SixTONES",
+      "songNumbers": [
+        "449979",
+        "716343"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:36:47.630Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/875192",
+      "title": "エンヴィーベイビー",
+      "artist": "Kanaria",
+      "songNumbers": [
+        "489734",
+        "716677"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:36:54.097Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/912851",
+      "title": "にっこり^^調査隊のテーマ",
+      "artist": "じーざす(ワンダフル☆オポチュニティ!)feat.鏡音リン、鏡音レン",
+      "songNumbers": [
+        "496569",
+        "717092"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:36:59.998Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/958",
+      "title": "天城越え",
+      "artist": "石川さゆり",
+      "songNumbers": [
+        "189027",
+        "191014",
+        "320019",
+        "701639",
+        "901301",
+        "958",
+        "99513"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:37:06.047Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/999449",
+      "title": "おやすみせかい",
+      "artist": "the奥歯's",
+      "songNumbers": [
+        "637947"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-25T16:37:11.832Z",
+      "differences": []
+    }
+  ]
+}
