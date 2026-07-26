@@ -8,7 +8,13 @@ import {
   searchSongs,
 } from "./lib/search";
 
-const examples = ["千本桜", "千本樱", "夜に駆ける", "夜に驱ける"];
+const examples = [
+  "千本",
+  "千本樱",
+  "夜に駆ける",
+  "夜に驱ける",
+  "残酷天使",
+];
 
 export default function App() {
   const [query, setQuery] = useState("");
@@ -50,10 +56,13 @@ export default function App() {
       </header>
 
       <section className="intro" aria-labelledby="intro-title">
-        <h2 id="intro-title">输入完整歌名，找到点歌编号</h2>
+        <h2 id="intro-title">输入歌名，找到点歌编号</h2>
         <p>
           中日汉字会自动统一。输入 <code>千本樱</code>、<code>千本櫻</code>
-          或 <code>千本桜</code>，都能找到同一首歌。
+          或 <code>千本桜</code>，都能找到同一首歌；输入 <code>千本</code>
+          也能模糊匹配“千本桜”。还可以只输入歌名中的汉字，例如用
+          <code>残酷天使</code> 搜索
+          “残酷な天使のテーゼ”。
         </p>
       </section>
 
@@ -65,7 +74,7 @@ export default function App() {
               id="song-name"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="例如：千本桜 或 千本樱"
+              placeholder="例如：千本 或 残酷天使"
               autoComplete="off"
               maxLength={120}
               enterKeyHint="search"
@@ -73,7 +82,7 @@ export default function App() {
             <button type="submit">查找编号</button>
           </div>
           <p className="form-help">
-            当前只做完整歌名匹配，不搜索简称、歌手或翻译名。
+            支持完整歌名，或输入至少两个汉字模糊搜索；不搜索歌手或翻译名。
           </p>
         </form>
 
@@ -98,9 +107,9 @@ export default function App() {
       >
         {hasSearched && results.length === 0 && (
           <div className="empty-state">
-            <strong>没有找到完整匹配的歌名</strong>
+            <strong>没有找到匹配的歌名</strong>
             <p>
-              请检查是否输入了完整歌名。简体、繁体和日文汉字会自动转换。
+              请检查完整歌名或至少两个汉字。简体、繁体和日文汉字会自动转换。
             </p>
           </div>
         )}
