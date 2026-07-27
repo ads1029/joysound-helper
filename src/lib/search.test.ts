@@ -62,6 +62,18 @@ describe("searchSongs", () => {
     ).toContain("残酷な天使のテーゼ");
   });
 
+  it("matches hiragana and katakana queries in both directions", () => {
+    expect(searchSongs(songs, "あいどる").map((song) => song.title)).toContain(
+      "アイドル",
+    );
+    expect(searchSongs(songs, "ファム").map((song) => song.title)).toContain(
+      "・ふぁむ・ふぁた～る・",
+    );
+    expect(searchSongs(songs, "ｱｲﾄﾞﾙ").map((song) => song.title)).toContain(
+      "アイドル",
+    );
+  });
+
   it("treats wave dashes and kana long vowels as equivalent", () => {
     expect(
       searchSongs(songs, "ふぁむふぁたーる").map((song) => song.title),
@@ -89,9 +101,9 @@ describe("searchSongs", () => {
     );
   });
 
-  it("does not fuzzy-match one character or a translated title", () => {
+  it("allows a cross-kana exact title without fuzzy-matching one character", () => {
+    expect(searchSongs(songs, "ふ").map((song) => song.title)).toContain("フ");
     expect(searchSongs(songs, "千")).toEqual([]);
-    expect(searchSongs(songs, "ふ")).toEqual([]);
     expect(searchSongs(songs, "g")).toEqual([]);
     expect(searchSongs(songs, "一千棵樱花树")).toEqual([]);
   });
@@ -192,6 +204,16 @@ describe("searchSongsByArtist", () => {
         (song) => song.artist === "藤井 風",
       ),
     ).toBe(true);
+  });
+
+  it("matches hiragana and katakana artist names in both directions", () => {
+    const hiraganaResults = searchSongsByArtist(songs, "よるしか");
+    const katakanaResults = searchSongsByArtist(songs, "ヨルシカ");
+
+    expect(hiraganaResults.length).toBeGreaterThan(0);
+    expect(hiraganaResults.map((song) => song.id)).toEqual(
+      katakanaResults.map((song) => song.id),
+    );
   });
 
   it("includes collaborations containing the artist query", () => {

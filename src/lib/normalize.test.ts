@@ -16,11 +16,19 @@ describe("normalizeSearchText", () => {
       normalizeSearchText(
         "「你好？！」☆カタカナ・ひらがな_English 2026 한글",
       ),
-    ).toBe("你好カタカナひらがなenglish");
+    ).toBe("你好かたかなひらがなenglish");
   });
 
   it("keeps kana long vowels and Japanese iteration marks", () => {
-    expect(normalizeSearchText("テーゼ・時々")).toBe("テーゼ時々");
+    expect(normalizeSearchText("テーゼ・時々")).toBe("てーぜ時々");
+  });
+
+  it("normalizes full-width and half-width katakana to hiragana", () => {
+    expect(normalizeSearchText("カタカナ")).toBe("かたかな");
+    expect(normalizeSearchText("ｶﾀｶﾅ")).toBe("かたかな");
+    expect(normalizeSearchText("ヴァイオリン")).toBe(
+      normalizeSearchText("ゔぁいおりん"),
+    );
   });
 
   it("makes spaced romaji searchable as one value", () => {
@@ -29,7 +37,7 @@ describe("normalizeSearchText", () => {
 
   it("keeps Japanese and Chinese characters intact", () => {
     expect(normalizeSearchText("残酷な天使のテーゼ")).toBe(
-      "残酷な天使のテーゼ",
+      "残酷な天使のてーぜ",
     );
   });
 

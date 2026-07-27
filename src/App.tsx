@@ -190,9 +190,10 @@ export default function App() {
       <section className="intro" aria-labelledby="intro-title">
         <h2 id="intro-title">输入歌名或歌手，找到点歌编号</h2>
         <p>
-          中日汉字会自动统一。输入 <code>千本樱</code>、<code>千本櫻</code>
-          或 <code>千本桜</code>，都能找到同一首歌；输入 <code>ふぁむ</code>
-          也能匹配“・ふぁむ・ふぁた～る・”。还可以只输入歌名中的汉字，例如用
+          中日汉字及平片假名会自动统一。输入 <code>千本樱</code>、
+          <code>千本櫻</code> 或 <code>千本桜</code>，都能找到同一首歌；
+          输入 <code>ふぁむ</code> 或 <code>ファム</code>
+          都能匹配“・ふぁむ・ふぁた～る・”。还可以只输入歌名中的汉字，例如用
           <code>残酷天使</code> 搜索“残酷な天使のテーゼ”，或切换到歌手搜索
           该歌手的全部收录歌曲。
         </p>
