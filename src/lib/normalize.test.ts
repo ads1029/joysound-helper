@@ -11,6 +11,18 @@ describe("normalizeSearchText", () => {
     expect(normalizeSearchText("God knows...")).toBe("godknows");
   });
 
+  it("keeps only Han, kana, and Latin characters", () => {
+    expect(
+      normalizeSearchText(
+        "「你好？！」☆カタカナ・ひらがな_English 2026 한글",
+      ),
+    ).toBe("你好カタカナひらがなenglish");
+  });
+
+  it("keeps kana long vowels and Japanese iteration marks", () => {
+    expect(normalizeSearchText("テーゼ・時々")).toBe("テーゼ時々");
+  });
+
   it("makes spaced romaji searchable as one value", () => {
     expect(normalizeSearchText("  yoru　ni kakeru  ")).toBe("yorunikakeru");
   });

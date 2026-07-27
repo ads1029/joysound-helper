@@ -14,8 +14,7 @@ export function SongResult({ song }: { song: SearchResult }) {
   return (
     <article className="result-card">
       <header className="result-header">
-        <div>
-          {song.romaji && <p className="song-romaji">{song.romaji}</p>}
+        <div className="song-heading">
           <h2>{song.title}</h2>
           <p className="song-artist">{song.artist}</p>
         </div>
@@ -26,7 +25,6 @@ export function SongResult({ song }: { song: SearchResult }) {
           <div className="variant-row" key={variant.id}>
             <div className="variant-info">
               <strong>{versionLabels[variant.versionType]}</strong>
-              <span>{variant.versionTitle}</span>
             </div>
 
             <div className="number-info">
@@ -36,15 +34,6 @@ export function SongResult({ song }: { song: SearchResult }) {
           </div>
         ))}
       </div>
-
-      <a
-        className="source-link"
-        href={song.sourceUrl}
-        target="_blank"
-        rel="noreferrer"
-      >
-        查看 JOYSOUND 官方页面
-      </a>
     </article>
   );
 }

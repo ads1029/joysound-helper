@@ -1,15 +1,13 @@
 import { normalizeKanjiVariants } from "./kanji-variants";
 
 const KANJI_CHARACTER_PATTERN = /[\p{Script=Han}々]/u;
+const SEARCH_CHARACTER_PATTERN =
+  /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Latin}々ー]/u;
 
 export function normalizeSearchText(value: string): string {
-  const normalized = value
-    .normalize("NFKC")
-    .toLocaleLowerCase()
-    .replace(/[・･]/g, "")
-    .replace(/[\s\u3000]+/g, "")
-    .replace(/[!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/g, "")
-    .trim();
+  const normalized = Array.from(value.normalize("NFKC").toLocaleLowerCase())
+    .filter((character) => SEARCH_CHARACTER_PATTERN.test(character))
+    .join("");
 
   return normalizeKanjiVariants(normalized);
 }

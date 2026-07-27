@@ -7,6 +7,7 @@ import {
   CATALOG_PAGE_SIZE,
   listSongsByRomaji,
   searchSongs,
+  searchSongsByArtist,
 } from "./search";
 
 describe("searchSongs", () => {
@@ -25,6 +26,46 @@ describe("searchSongs", () => {
     expect(searchSongs(songs, "千本櫻")[0]?.title).toBe("千本桜");
     expect(searchSongs(songs, "夜に驱ける")[0]?.title).toBe("夜に駆ける");
     expect(searchSongs(songs, "夜に驅ける")[0]?.title).toBe("夜に駆ける");
+  });
+
+  it("matches a title without requiring its punctuation or symbols", () => {
+    const fixture: Song[] = [
+      {
+        id: "punctuated-title",
+        title: "大丈夫！？★ Song 2026",
+        artist: "テスト",
+        sourceUrl: "https://example.com",
+        variants: [
+          {
+            id: "punctuated-title-x1",
+            songNumber: "123456",
+            versionTitle: "大丈夫！？★ Song 2026",
+            versionType: "standard",
+            supportsX1: true,
+          },
+        ],
+      },
+    ];
+
+    expect(searchSongs(fixture, "大丈夫Song")).toHaveLength(1);
+  });
+
+  it("matches kana and Latin fragments with at least two characters", () => {
+    expect(searchSongs(songs, "ふぁむ").map((song) => song.title)).toContain(
+      "・ふぁむ・ふぁた～る・",
+    );
+    expect(searchSongs(songs, "knows").map((song) => song.title)).toContain(
+      "God knows...",
+    );
+    expect(
+      searchSongs(songs, "残酷な天使").map((song) => song.title),
+    ).toContain("残酷な天使のテーゼ");
+  });
+
+  it("treats wave dashes and kana long vowels as equivalent", () => {
+    expect(
+      searchSongs(songs, "ふぁむふぁたーる").map((song) => song.title),
+    ).toContain("・ふぁむ・ふぁた～る・");
   });
 
   it("matches a kanji-only query after removing kana from the title", () => {
@@ -48,10 +89,11 @@ describe("searchSongs", () => {
     );
   });
 
-  it("does not fuzzy-match one kanji, kana, or a translated title", () => {
+  it("does not fuzzy-match one character or a translated title", () => {
     expect(searchSongs(songs, "千")).toEqual([]);
+    expect(searchSongs(songs, "ふ")).toEqual([]);
+    expect(searchSongs(songs, "g")).toEqual([]);
     expect(searchSongs(songs, "一千棵樱花树")).toEqual([]);
-    expect(searchSongs(songs, "残酷な天使")).toEqual([]);
   });
 
   it("lists the catalog in romaji order with ten songs per page", () => {
@@ -115,5 +157,84 @@ describe("searchSongs", () => {
     expect(results[0]?.variants.map((variant) => variant.songNumber)).toEqual([
       "123456",
     ]);
+  });
+});
+
+describe("searchSongsByArtist", () => {
+  it("places exact artist matches before collaborations", () => {
+    const results = searchSongsByArtist(songs, "米津玄師");
+    const firstCollaborationIndex = results.findIndex(
+      (song) => song.artist !== "米津玄師",
+    );
+
+    expect(results.length).toBeGreaterThan(1);
+    expect(firstCollaborationIndex).toBeGreaterThan(0);
+    expect(
+      results
+        .slice(0, firstCollaborationIndex)
+        .every((song) => song.artist === "米津玄師"),
+    ).toBe(true);
+    expect(
+      results
+        .slice(firstCollaborationIndex)
+        .every((song) => song.artist.includes("米津玄師")),
+    ).toBe(true);
+  });
+
+  it("normalizes spaces, punctuation, case, and kanji variants", () => {
+    expect(
+      searchSongsByArtist(songs, "mrs green apple").some(
+        (song) => song.artist === "Mrs. GREEN APPLE",
+      ),
+    ).toBe(true);
+    expect(
+      searchSongsByArtist(songs, "藤井风").some(
+        (song) => song.artist === "藤井 風",
+      ),
+    ).toBe(true);
+  });
+
+  it("includes collaborations containing the artist query", () => {
+    const fixture: Song[] = [
+      {
+        id: "solo",
+        title: "独唱",
+        artist: "Ado",
+        sourceUrl: "https://example.com/solo",
+        variants: [
+          {
+            id: "solo-x1",
+            songNumber: "123456",
+            versionTitle: "独唱",
+            versionType: "standard",
+            supportsX1: true,
+          },
+        ],
+      },
+      {
+        id: "collaboration",
+        title: "合唱",
+        artist: "Ado feat. テスト",
+        sourceUrl: "https://example.com/collaboration",
+        variants: [
+          {
+            id: "collaboration-x1",
+            songNumber: "234567",
+            versionTitle: "合唱",
+            versionType: "standard",
+            supportsX1: true,
+          },
+        ],
+      },
+    ];
+
+    expect(
+      searchSongsByArtist(fixture, "Ado").map((song) => song.id),
+    ).toEqual(["solo", "collaboration"]);
+  });
+
+  it("allows a one-character exact artist but rejects broad fragments", () => {
+    expect(searchSongsByArtist(songs, "嵐").length).toBeGreaterThan(1);
+    expect(searchSongsByArtist(songs, "米")).toEqual([]);
   });
 });
