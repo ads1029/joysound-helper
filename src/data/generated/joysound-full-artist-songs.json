@@ -1,0 +1,6956 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-27T10:55:17.523Z",
+  "sitemapUrl": "local-index:/Users/minjiehuang/Code/_side_proj/joysound-helper/src/data/generated/joysound-full-artist-candidates.json#new-only",
+  "songs": [
+    {
+      "id": "joysound-1000167",
+      "title": "ラジオ",
+      "artist": "aiko",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000167",
+      "variants": [
+        {
+          "id": "joysound-1000167-621651",
+          "songNumber": "621651",
+          "versionTitle": "ラジオ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1000223",
+      "title": "声",
+      "artist": "いきものがかり",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000223",
+      "variants": [
+        {
+          "id": "joysound-1000223-622651",
+          "songNumber": "622651",
+          "versionTitle": "声",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1000224",
+      "title": "好きをあつめたら",
+      "artist": "いきものがかり",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000224",
+      "variants": [
+        {
+          "id": "joysound-1000224-622650",
+          "songNumber": "622650",
+          "versionTitle": "好きをあつめたら",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1000448",
+      "title": "LOVE",
+      "artist": "HY",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000448",
+      "variants": [
+        {
+          "id": "joysound-1000448-622383",
+          "songNumber": "622383",
+          "versionTitle": "LOVE",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1000819",
+      "title": "ビリミリオン -オーケストラアレンジver.-",
+      "artist": "優里",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000819",
+      "variants": [
+        {
+          "id": "joysound-1000819-622898",
+          "songNumber": "622898",
+          "versionTitle": "ビリミリオン -オーケストラアレンジver.-",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1000820",
+      "title": "ベテルギウス -オーケストラアレンジver.-",
+      "artist": "優里",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000820",
+      "variants": [
+        {
+          "id": "joysound-1000820-623384",
+          "songNumber": "623384",
+          "versionTitle": "ベテルギウス -オーケストラアレンジver.-",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1000821",
+      "title": "かくれんぼ -オーケストラアレンジver.-",
+      "artist": "優里",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000821",
+      "variants": [
+        {
+          "id": "joysound-1000821-625981",
+          "songNumber": "625981",
+          "versionTitle": "かくれんぼ -オーケストラアレンジver.-",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1000822",
+      "title": "ドライフラワー -オーケストラアレンジver.-",
+      "artist": "優里",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000822",
+      "variants": [
+        {
+          "id": "joysound-1000822-622933",
+          "songNumber": "622933",
+          "versionTitle": "ドライフラワー -オーケストラアレンジver.-",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1000823",
+      "title": "アダムとイブ -オーケストラアレンジver.-",
+      "artist": "優里",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000823",
+      "variants": [
+        {
+          "id": "joysound-1000823-625980",
+          "songNumber": "625980",
+          "versionTitle": "アダムとイブ -オーケストラアレンジver.-",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1000824",
+      "title": "レオ -オーケストラアレンジver.-",
+      "artist": "優里",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000824",
+      "variants": [
+        {
+          "id": "joysound-1000824-625457",
+          "songNumber": "625457",
+          "versionTitle": "レオ -オーケストラアレンジver.-",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1000825",
+      "title": "アストロノーツ -オーケストラアレンジver.-",
+      "artist": "優里",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000825",
+      "variants": [
+        {
+          "id": "joysound-1000825-625979",
+          "songNumber": "625979",
+          "versionTitle": "アストロノーツ -オーケストラアレンジver.-",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1000826",
+      "title": "ガリレオは恋をする -オーケストラアレンジver.-",
+      "artist": "優里",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000826",
+      "variants": [
+        {
+          "id": "joysound-1000826-625978",
+          "songNumber": "625978",
+          "versionTitle": "ガリレオは恋をする -オーケストラアレンジver.-",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1000827",
+      "title": "かごめ -オーケストラアレンジver.-",
+      "artist": "優里",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000827",
+      "variants": [
+        {
+          "id": "joysound-1000827-625977",
+          "songNumber": "625977",
+          "versionTitle": "かごめ -オーケストラアレンジver.-",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1000828",
+      "title": "ピーターパン -オーケストラアレンジver.-",
+      "artist": "優里",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000828",
+      "variants": [
+        {
+          "id": "joysound-1000828-625456",
+          "songNumber": "625456",
+          "versionTitle": "ピーターパン -オーケストラアレンジver.-",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1000829",
+      "title": "うぉ -オーケストラアレンジver.-",
+      "artist": "優里",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000829",
+      "variants": [
+        {
+          "id": "joysound-1000829-625976",
+          "songNumber": "625976",
+          "versionTitle": "うぉ -オーケストラアレンジver.-",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1000830",
+      "title": "メリーゴーランド -オーケストラアレンジver.-",
+      "artist": "優里",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000830",
+      "variants": [
+        {
+          "id": "joysound-1000830-625975",
+          "songNumber": "625975",
+          "versionTitle": "メリーゴーランド -オーケストラアレンジver.-",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1001229",
+      "title": "ひらり",
+      "artist": "GReeeeN",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1001229",
+      "variants": [
+        {
+          "id": "joysound-1001229-622086",
+          "songNumber": "622086",
+          "versionTitle": "ひらり",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1001572",
+      "title": "名のないハート",
+      "artist": "aiko",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1001572",
+      "variants": [
+        {
+          "id": "joysound-1001572-622332",
+          "songNumber": "622332",
+          "versionTitle": "名のないハート",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1001647",
+      "title": "メガネのうた",
+      "artist": "川崎鷹也",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1001647",
+      "variants": [
+        {
+          "id": "joysound-1001647-621994",
+          "songNumber": "621994",
+          "versionTitle": "メガネのうた",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1001787",
+      "title": "一途(ALBUM ver.)",
+      "artist": "King Gnu",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1001787",
+      "variants": [
+        {
+          "id": "joysound-1001787-622648",
+          "songNumber": "622648",
+          "versionTitle": "一途(ALBUM ver.)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1001789",
+      "title": "IKAROS",
+      "artist": "King Gnu",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1001789",
+      "variants": [
+        {
+          "id": "joysound-1001789-622647",
+          "songNumber": "622647",
+          "versionTitle": "IKAROS",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1001790",
+      "title": "W●RKAHOLIC",
+      "artist": "King Gnu",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1001790",
+      "variants": [
+        {
+          "id": "joysound-1001790-622646",
+          "songNumber": "622646",
+          "versionTitle": "W●RKAHOLIC",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1001795",
+      "title": "千両役者(ALBUM ver.)",
+      "artist": "King Gnu",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1001795",
+      "variants": [
+        {
+          "id": "joysound-1001795-622644",
+          "songNumber": "622644",
+          "versionTitle": "千両役者(ALBUM ver.)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1001796",
+      "title": "泡(ALBUM ver.)",
+      "artist": "King Gnu",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1001796",
+      "variants": [
+        {
+          "id": "joysound-1001796-622643",
+          "songNumber": "622643",
+          "versionTitle": "泡(ALBUM ver.)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1001798",
+      "title": "2 Μ Ο Я Ο",
+      "artist": "King Gnu",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1001798",
+      "variants": [
+        {
+          "id": "joysound-1001798-622673",
+          "songNumber": "622673",
+          "versionTitle": "2 Μ Ο Я Ο",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1001800",
+      "title": "STARDOM(ALBUM ver.)",
+      "artist": "King Gnu",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1001800",
+      "variants": [
+        {
+          "id": "joysound-1001800-622642",
+          "songNumber": "622642",
+          "versionTitle": "STARDOM(ALBUM ver.)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1001803",
+      "title": "三文小説(ALBUM ver.)",
+      "artist": "King Gnu",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1001803",
+      "variants": [
+        {
+          "id": "joysound-1001803-622641",
+          "songNumber": "622641",
+          "versionTitle": "三文小説(ALBUM ver.)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1001811",
+      "title": "ハピダン",
+      "artist": "M!LK",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1001811",
+      "variants": [
+        {
+          "id": "joysound-1001811-622516",
+          "songNumber": "622516",
+          "versionTitle": "ハピダン",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1002423",
+      "title": "誰か",
+      "artist": "いきものがかり",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1002423",
+      "variants": [
+        {
+          "id": "joysound-1002423-622640",
+          "songNumber": "622640",
+          "versionTitle": "誰か",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1003072",
+      "title": "Adoメドレー2",
+      "artist": "Ado",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1003072",
+      "variants": [
+        {
+          "id": "joysound-1003072-622889",
+          "songNumber": "622889",
+          "versionTitle": "Adoメドレー2",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1003113",
+      "title": "HELLO WORLD",
+      "artist": "LiSA",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1003113",
+      "variants": [
+        {
+          "id": "joysound-1003113-625190",
+          "songNumber": "625190",
+          "versionTitle": "HELLO WORLD",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1003241",
+      "title": "ドライフラワー",
+      "artist": "Ado",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1003241",
+      "variants": [
+        {
+          "id": "joysound-1003241-622639",
+          "songNumber": "622639",
+          "versionTitle": "ドライフラワー",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1003242",
+      "title": "愛して愛して愛して",
+      "artist": "Ado",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1003242",
+      "variants": [
+        {
+          "id": "joysound-1003242-622638",
+          "songNumber": "622638",
+          "versionTitle": "愛して愛して愛して",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1003243",
+      "title": "可愛くてごめん",
+      "artist": "Ado",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1003243",
+      "variants": [
+        {
+          "id": "joysound-1003243-622637",
+          "songNumber": "622637",
+          "versionTitle": "可愛くてごめん",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1003244",
+      "title": "夜明けと蛍",
+      "artist": "Ado",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1003244",
+      "variants": [
+        {
+          "id": "joysound-1003244-622636",
+          "songNumber": "622636",
+          "versionTitle": "夜明けと蛍",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1003993",
+      "title": "[サビカラ]唱",
+      "artist": "Ado",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1003993",
+      "variants": [
+        {
+          "id": "joysound-1003993-622009",
+          "songNumber": "622009",
+          "versionTitle": "[サビカラ]唱",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1003994",
+      "title": "[サビカラ]SPECIALZ",
+      "artist": "King Gnu",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1003994",
+      "variants": [
+        {
+          "id": "joysound-1003994-622010",
+          "songNumber": "622010",
+          "versionTitle": "[サビカラ]SPECIALZ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1003997",
+      "title": "[サビカラ]Fallin",
+      "artist": "清水翔太",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1003997",
+      "variants": [
+        {
+          "id": "joysound-1003997-622013",
+          "songNumber": "622013",
+          "versionTitle": "[サビカラ]Fallin",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1003998",
+      "title": "[サビカラ]堕天",
+      "artist": "Creepy Nuts(R-指定&DJ松永)",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1003998",
+      "variants": [
+        {
+          "id": "joysound-1003998-622014",
+          "songNumber": "622014",
+          "versionTitle": "[サビカラ]堕天",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1003999",
+      "title": "[サビカラ]栞",
+      "artist": "クリープハイプ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1003999",
+      "variants": [
+        {
+          "id": "joysound-1003999-622015",
+          "songNumber": "622015",
+          "versionTitle": "[サビカラ]栞",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1004001",
+      "title": "[サビカラ]最愛",
+      "artist": "福山雅治",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1004001",
+      "variants": [
+        {
+          "id": "joysound-1004001-622017",
+          "songNumber": "622017",
+          "versionTitle": "[サビカラ]最愛",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1004002",
+      "title": "[サビカラ]白い恋人達",
+      "artist": "桑田佳祐",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1004002",
+      "variants": [
+        {
+          "id": "joysound-1004002-622018",
+          "songNumber": "622018",
+          "versionTitle": "[サビカラ]白い恋人達",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1004005",
+      "title": "[サビカラ]いつかのメリークリスマス",
+      "artist": "B'z",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1004005",
+      "variants": [
+        {
+          "id": "joysound-1004005-622021",
+          "songNumber": "622021",
+          "versionTitle": "[サビカラ]いつかのメリークリスマス",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1004801",
+      "title": "die die die",
+      "artist": "あいみょん",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1004801",
+      "variants": [
+        {
+          "id": "joysound-1004801-622483",
+          "songNumber": "622483",
+          "versionTitle": "die die die",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1005079",
+      "title": "夕暮れ",
+      "artist": "KANA-BOON",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1005079",
+      "variants": [
+        {
+          "id": "joysound-1005079-622431",
+          "songNumber": "622431",
+          "versionTitle": "夕暮れ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100518",
+      "title": "彼方から此処へ",
+      "artist": "EXILE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100518",
+      "variants": [
+        {
+          "id": "joysound-100518-56821",
+          "songNumber": "56821",
+          "versionTitle": "彼方から此処へ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100519",
+      "title": "Dream Catcher",
+      "artist": "EXILE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100519",
+      "variants": [
+        {
+          "id": "joysound-100519-56822",
+          "songNumber": "56822",
+          "versionTitle": "Dream Catcher",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100520",
+      "title": "One love",
+      "artist": "EXILE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100520",
+      "variants": [
+        {
+          "id": "joysound-100520-56823",
+          "songNumber": "56823",
+          "versionTitle": "One love",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100521",
+      "title": "運命のヒト〈Orchestra Version〉",
+      "artist": "EXILE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100521",
+      "variants": [
+        {
+          "id": "joysound-100521-56826",
+          "songNumber": "56826",
+          "versionTitle": "運命のヒト〈Orchestra Version〉",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100522",
+      "title": "Yell",
+      "artist": "EXILE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100522",
+      "variants": [
+        {
+          "id": "joysound-100522-56818",
+          "songNumber": "56818",
+          "versionTitle": "Yell",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100523",
+      "title": "WON'T BE LONG feat.NEVER LAND",
+      "artist": "EXILE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100523",
+      "variants": [
+        {
+          "id": "joysound-100523-56819",
+          "songNumber": "56819",
+          "versionTitle": "WON'T BE LONG feat.NEVER LAND",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100524",
+      "title": "No Other Man feat.NaNa",
+      "artist": "EXILE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100524",
+      "variants": [
+        {
+          "id": "joysound-100524-56820",
+          "songNumber": "56820",
+          "versionTitle": "No Other Man feat.NaNa",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1005382",
+      "title": "X-Day",
+      "artist": "KinKi Kids",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1005382",
+      "variants": [
+        {
+          "id": "joysound-1005382-622634",
+          "songNumber": "622634",
+          "versionTitle": "X-Day",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1005383",
+      "title": "BANANA",
+      "artist": "KinKi Kids",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1005383",
+      "variants": [
+        {
+          "id": "joysound-1005383-622633",
+          "songNumber": "622633",
+          "versionTitle": "BANANA",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1005384",
+      "title": "Through the night",
+      "artist": "KinKi Kids",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1005384",
+      "variants": [
+        {
+          "id": "joysound-1005384-622632",
+          "songNumber": "622632",
+          "versionTitle": "Through the night",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1005385",
+      "title": "Insomnia",
+      "artist": "KinKi Kids",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1005385",
+      "variants": [
+        {
+          "id": "joysound-1005385-622631",
+          "songNumber": "622631",
+          "versionTitle": "Insomnia",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1005386",
+      "title": "ローズマリー",
+      "artist": "KinKi Kids",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1005386",
+      "variants": [
+        {
+          "id": "joysound-1005386-622630",
+          "songNumber": "622630",
+          "versionTitle": "ローズマリー",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1005387",
+      "title": "無重力みたいな愛",
+      "artist": "KinKi Kids",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1005387",
+      "variants": [
+        {
+          "id": "joysound-1005387-622629",
+          "songNumber": "622629",
+          "versionTitle": "無重力みたいな愛",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1005388",
+      "title": "明日のピース",
+      "artist": "KinKi Kids",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1005388",
+      "variants": [
+        {
+          "id": "joysound-1005388-622628",
+          "songNumber": "622628",
+          "versionTitle": "明日のピース",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1005389",
+      "title": "FREAKY FUNKY NIGHT",
+      "artist": "KinKi Kids",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1005389",
+      "variants": [
+        {
+          "id": "joysound-1005389-622627",
+          "songNumber": "622627",
+          "versionTitle": "FREAKY FUNKY NIGHT",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1005402",
+      "title": "Before Dawn",
+      "artist": "KinKi Kids",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1005402",
+      "variants": [
+        {
+          "id": "joysound-1005402-622626",
+          "songNumber": "622626",
+          "versionTitle": "Before Dawn",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1005403",
+      "title": "One of a kind",
+      "artist": "KinKi Kids",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1005403",
+      "variants": [
+        {
+          "id": "joysound-1005403-622625",
+          "songNumber": "622625",
+          "versionTitle": "One of a kind",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10057",
+      "title": "1985",
+      "artist": "THE BLUE HEARTS",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10057",
+      "variants": [
+        {
+          "id": "joysound-10057-10060",
+          "songNumber": "10060",
+          "versionTitle": "1985",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1005739",
+      "title": "Sweet Igloo",
+      "artist": "Aimer",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1005739",
+      "variants": [
+        {
+          "id": "joysound-1005739-622582",
+          "songNumber": "622582",
+          "versionTitle": "Sweet Igloo",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1005965",
+      "title": "北ウイング-CLASSIC-",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1005965",
+      "variants": [
+        {
+          "id": "joysound-1005965-623747",
+          "songNumber": "623747",
+          "versionTitle": "北ウイング-CLASSIC-",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10060",
+      "title": "Heavenly kiss",
+      "artist": "Mr.Children",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10060",
+      "variants": [
+        {
+          "id": "joysound-10060-10063",
+          "songNumber": "10063",
+          "versionTitle": "Heavenly kiss",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-10060-902659",
+          "songNumber": "902659",
+          "versionTitle": "Heavenly kiss《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1006222",
+      "title": "HEROINE",
+      "artist": "いきものがかり",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1006222",
+      "variants": [
+        {
+          "id": "joysound-1006222-622661",
+          "songNumber": "622661",
+          "versionTitle": "HEROINE",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1006223",
+      "title": "やさしく、さよなら",
+      "artist": "いきものがかり",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1006223",
+      "variants": [
+        {
+          "id": "joysound-1006223-622660",
+          "songNumber": "622660",
+          "versionTitle": "やさしく、さよなら",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1006224",
+      "title": "喝采",
+      "artist": "いきものがかり",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1006224",
+      "variants": [
+        {
+          "id": "joysound-1006224-622659",
+          "songNumber": "622659",
+          "versionTitle": "喝采",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1006226",
+      "title": "YUKIMANIA",
+      "artist": "いきものがかり",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1006226",
+      "variants": [
+        {
+          "id": "joysound-1006226-622658",
+          "songNumber": "622658",
+          "versionTitle": "YUKIMANIA",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1006227",
+      "title": "○",
+      "artist": "いきものがかり",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1006227",
+      "variants": [
+        {
+          "id": "joysound-1006227-622657",
+          "songNumber": "622657",
+          "versionTitle": "○",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1006475",
+      "title": "光の跡",
+      "artist": "星野源",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1006475",
+      "variants": [
+        {
+          "id": "joysound-1006475-717732",
+          "songNumber": "717732",
+          "versionTitle": "光の跡《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1006475-622966",
+          "songNumber": "622966",
+          "versionTitle": "光の跡",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1006475-349476",
+          "songNumber": "349476",
+          "versionTitle": "光の跡《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1006475-980547",
+          "songNumber": "980547",
+          "versionTitle": "光の跡《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1006476",
+      "title": "The Brave",
+      "artist": "YOASOBI",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1006476",
+      "variants": [
+        {
+          "id": "joysound-1006476-622624",
+          "songNumber": "622624",
+          "versionTitle": "The Brave",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1006699",
+      "title": "LOVE TRIGGER",
+      "artist": "Snow Man",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1006699",
+      "variants": [
+        {
+          "id": "joysound-1006699-717735",
+          "songNumber": "717735",
+          "versionTitle": "LOVE TRIGGER《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1006699-624052",
+          "songNumber": "624052",
+          "versionTitle": "LOVE TRIGGER",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1006765",
+      "title": "夜の歯車",
+      "artist": "なとり",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1006765",
+      "variants": [
+        {
+          "id": "joysound-1006765-622847",
+          "songNumber": "622847",
+          "versionTitle": "夜の歯車",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1006766",
+      "title": "ラブソング",
+      "artist": "なとり",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1006766",
+      "variants": [
+        {
+          "id": "joysound-1006766-622846",
+          "songNumber": "622846",
+          "versionTitle": "ラブソング",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1006886",
+      "title": "NEXT",
+      "artist": "Snow Man",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1006886",
+      "variants": [
+        {
+          "id": "joysound-1006886-624631",
+          "songNumber": "624631",
+          "versionTitle": "NEXT",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1007132",
+      "title": "お願いサンタクロース",
+      "artist": "コレサワ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1007132",
+      "variants": [
+        {
+          "id": "joysound-1007132-623237",
+          "songNumber": "623237",
+          "versionTitle": "お願いサンタクロース",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100724",
+      "title": "Dear my teacher",
+      "artist": "AKB48",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100724",
+      "variants": [
+        {
+          "id": "joysound-100724-162006",
+          "songNumber": "162006",
+          "versionTitle": "Dear my teacher",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100725",
+      "title": "未来の扉",
+      "artist": "AKB48",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100725",
+      "variants": [
+        {
+          "id": "joysound-100725-162011",
+          "songNumber": "162011",
+          "versionTitle": "未来の扉",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1007448",
+      "title": "Biri-Biri",
+      "artist": "YOASOBI",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1007448",
+      "variants": [
+        {
+          "id": "joysound-1007448-622671",
+          "songNumber": "622671",
+          "versionTitle": "Biri-Biri",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1007448-349459",
+          "songNumber": "349459",
+          "versionTitle": "Biri-Biri《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1007449",
+      "title": "Biri-Biri (English Version)",
+      "artist": "YOASOBI",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1007449",
+      "variants": [
+        {
+          "id": "joysound-1007449-622670",
+          "songNumber": "622670",
+          "versionTitle": "Biri-Biri (English Version)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1007479",
+      "title": "世界中を I LOVE YOU",
+      "artist": "KinKi Kids",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1007479",
+      "variants": [
+        {
+          "id": "joysound-1007479-622989",
+          "songNumber": "622989",
+          "versionTitle": "世界中を I LOVE YOU",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1007480",
+      "title": "消えないトーチライト",
+      "artist": "KinKi Kids",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1007480",
+      "variants": [
+        {
+          "id": "joysound-1007480-622988",
+          "songNumber": "622988",
+          "versionTitle": "消えないトーチライト",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1007481",
+      "title": "Precious Life",
+      "artist": "KinKi Kids",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1007481",
+      "variants": [
+        {
+          "id": "joysound-1007481-622987",
+          "songNumber": "622987",
+          "versionTitle": "Precious Life",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1007482",
+      "title": "Midway of Life",
+      "artist": "KinKi Kids",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1007482",
+      "variants": [
+        {
+          "id": "joysound-1007482-622986",
+          "songNumber": "622986",
+          "versionTitle": "Midway of Life",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1007529",
+      "title": "へっぽこまん rearrange ver.",
+      "artist": "Saucy Dog",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1007529",
+      "variants": [
+        {
+          "id": "joysound-1007529-622590",
+          "songNumber": "622590",
+          "versionTitle": "へっぽこまん rearrange ver.",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100753",
+      "title": "投げキッスで撃ち落とせ!",
+      "artist": "AKB48",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100753",
+      "variants": [
+        {
+          "id": "joysound-100753-162037",
+          "songNumber": "162037",
+          "versionTitle": "投げキッスで撃ち落とせ!",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1007530",
+      "title": "煙草とコーヒー",
+      "artist": "Saucy Dog",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1007530",
+      "variants": [
+        {
+          "id": "joysound-1007530-622589",
+          "songNumber": "622589",
+          "versionTitle": "煙草とコーヒー",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1007531",
+      "title": "寝ぐせ",
+      "artist": "Saucy Dog",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1007531",
+      "variants": [
+        {
+          "id": "joysound-1007531-622588",
+          "songNumber": "622588",
+          "versionTitle": "寝ぐせ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1007532",
+      "title": "いつもの帰り道",
+      "artist": "Saucy Dog",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1007532",
+      "variants": [
+        {
+          "id": "joysound-1007532-622587",
+          "songNumber": "622587",
+          "versionTitle": "いつもの帰り道",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1007533",
+      "title": "ころもがえ",
+      "artist": "Saucy Dog",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1007533",
+      "variants": [
+        {
+          "id": "joysound-1007533-622586",
+          "songNumber": "622586",
+          "versionTitle": "ころもがえ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100755",
+      "title": "PARTYが始まるよ",
+      "artist": "AKB48",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100755",
+      "variants": [
+        {
+          "id": "joysound-100755-162039",
+          "songNumber": "162039",
+          "versionTitle": "PARTYが始まるよ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100756",
+      "title": "Virgin love",
+      "artist": "AKB48",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100756",
+      "variants": [
+        {
+          "id": "joysound-100756-162040",
+          "songNumber": "162040",
+          "versionTitle": "Virgin love",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100757",
+      "title": "気になる転校生",
+      "artist": "AKB48",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100757",
+      "variants": [
+        {
+          "id": "joysound-100757-162041",
+          "songNumber": "162041",
+          "versionTitle": "気になる転校生",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1007619",
+      "title": "旅にでも出よっか",
+      "artist": "キタニタツヤ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1007619",
+      "variants": [
+        {
+          "id": "joysound-1007619-623304",
+          "songNumber": "623304",
+          "versionTitle": "旅にでも出よっか",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1007957",
+      "title": "CHAMELEON",
+      "artist": "King Gnu",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1007957",
+      "variants": [
+        {
+          "id": "joysound-1007957-641618",
+          "songNumber": "641618",
+          "versionTitle": "CHAMELEON",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1008151",
+      "title": "ナイトルーティーン (cover)",
+      "artist": "キタニタツヤ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1008151",
+      "variants": [
+        {
+          "id": "joysound-1008151-623303",
+          "songNumber": "623303",
+          "versionTitle": "ナイトルーティーン (cover)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100847",
+      "title": "Only you",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100847",
+      "variants": [
+        {
+          "id": "joysound-100847-56849",
+          "songNumber": "56849",
+          "versionTitle": "Only you",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100848",
+      "title": "夜の華",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100848",
+      "variants": [
+        {
+          "id": "joysound-100848-56850",
+          "songNumber": "56850",
+          "versionTitle": "夜の華",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100882",
+      "title": "オーバーラップワルツ",
+      "artist": "MONGOL800",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100882",
+      "variants": [
+        {
+          "id": "joysound-100882-83830",
+          "songNumber": "83830",
+          "versionTitle": "オーバーラップワルツ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1008849",
+      "title": "無礼者たちへ",
+      "artist": "福山雅治",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1008849",
+      "variants": [
+        {
+          "id": "joysound-1008849-623822",
+          "songNumber": "623822",
+          "versionTitle": "無礼者たちへ",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1008849-349636",
+          "songNumber": "349636",
+          "versionTitle": "無礼者たちへ《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100889",
+      "title": "蜃気楼〈'06.1.28 live ver.at 三郷市文化会館〉",
+      "artist": "レミオロメン",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100889",
+      "variants": [
+        {
+          "id": "joysound-100889-56851",
+          "songNumber": "56851",
+          "versionTitle": "蜃気楼〈'06.1.28 live ver.at 三郷市文化会館〉",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1008890",
+      "title": "「ドライブ デート 都内」",
+      "artist": "=LOVE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1008890",
+      "variants": [
+        {
+          "id": "joysound-1008890-622860",
+          "songNumber": "622860",
+          "versionTitle": "「ドライブ デート 都内」",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100902",
+      "title": "もどり雨",
+      "artist": "嵐",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100902",
+      "variants": [
+        {
+          "id": "joysound-100902-24521",
+          "songNumber": "24521",
+          "versionTitle": "もどり雨",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100903",
+      "title": "鼓動",
+      "artist": "GLAY",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100903",
+      "variants": [
+        {
+          "id": "joysound-100903-24520",
+          "songNumber": "24520",
+          "versionTitle": "鼓動",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-100903-905132",
+          "songNumber": "905132",
+          "versionTitle": "鼓動《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1009142",
+      "title": "[サビカラ]洗濯機と君とラヂオ",
+      "artist": "マカロニえんぴつ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1009142",
+      "variants": [
+        {
+          "id": "joysound-1009142-622775",
+          "songNumber": "622775",
+          "versionTitle": "[サビカラ]洗濯機と君とラヂオ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1009143",
+      "title": "[サビカラ]勇者",
+      "artist": "YOASOBI",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1009143",
+      "variants": [
+        {
+          "id": "joysound-1009143-622774",
+          "songNumber": "622774",
+          "versionTitle": "[サビカラ]勇者",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1009145",
+      "title": "[サビカラ]最高到達点",
+      "artist": "SEKAI NO OWARI",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1009145",
+      "variants": [
+        {
+          "id": "joysound-1009145-622772",
+          "songNumber": "622772",
+          "versionTitle": "[サビカラ]最高到達点",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1009146",
+      "title": "[サビカラ]ANTENNA",
+      "artist": "Mrs. GREEN APPLE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1009146",
+      "variants": [
+        {
+          "id": "joysound-1009146-622771",
+          "songNumber": "622771",
+          "versionTitle": "[サビカラ]ANTENNA",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1009148",
+      "title": "[サビカラ]恋風邪にのせて",
+      "artist": "Vaundy",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1009148",
+      "variants": [
+        {
+          "id": "joysound-1009148-622769",
+          "songNumber": "622769",
+          "versionTitle": "[サビカラ]恋風邪にのせて",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1009149",
+      "title": "[サビカラ]カメレオン",
+      "artist": "King Gnu",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1009149",
+      "variants": [
+        {
+          "id": "joysound-1009149-622768",
+          "songNumber": "622768",
+          "versionTitle": "[サビカラ]カメレオン",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1009152",
+      "title": "[サビカラ]花束",
+      "artist": "back number",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1009152",
+      "variants": [
+        {
+          "id": "joysound-1009152-622765",
+          "songNumber": "622765",
+          "versionTitle": "[サビカラ]花束",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1009160",
+      "title": "[サビカラ]北ウイング",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1009160",
+      "variants": [
+        {
+          "id": "joysound-1009160-622757",
+          "songNumber": "622757",
+          "versionTitle": "[サビカラ]北ウイング",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-100931",
+      "title": "涙の流れ星",
+      "artist": "嵐",
+      "sourceUrl": "https://www.joysound.com/web/search/song/100931",
+      "variants": [
+        {
+          "id": "joysound-100931-24524",
+          "songNumber": "24524",
+          "versionTitle": "涙の流れ星",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1009312",
+      "title": "ピースサイン",
+      "artist": "M!LK",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1009312",
+      "variants": [
+        {
+          "id": "joysound-1009312-623363",
+          "songNumber": "623363",
+          "versionTitle": "ピースサイン",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1009459",
+      "title": "唱 (Jax Jones Remix)",
+      "artist": "Ado",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1009459",
+      "variants": [
+        {
+          "id": "joysound-1009459-717736",
+          "songNumber": "717736",
+          "versionTitle": "唱 (Jax Jones Remix)《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1009459-623744",
+          "songNumber": "623744",
+          "versionTitle": "唱 (Jax Jones Remix)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1009540",
+      "title": "狂想カタストロフィ",
+      "artist": "=LOVE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1009540",
+      "variants": [
+        {
+          "id": "joysound-1009540-623047",
+          "songNumber": "623047",
+          "versionTitle": "狂想カタストロフィ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1009541",
+      "title": "どこが好きか言って",
+      "artist": "=LOVE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1009541",
+      "variants": [
+        {
+          "id": "joysound-1009541-623046",
+          "songNumber": "623046",
+          "versionTitle": "どこが好きか言って",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1009891",
+      "title": "800",
+      "artist": "Aimer",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1009891",
+      "variants": [
+        {
+          "id": "joysound-1009891-625669",
+          "songNumber": "625669",
+          "versionTitle": "800",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1009891-980612",
+          "songNumber": "980612",
+          "versionTitle": "800《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1010649",
+      "title": "おともだち",
+      "artist": "星野源",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1010649",
+      "variants": [
+        {
+          "id": "joysound-1010649-623032",
+          "songNumber": "623032",
+          "versionTitle": "おともだち",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1010723",
+      "title": "谺する",
+      "artist": "菅田将暉",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1010723",
+      "variants": [
+        {
+          "id": "joysound-1010723-624547",
+          "songNumber": "624547",
+          "versionTitle": "谺する",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1011193",
+      "title": "HEART BEAT",
+      "artist": "YOASOBI",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1011193",
+      "variants": [
+        {
+          "id": "joysound-1011193-717722",
+          "songNumber": "717722",
+          "versionTitle": "HEART BEAT《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1011193-623551",
+          "songNumber": "623551",
+          "versionTitle": "HEART BEAT",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1011193-349638",
+          "songNumber": "349638",
+          "versionTitle": "HEART BEAT《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-101142",
+      "title": "Seashore",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/101142",
+      "variants": [
+        {
+          "id": "joysound-101142-56874",
+          "songNumber": "56874",
+          "versionTitle": "Seashore",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1011942",
+      "title": "Weekend",
+      "artist": "M!LK",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1011942",
+      "variants": [
+        {
+          "id": "joysound-1011942-623362",
+          "songNumber": "623362",
+          "versionTitle": "Weekend",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-101218",
+      "title": "ルキンフォー",
+      "artist": "スピッツ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/101218",
+      "variants": [
+        {
+          "id": "joysound-101218-180402",
+          "songNumber": "180402",
+          "versionTitle": "ルキンフォー《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-101218-24528",
+          "songNumber": "24528",
+          "versionTitle": "ルキンフォー",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-101218-905135",
+          "songNumber": "905135",
+          "versionTitle": "ルキンフォー《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1012303",
+      "title": "Electricity",
+      "artist": "宇多田ヒカル",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1012303",
+      "variants": [
+        {
+          "id": "joysound-1012303-625639",
+          "songNumber": "625639",
+          "versionTitle": "Electricity",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1012309",
+      "title": "会心ノ一撃",
+      "artist": "GLAY",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1012309",
+      "variants": [
+        {
+          "id": "joysound-1012309-630033",
+          "songNumber": "630033",
+          "versionTitle": "会心ノ一撃",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1012309-980750",
+          "songNumber": "980750",
+          "versionTitle": "会心ノ一撃《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1012349",
+      "title": "カラコンウインク",
+      "artist": "AKB48",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1012349",
+      "variants": [
+        {
+          "id": "joysound-1012349-717813",
+          "songNumber": "717813",
+          "versionTitle": "カラコンウインク《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1012349-625401",
+          "songNumber": "625401",
+          "versionTitle": "カラコンウインク",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10125",
+      "title": "ラヴレター",
+      "artist": "DREAMS COME TRUE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10125",
+      "variants": [
+        {
+          "id": "joysound-10125-10128",
+          "songNumber": "10128",
+          "versionTitle": "ラヴレター",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1013",
+      "title": "SOLITUDE",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1013",
+      "variants": [
+        {
+          "id": "joysound-1013-1013",
+          "songNumber": "1013",
+          "versionTitle": "SOLITUDE",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-101303",
+      "title": "オロオロ",
+      "artist": "松山千春",
+      "sourceUrl": "https://www.joysound.com/web/search/song/101303",
+      "variants": [
+        {
+          "id": "joysound-101303-162319",
+          "songNumber": "162319",
+          "versionTitle": "オロオロ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-101330",
+      "title": "ラクガキ王国",
+      "artist": "スピッツ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/101330",
+      "variants": [
+        {
+          "id": "joysound-101330-24557",
+          "songNumber": "24557",
+          "versionTitle": "ラクガキ王国",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-101341",
+      "title": "東京にもあったんだ",
+      "artist": "福山雅治",
+      "sourceUrl": "https://www.joysound.com/web/search/song/101341",
+      "variants": [
+        {
+          "id": "joysound-101341-327564",
+          "songNumber": "327564",
+          "versionTitle": "東京にもあったんだ《生演奏》",
+          "versionType": "other",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-101341-24565",
+          "songNumber": "24565",
+          "versionTitle": "東京にもあったんだ",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-101341-189123",
+          "songNumber": "189123",
+          "versionTitle": "東京にもあったんだ《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-101341-905144",
+          "songNumber": "905144",
+          "versionTitle": "東京にもあったんだ《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-101342",
+      "title": "無敵のキミ",
+      "artist": "福山雅治",
+      "sourceUrl": "https://www.joysound.com/web/search/song/101342",
+      "variants": [
+        {
+          "id": "joysound-101342-327694",
+          "songNumber": "327694",
+          "versionTitle": "無敵のキミ《生演奏》",
+          "versionType": "other",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-101342-24566",
+          "songNumber": "24566",
+          "versionTitle": "無敵のキミ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-101374",
+      "title": "HIGH G.K LOW ～ハジケロ～",
+      "artist": "GReeeeN",
+      "sourceUrl": "https://www.joysound.com/web/search/song/101374",
+      "variants": [
+        {
+          "id": "joysound-101374-180193",
+          "songNumber": "180193",
+          "versionTitle": "HIGH G.K LOW ～ハジケロ～《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-101374-162095",
+          "songNumber": "162095",
+          "versionTitle": "HIGH G.K LOW ～ハジケロ～",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-101411",
+      "title": "鼓動",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/101411",
+      "variants": [
+        {
+          "id": "joysound-101411-56912",
+          "songNumber": "56912",
+          "versionTitle": "鼓動",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10151",
+      "title": "未来を旅するハーモニー 〈DCT VERSION〉",
+      "artist": "DREAMS COME TRUE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10151",
+      "variants": [
+        {
+          "id": "joysound-10151-10154",
+          "songNumber": "10154",
+          "versionTitle": "未来を旅するハーモニー 〈DCT VERSION〉",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1015214",
+      "title": "[サビカラ]Biri-Biri",
+      "artist": "YOASOBI",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1015214",
+      "variants": [
+        {
+          "id": "joysound-1015214-623511",
+          "songNumber": "623511",
+          "versionTitle": "[サビカラ]Biri-Biri",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1015221",
+      "title": "[サビカラ]愛を伝えたいだとか",
+      "artist": "あいみょん",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1015221",
+      "variants": [
+        {
+          "id": "joysound-1015221-623518",
+          "songNumber": "623518",
+          "versionTitle": "[サビカラ]愛を伝えたいだとか",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1015231",
+      "title": "[サビカラ]空も飛べるはず",
+      "artist": "スピッツ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1015231",
+      "variants": [
+        {
+          "id": "joysound-1015231-623528",
+          "songNumber": "623528",
+          "versionTitle": "[サビカラ]空も飛べるはず",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10153",
+      "title": "黄昏ロマンス",
+      "artist": "ポルノグラフィティ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10153",
+      "variants": [
+        {
+          "id": "joysound-10153-10156",
+          "songNumber": "10156",
+          "versionTitle": "黄昏ロマンス",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-10153-902682",
+          "songNumber": "902682",
+          "versionTitle": "黄昏ロマンス《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1015429",
+      "title": "この長い旅の中で",
+      "artist": "Saucy Dog",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1015429",
+      "variants": [
+        {
+          "id": "joysound-1015429-624628",
+          "songNumber": "624628",
+          "versionTitle": "この長い旅の中で",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1015429-349688",
+          "songNumber": "349688",
+          "versionTitle": "この長い旅の中で《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1015429-980595",
+          "songNumber": "980595",
+          "versionTitle": "この長い旅の中で《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1015439",
+      "title": "何色でもない花",
+      "artist": "宇多田ヒカル",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1015439",
+      "variants": [
+        {
+          "id": "joysound-1015439-624486",
+          "songNumber": "624486",
+          "versionTitle": "何色でもない花",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1015439-349599",
+          "songNumber": "349599",
+          "versionTitle": "何色でもない花《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1015577",
+      "title": "Hello Signals",
+      "artist": "Ado",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1015577",
+      "variants": [
+        {
+          "id": "joysound-1015577-636331",
+          "songNumber": "636331",
+          "versionTitle": "Hello Signals",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1015577-980849",
+          "songNumber": "980849",
+          "versionTitle": "Hello Signals《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1016188",
+      "title": "Challenger",
+      "artist": "いきものがかり",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1016188",
+      "variants": [
+        {
+          "id": "joysound-1016188-628597",
+          "songNumber": "628597",
+          "versionTitle": "Challenger",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1016405",
+      "title": "Shouted Serenade",
+      "artist": "LiSA",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1016405",
+      "variants": [
+        {
+          "id": "joysound-1016405-625918",
+          "songNumber": "625918",
+          "versionTitle": "Shouted Serenade",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1016405-349717",
+          "songNumber": "349717",
+          "versionTitle": "Shouted Serenade《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1016405-980651",
+          "songNumber": "980651",
+          "versionTitle": "Shouted Serenade《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1016459",
+      "title": "YELL",
+      "artist": "ゆず",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1016459",
+      "variants": [
+        {
+          "id": "joysound-1016459-637488",
+          "songNumber": "637488",
+          "versionTitle": "YELL",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1016818",
+      "title": "ショコラカタブラ",
+      "artist": "Ado",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1016818",
+      "variants": [
+        {
+          "id": "joysound-1016818-717766",
+          "songNumber": "717766",
+          "versionTitle": "ショコラカタブラ《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1016818-623811",
+          "songNumber": "623811",
+          "versionTitle": "ショコラカタブラ",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1016818-349651",
+          "songNumber": "349651",
+          "versionTitle": "ショコラカタブラ《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1016860",
+      "title": "オレンジ (Live)",
+      "artist": "川崎鷹也",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1016860",
+      "variants": [
+        {
+          "id": "joysound-1016860-623995",
+          "songNumber": "623995",
+          "versionTitle": "オレンジ (Live)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1016861",
+      "title": "愛の歌 (Live)",
+      "artist": "川崎鷹也",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1016861",
+      "variants": [
+        {
+          "id": "joysound-1016861-623970",
+          "songNumber": "623970",
+          "versionTitle": "愛の歌 (Live)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1016862",
+      "title": "カレンダー (Live)",
+      "artist": "川崎鷹也",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1016862",
+      "variants": [
+        {
+          "id": "joysound-1016862-623969",
+          "songNumber": "623969",
+          "versionTitle": "カレンダー (Live)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1016863",
+      "title": "魔法の絨毯 (Live)",
+      "artist": "川崎鷹也",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1016863",
+      "variants": [
+        {
+          "id": "joysound-1016863-623899",
+          "songNumber": "623899",
+          "versionTitle": "魔法の絨毯 (Live)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1016864",
+      "title": "君の為のキミノウタ (Live)",
+      "artist": "川崎鷹也",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1016864",
+      "variants": [
+        {
+          "id": "joysound-1016864-623898",
+          "songNumber": "623898",
+          "versionTitle": "君の為のキミノウタ (Live)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1016865",
+      "title": "ほろ酔いラブソング (Live)",
+      "artist": "川崎鷹也",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1016865",
+      "variants": [
+        {
+          "id": "joysound-1016865-623994",
+          "songNumber": "623994",
+          "versionTitle": "ほろ酔いラブソング (Live)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1017137",
+      "title": "光の粒",
+      "artist": "コブクロ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1017137",
+      "variants": [
+        {
+          "id": "joysound-1017137-625789",
+          "songNumber": "625789",
+          "versionTitle": "光の粒",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1017991",
+      "title": "ひとみ",
+      "artist": "福山雅治",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1017991",
+      "variants": [
+        {
+          "id": "joysound-1017991-625015",
+          "songNumber": "625015",
+          "versionTitle": "ひとみ",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1017991-349673",
+          "songNumber": "349673",
+          "versionTitle": "ひとみ《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1017991-980599",
+          "songNumber": "980599",
+          "versionTitle": "ひとみ《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1018142",
+      "title": "解放区",
+      "artist": "ポルノグラフィティ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1018142",
+      "variants": [
+        {
+          "id": "joysound-1018142-717848",
+          "songNumber": "717848",
+          "versionTitle": "解放区《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1018142-625192",
+          "songNumber": "625192",
+          "versionTitle": "解放区",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1018142-349709",
+          "songNumber": "349709",
+          "versionTitle": "解放区《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1018142-980600",
+          "songNumber": "980600",
+          "versionTitle": "解放区《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1018145",
+      "title": "OLD VILLAGER",
+      "artist": "ポルノグラフィティ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1018145",
+      "variants": [
+        {
+          "id": "joysound-1018145-624921",
+          "songNumber": "624921",
+          "versionTitle": "OLD VILLAGER",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1018664",
+      "title": "リズム64",
+      "artist": "あいみょん",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1018664",
+      "variants": [
+        {
+          "id": "joysound-1018664-624054",
+          "songNumber": "624054",
+          "versionTitle": "リズム64",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1018664-349668",
+          "songNumber": "349668",
+          "versionTitle": "リズム64《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1018664-980586",
+          "songNumber": "980586",
+          "versionTitle": "リズム64《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1019",
+      "title": "I MISSED “THE SHOCK”",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1019",
+      "variants": [
+        {
+          "id": "joysound-1019-1019",
+          "songNumber": "1019",
+          "versionTitle": "I MISSED “THE SHOCK”",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1019206",
+      "title": "ボルテッカー (Jewel Remix)",
+      "artist": "DECO*27",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1019206",
+      "variants": [
+        {
+          "id": "joysound-1019206-821018",
+          "songNumber": "821018",
+          "versionTitle": "ボルテッカー (Jewel Remix)《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1019206-624142",
+          "songNumber": "624142",
+          "versionTitle": "ボルテッカー (Jewel Remix)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1019690",
+      "title": "別れ話 (2024 ver.)",
+      "artist": "ヤングスキニー",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1019690",
+      "variants": [
+        {
+          "id": "joysound-1019690-624749",
+          "songNumber": "624749",
+          "versionTitle": "別れ話 (2024 ver.)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10199",
+      "title": "冬の口笛",
+      "artist": "スキマスイッチ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10199",
+      "variants": [
+        {
+          "id": "joysound-10199-10203",
+          "songNumber": "10203",
+          "versionTitle": "冬の口笛",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1020058",
+      "title": "poi",
+      "artist": "Saucy Dog",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1020058",
+      "variants": [
+        {
+          "id": "joysound-1020058-625972",
+          "songNumber": "625972",
+          "versionTitle": "poi",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1020058-980623",
+          "songNumber": "980623",
+          "versionTitle": "poi《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1020059",
+      "title": "コーンポタージュ",
+      "artist": "Saucy Dog",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1020059",
+      "variants": [
+        {
+          "id": "joysound-1020059-632641",
+          "songNumber": "632641",
+          "versionTitle": "コーンポタージュ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1020070",
+      "title": "正解 (混声三部合唱)",
+      "artist": "RADWIMPS",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1020070",
+      "variants": [
+        {
+          "id": "joysound-1020070-624904",
+          "songNumber": "624904",
+          "versionTitle": "正解 (混声三部合唱)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1020071",
+      "title": "正解 (女声三部合唱)",
+      "artist": "RADWIMPS",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1020071",
+      "variants": [
+        {
+          "id": "joysound-1020071-624903",
+          "songNumber": "624903",
+          "versionTitle": "正解 (女声三部合唱)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1020120",
+      "title": "Stardust Memory",
+      "artist": "川崎鷹也",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1020120",
+      "variants": [
+        {
+          "id": "joysound-1020120-625503",
+          "songNumber": "625503",
+          "versionTitle": "Stardust Memory",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1020465",
+      "title": "記憶の旅人",
+      "artist": "Mr.Children",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1020465",
+      "variants": [
+        {
+          "id": "joysound-1020465-627402",
+          "songNumber": "627402",
+          "versionTitle": "記憶の旅人",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1020465-349768",
+          "songNumber": "349768",
+          "versionTitle": "記憶の旅人《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1020465-980632",
+          "songNumber": "980632",
+          "versionTitle": "記憶の旅人《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1020715",
+      "title": "ココロありがとう (ビリー・バンバン カバー)",
+      "artist": "Vaundy",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1020715",
+      "variants": [
+        {
+          "id": "joysound-1020715-624879",
+          "songNumber": "624879",
+          "versionTitle": "ココロありがとう (ビリー・バンバン カバー)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1020891",
+      "title": "死ぬまでに俺がやりたいこと",
+      "artist": "ヤングスキニー",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1020891",
+      "variants": [
+        {
+          "id": "joysound-1020891-630526",
+          "songNumber": "630526",
+          "versionTitle": "死ぬまでに俺がやりたいこと",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1020892",
+      "title": "ベランダ feat. 戦慄かなの - maeshima soshi Remix",
+      "artist": "ヤングスキニー",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1020892",
+      "variants": [
+        {
+          "id": "joysound-1020892-631472",
+          "songNumber": "631472",
+          "versionTitle": "ベランダ feat. 戦慄かなの - maeshima soshi Remix",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10209",
+      "title": "オリオンの炎",
+      "artist": "徳永英明",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10209",
+      "variants": [
+        {
+          "id": "joysound-10209-10213",
+          "songNumber": "10213",
+          "versionTitle": "オリオンの炎",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1020967",
+      "title": "[サビカラ]SOULSOUP",
+      "artist": "Official髭男dism",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1020967",
+      "variants": [
+        {
+          "id": "joysound-1020967-624498",
+          "songNumber": "624498",
+          "versionTitle": "[サビカラ]SOULSOUP",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1020969",
+      "title": "[サビカラ]KICK BACK",
+      "artist": "米津玄師",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1020969",
+      "variants": [
+        {
+          "id": "joysound-1020969-624500",
+          "songNumber": "624500",
+          "versionTitle": "[サビカラ]KICK BACK",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1020975",
+      "title": "[サビカラ]卒業写真",
+      "artist": "松任谷由実",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1020975",
+      "variants": [
+        {
+          "id": "joysound-1020975-624506",
+          "songNumber": "624506",
+          "versionTitle": "[サビカラ]卒業写真",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1020977",
+      "title": "[サビカラ]Automatic",
+      "artist": "宇多田ヒカル",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1020977",
+      "variants": [
+        {
+          "id": "joysound-1020977-624508",
+          "songNumber": "624508",
+          "versionTitle": "[サビカラ]Automatic",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1020983",
+      "title": "[サビカラ]いとしのエリー",
+      "artist": "サザンオールスターズ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1020983",
+      "variants": [
+        {
+          "id": "joysound-1020983-624514",
+          "songNumber": "624514",
+          "versionTitle": "[サビカラ]いとしのエリー",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1021068",
+      "title": "デートの前の夜に",
+      "artist": "コレサワ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1021068",
+      "variants": [
+        {
+          "id": "joysound-1021068-627170",
+          "songNumber": "627170",
+          "versionTitle": "デートの前の夜に",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1021069",
+      "title": "この日々を",
+      "artist": "コレサワ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1021069",
+      "variants": [
+        {
+          "id": "joysound-1021069-627169",
+          "songNumber": "627169",
+          "versionTitle": "この日々を",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-102140",
+      "title": "僕の時計",
+      "artist": "徳永英明",
+      "sourceUrl": "https://www.joysound.com/web/search/song/102140",
+      "variants": [
+        {
+          "id": "joysound-102140-56953",
+          "songNumber": "56953",
+          "versionTitle": "僕の時計",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1021469",
+      "title": "君と未来を",
+      "artist": "HY",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1021469",
+      "variants": [
+        {
+          "id": "joysound-1021469-624623",
+          "songNumber": "624623",
+          "versionTitle": "君と未来を",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1021611",
+      "title": "ルーキー",
+      "artist": "DECO*27",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1021611",
+      "variants": [
+        {
+          "id": "joysound-1021611-717838",
+          "songNumber": "717838",
+          "versionTitle": "ルーキー《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1021611-624785",
+          "songNumber": "624785",
+          "versionTitle": "ルーキー",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1021639",
+      "title": "十字星",
+      "artist": "ゆず",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1021639",
+      "variants": [
+        {
+          "id": "joysound-1021639-628976",
+          "songNumber": "628976",
+          "versionTitle": "十字星",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1021668",
+      "title": "月へ行こう",
+      "artist": "マカロニえんぴつ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1021668",
+      "variants": [
+        {
+          "id": "joysound-1021668-717840",
+          "songNumber": "717840",
+          "versionTitle": "月へ行こう《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1021668-624936",
+          "songNumber": "624936",
+          "versionTitle": "月へ行こう",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1021682",
+      "title": "poole",
+      "artist": "マカロニえんぴつ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1021682",
+      "variants": [
+        {
+          "id": "joysound-1021682-627018",
+          "songNumber": "627018",
+          "versionTitle": "poole",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-102174",
+      "title": "SEVENTH HEAVEN",
+      "artist": "L'Arc-en-Ciel",
+      "sourceUrl": "https://www.joysound.com/web/search/song/102174",
+      "variants": [
+        {
+          "id": "joysound-102174-190253",
+          "songNumber": "190253",
+          "versionTitle": "SEVENTH HEAVEN《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-102174-24577",
+          "songNumber": "24577",
+          "versionTitle": "SEVENTH HEAVEN",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-102174-189124",
+          "songNumber": "189124",
+          "versionTitle": "SEVENTH HEAVEN《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-102174-905149",
+          "songNumber": "905149",
+          "versionTitle": "SEVENTH HEAVEN《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1022119",
+      "title": "THIS IS IT! YOU'RE THE ONE! I KNEW IT! うれしい!たのしい!大好き! ～ODYSSEY Version～",
+      "artist": "DREAMS COME TRUE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1022119",
+      "variants": [
+        {
+          "id": "joysound-1022119-625448",
+          "songNumber": "625448",
+          "versionTitle": "THIS IS IT! YOU'RE THE ONE! I KNEW IT! うれしい!たのしい!大好き! ～ODYSSEY Version～",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-102231",
+      "title": "ファイトソング",
+      "artist": "嵐",
+      "sourceUrl": "https://www.joysound.com/web/search/song/102231",
+      "variants": [
+        {
+          "id": "joysound-102231-56964",
+          "songNumber": "56964",
+          "versionTitle": "ファイトソング",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-102239",
+      "title": "道〈Piano Version〉",
+      "artist": "EXILE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/102239",
+      "variants": [
+        {
+          "id": "joysound-102239-162546",
+          "songNumber": "162546",
+          "versionTitle": "道〈Piano Version〉",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10224",
+      "title": "LONELY WOMAN",
+      "artist": "サザンオールスターズ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10224",
+      "variants": [
+        {
+          "id": "joysound-10224-10228",
+          "songNumber": "10228",
+          "versionTitle": "LONELY WOMAN",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-10224-902700",
+          "songNumber": "902700",
+          "versionTitle": "LONELY WOMAN《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1023024",
+      "title": "Value",
+      "artist": "Ado",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1023024",
+      "variants": [
+        {
+          "id": "joysound-1023024-717787",
+          "songNumber": "717787",
+          "versionTitle": "Value《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1023024-624801",
+          "songNumber": "624801",
+          "versionTitle": "Value",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-102303",
+      "title": "君は悲しいギター",
+      "artist": "徳永英明",
+      "sourceUrl": "https://www.joysound.com/web/search/song/102303",
+      "variants": [
+        {
+          "id": "joysound-102303-56965",
+          "songNumber": "56965",
+          "versionTitle": "君は悲しいギター",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10231",
+      "title": "北風の子守唄",
+      "artist": "松山千春",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10231",
+      "variants": [
+        {
+          "id": "joysound-10231-10235",
+          "songNumber": "10235",
+          "versionTitle": "北風の子守唄",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1023176",
+      "title": "邂逅",
+      "artist": "BUMP OF CHICKEN",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1023176",
+      "variants": [
+        {
+          "id": "joysound-1023176-626013",
+          "songNumber": "626013",
+          "versionTitle": "邂逅",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1023176-349732",
+          "songNumber": "349732",
+          "versionTitle": "邂逅《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1024298",
+      "title": "Dear",
+      "artist": "Mrs. GREEN APPLE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1024298",
+      "variants": [
+        {
+          "id": "joysound-1024298-718013",
+          "songNumber": "718013",
+          "versionTitle": "Dear《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1024298-626977",
+          "songNumber": "626977",
+          "versionTitle": "Dear",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1024298-349752",
+          "songNumber": "349752",
+          "versionTitle": "Dear《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1024298-980635",
+          "songNumber": "980635",
+          "versionTitle": "Dear《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1024317",
+      "title": "人間として",
+      "artist": "椎名林檎",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1024317",
+      "variants": [
+        {
+          "id": "joysound-1024317-717899",
+          "songNumber": "717899",
+          "versionTitle": "人間として《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1024317-626738",
+          "songNumber": "626738",
+          "versionTitle": "人間として",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1024515",
+      "title": "星が消えないうちに",
+      "artist": "AKB48",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1024515",
+      "variants": [
+        {
+          "id": "joysound-1024515-625431",
+          "songNumber": "625431",
+          "versionTitle": "星が消えないうちに",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1024516",
+      "title": "ライオンを狙え!",
+      "artist": "AKB48",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1024516",
+      "variants": [
+        {
+          "id": "joysound-1024516-625458",
+          "songNumber": "625458",
+          "versionTitle": "ライオンを狙え!",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1024518",
+      "title": "パパに言えない夜",
+      "artist": "AKB48",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1024518",
+      "variants": [
+        {
+          "id": "joysound-1024518-625420",
+          "songNumber": "625420",
+          "versionTitle": "パパに言えない夜",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1024519",
+      "title": "マチビト",
+      "artist": "AKB48",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1024519",
+      "variants": [
+        {
+          "id": "joysound-1024519-625419",
+          "songNumber": "625419",
+          "versionTitle": "マチビト",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1024802",
+      "title": "Adventure",
+      "artist": "YOASOBI",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1024802",
+      "variants": [
+        {
+          "id": "joysound-1024802-625422",
+          "songNumber": "625422",
+          "versionTitle": "Adventure",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025468",
+      "title": "Addicted To You (Re-Recording)",
+      "artist": "宇多田ヒカル",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025468",
+      "variants": [
+        {
+          "id": "joysound-1025468-625584",
+          "songNumber": "625584",
+          "versionTitle": "Addicted To You (Re-Recording)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025469",
+      "title": "traveling (Re-Recording)",
+      "artist": "宇多田ヒカル",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025469",
+      "variants": [
+        {
+          "id": "joysound-1025469-625621",
+          "songNumber": "625621",
+          "versionTitle": "traveling (Re-Recording)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025470",
+      "title": "光 (Re-Recording)",
+      "artist": "宇多田ヒカル",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025470",
+      "variants": [
+        {
+          "id": "joysound-1025470-625649",
+          "songNumber": "625649",
+          "versionTitle": "光 (Re-Recording)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025471",
+      "title": "Automatic (2024 Mix)",
+      "artist": "宇多田ヒカル",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025471",
+      "variants": [
+        {
+          "id": "joysound-1025471-625831",
+          "songNumber": "625831",
+          "versionTitle": "Automatic (2024 Mix)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025472",
+      "title": "Beautiful World (2024 Mix)",
+      "artist": "宇多田ヒカル",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025472",
+      "variants": [
+        {
+          "id": "joysound-1025472-625620",
+          "songNumber": "625620",
+          "versionTitle": "Beautiful World (2024 Mix)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025473",
+      "title": "Can You Keep A Secret? (2024 Mix)",
+      "artist": "宇多田ヒカル",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025473",
+      "variants": [
+        {
+          "id": "joysound-1025473-625573",
+          "songNumber": "625573",
+          "versionTitle": "Can You Keep A Secret? (2024 Mix)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025474",
+      "title": "COLORS (2024 Mix)",
+      "artist": "宇多田ヒカル",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025474",
+      "variants": [
+        {
+          "id": "joysound-1025474-625648",
+          "songNumber": "625648",
+          "versionTitle": "COLORS (2024 Mix)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025475",
+      "title": "First Love (2022 Mix)",
+      "artist": "宇多田ヒカル",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025475",
+      "variants": [
+        {
+          "id": "joysound-1025475-625971",
+          "songNumber": "625971",
+          "versionTitle": "First Love (2022 Mix)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025476",
+      "title": "Flavor Of Life -Ballad Version- (2024 Mix)",
+      "artist": "宇多田ヒカル",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025476",
+      "variants": [
+        {
+          "id": "joysound-1025476-625830",
+          "songNumber": "625830",
+          "versionTitle": "Flavor Of Life -Ballad Version- (2024 Mix)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025477",
+      "title": "Goodbye Happiness (2024 Mix)",
+      "artist": "宇多田ヒカル",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025477",
+      "variants": [
+        {
+          "id": "joysound-1025477-625617",
+          "songNumber": "625617",
+          "versionTitle": "Goodbye Happiness (2024 Mix)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025478",
+      "title": "Letters (2024 Mix)",
+      "artist": "宇多田ヒカル",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025478",
+      "variants": [
+        {
+          "id": "joysound-1025478-625647",
+          "songNumber": "625647",
+          "versionTitle": "Letters (2024 Mix)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025479",
+      "title": "Prisoner Of Love (2024 Mix)",
+      "artist": "宇多田ヒカル",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025479",
+      "variants": [
+        {
+          "id": "joysound-1025479-625572",
+          "songNumber": "625572",
+          "versionTitle": "Prisoner Of Love (2024 Mix)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025480",
+      "title": "SAKURAドロップス (2024 Mix)",
+      "artist": "宇多田ヒカル",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025480",
+      "variants": [
+        {
+          "id": "joysound-1025480-625583",
+          "songNumber": "625583",
+          "versionTitle": "SAKURAドロップス (2024 Mix)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025481",
+      "title": "Somewhere Near Marseilles -マルセイユ辺り- (Sci-Fi Edit)",
+      "artist": "宇多田ヒカル",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025481",
+      "variants": [
+        {
+          "id": "joysound-1025481-625616",
+          "songNumber": "625616",
+          "versionTitle": "Somewhere Near Marseilles -マルセイユ辺り- (Sci-Fi Edit)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025484",
+      "title": "honey",
+      "artist": "WANDS",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025484",
+      "variants": [
+        {
+          "id": "joysound-1025484-629447",
+          "songNumber": "629447",
+          "versionTitle": "honey",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025842",
+      "title": "[サビカラ]ショコラカタブラ",
+      "artist": "Ado",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025842",
+      "variants": [
+        {
+          "id": "joysound-1025842-625227",
+          "songNumber": "625227",
+          "versionTitle": "[サビカラ]ショコラカタブラ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025843",
+      "title": "[サビカラ]冬と春",
+      "artist": "back number",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025843",
+      "variants": [
+        {
+          "id": "joysound-1025843-625228",
+          "songNumber": "625228",
+          "versionTitle": "[サビカラ]冬と春",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025844",
+      "title": "[サビカラ]晴る",
+      "artist": "ヨルシカ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025844",
+      "variants": [
+        {
+          "id": "joysound-1025844-625229",
+          "songNumber": "625229",
+          "versionTitle": "[サビカラ]晴る",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025846",
+      "title": "[サビカラ]ナハトムジーク",
+      "artist": "Mrs. GREEN APPLE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025846",
+      "variants": [
+        {
+          "id": "joysound-1025846-625231",
+          "songNumber": "625231",
+          "versionTitle": "[サビカラ]ナハトムジーク",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025847",
+      "title": "[サビカラ]想望",
+      "artist": "福山雅治",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025847",
+      "variants": [
+        {
+          "id": "joysound-1025847-625232",
+          "songNumber": "625232",
+          "versionTitle": "[サビカラ]想望",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025849",
+      "title": "[サビカラ]桜が降る夜は",
+      "artist": "あいみょん",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025849",
+      "variants": [
+        {
+          "id": "joysound-1025849-625234",
+          "songNumber": "625234",
+          "versionTitle": "[サビカラ]桜が降る夜は",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025850",
+      "title": "[サビカラ]灰色と青 ( + 菅田将暉 )",
+      "artist": "米津玄師",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025850",
+      "variants": [
+        {
+          "id": "joysound-1025850-625235",
+          "songNumber": "625235",
+          "versionTitle": "[サビカラ]灰色と青 ( + 菅田将暉 )",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1025855",
+      "title": "[サビカラ]名もなき詩",
+      "artist": "Mr.Children",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1025855",
+      "variants": [
+        {
+          "id": "joysound-1025855-625240",
+          "songNumber": "625240",
+          "versionTitle": "[サビカラ]名もなき詩",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1026",
+      "title": "BLONDE",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1026",
+      "variants": [
+        {
+          "id": "joysound-1026-1026",
+          "songNumber": "1026",
+          "versionTitle": "BLONDE",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10260",
+      "title": "約束の十二月",
+      "artist": "斉藤和義",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10260",
+      "variants": [
+        {
+          "id": "joysound-10260-10264",
+          "songNumber": "10264",
+          "versionTitle": "約束の十二月",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-10260-902713",
+          "songNumber": "902713",
+          "versionTitle": "約束の十二月《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1026232",
+      "title": "ユートピア",
+      "artist": "SEKAI NO OWARI",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1026232",
+      "variants": [
+        {
+          "id": "joysound-1026232-625288",
+          "songNumber": "625288",
+          "versionTitle": "ユートピア",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10266",
+      "title": "ホワイトロード",
+      "artist": "GLAY",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10266",
+      "variants": [
+        {
+          "id": "joysound-10266-900509",
+          "songNumber": "900509",
+          "versionTitle": "ホワイトロード《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-10266-323682",
+          "songNumber": "323682",
+          "versionTitle": "ホワイトロード《生演奏》",
+          "versionType": "other",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-10266-10270",
+          "songNumber": "10270",
+          "versionTitle": "ホワイトロード",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-10266-902715",
+          "songNumber": "902715",
+          "versionTitle": "ホワイトロード《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1026669",
+      "title": "青のなかで",
+      "artist": "いきものがかり",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1026669",
+      "variants": [
+        {
+          "id": "joysound-1026669-625672",
+          "songNumber": "625672",
+          "versionTitle": "青のなかで",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1026686",
+      "title": "New me",
+      "artist": "YOASOBI",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1026686",
+      "variants": [
+        {
+          "id": "joysound-1026686-632250",
+          "songNumber": "632250",
+          "versionTitle": "New me",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10269",
+      "title": "泣いたりしないで",
+      "artist": "福山雅治",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10269",
+      "variants": [
+        {
+          "id": "joysound-10269-323683",
+          "songNumber": "323683",
+          "versionTitle": "泣いたりしないで《生演奏》",
+          "versionType": "other",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-10269-10273",
+          "songNumber": "10273",
+          "versionTitle": "泣いたりしないで",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1026991",
+      "title": "ゆびきりげんまん",
+      "artist": "MISIA",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1026991",
+      "variants": [
+        {
+          "id": "joysound-1026991-625876",
+          "songNumber": "625876",
+          "versionTitle": "ゆびきりげんまん",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1027184",
+      "title": "ただやるだけさ",
+      "artist": "一青窈",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1027184",
+      "variants": [
+        {
+          "id": "joysound-1027184-625586",
+          "songNumber": "625586",
+          "versionTitle": "ただやるだけさ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1027189",
+      "title": "友よ",
+      "artist": "松山千春",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1027189",
+      "variants": [
+        {
+          "id": "joysound-1027189-625826",
+          "songNumber": "625826",
+          "versionTitle": "友よ",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1027189-980607",
+          "songNumber": "980607",
+          "versionTitle": "友よ《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1027563",
+      "title": "BYE-BYE",
+      "artist": "浜崎あゆみ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1027563",
+      "variants": [
+        {
+          "id": "joysound-1027563-626279",
+          "songNumber": "626279",
+          "versionTitle": "BYE-BYE",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1027811",
+      "title": "誰にもバレずに",
+      "artist": "=LOVE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1027811",
+      "variants": [
+        {
+          "id": "joysound-1027811-625557",
+          "songNumber": "625557",
+          "versionTitle": "誰にもバレずに",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1027835",
+      "title": "時代",
+      "artist": "浜崎あゆみ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1027835",
+      "variants": [
+        {
+          "id": "joysound-1027835-625994",
+          "songNumber": "625994",
+          "versionTitle": "時代",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1027994",
+      "title": "あこがれ",
+      "artist": "川崎鷹也",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1027994",
+      "variants": [
+        {
+          "id": "joysound-1027994-626856",
+          "songNumber": "626856",
+          "versionTitle": "あこがれ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1028008",
+      "title": "FORGIVE ME",
+      "artist": "ちゃんみな",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1028008",
+      "variants": [
+        {
+          "id": "joysound-1028008-626315",
+          "songNumber": "626315",
+          "versionTitle": "FORGIVE ME",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1028020",
+      "title": "君の第3ボタン",
+      "artist": "=LOVE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1028020",
+      "variants": [
+        {
+          "id": "joysound-1028020-625556",
+          "songNumber": "625556",
+          "versionTitle": "君の第3ボタン",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1028923",
+      "title": "今日は終らない",
+      "artist": "松山千春",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1028923",
+      "variants": [
+        {
+          "id": "joysound-1028923-625974",
+          "songNumber": "625974",
+          "versionTitle": "今日は終らない",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1029193",
+      "title": "運命ちゃん",
+      "artist": "いきものがかり",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1029193",
+      "variants": [
+        {
+          "id": "joysound-1029193-626026",
+          "songNumber": "626026",
+          "versionTitle": "運命ちゃん",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-102923",
+      "title": "永遠の翼",
+      "artist": "B'z",
+      "sourceUrl": "https://www.joysound.com/web/search/song/102923",
+      "variants": [
+        {
+          "id": "joysound-102923-24585",
+          "songNumber": "24585",
+          "versionTitle": "永遠の翼",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-102923-189131",
+          "songNumber": "189131",
+          "versionTitle": "永遠の翼《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-102923-905150",
+          "songNumber": "905150",
+          "versionTitle": "永遠の翼《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-102924",
+      "title": "ロンリースターズ",
+      "artist": "B'z",
+      "sourceUrl": "https://www.joysound.com/web/search/song/102924",
+      "variants": [
+        {
+          "id": "joysound-102924-24586",
+          "songNumber": "24586",
+          "versionTitle": "ロンリースターズ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1029670",
+      "title": "紅海月の夜",
+      "artist": "椎名林檎",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1029670",
+      "variants": [
+        {
+          "id": "joysound-1029670-626737",
+          "songNumber": "626737",
+          "versionTitle": "紅海月の夜",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10302",
+      "title": "笑顔の多い日ばかりじゃない",
+      "artist": "GLAY",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10302",
+      "variants": [
+        {
+          "id": "joysound-10302-10306",
+          "songNumber": "10306",
+          "versionTitle": "笑顔の多い日ばかりじゃない",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103048",
+      "title": "イカSUMMER",
+      "artist": "ORANGE RANGE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103048",
+      "variants": [
+        {
+          "id": "joysound-103048-180090",
+          "songNumber": "180090",
+          "versionTitle": "イカSUMMER《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-103048-24592",
+          "songNumber": "24592",
+          "versionTitle": "イカSUMMER",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-103048-189126",
+          "songNumber": "189126",
+          "versionTitle": "イカSUMMER《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1030672",
+      "title": "さよならはやさしく",
+      "artist": "GLAY",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1030672",
+      "variants": [
+        {
+          "id": "joysound-1030672-631097",
+          "songNumber": "631097",
+          "versionTitle": "さよならはやさしく",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1030698",
+      "title": "HELLO MARY LOU",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1030698",
+      "variants": [
+        {
+          "id": "joysound-1030698-628596",
+          "songNumber": "628596",
+          "versionTitle": "HELLO MARY LOU",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103070",
+      "title": "アプリシエ",
+      "artist": "KinKi Kids",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103070",
+      "variants": [
+        {
+          "id": "joysound-103070-57051",
+          "songNumber": "57051",
+          "versionTitle": "アプリシエ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103071",
+      "title": "BRAND NEW SONG",
+      "artist": "KinKi Kids",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103071",
+      "variants": [
+        {
+          "id": "joysound-103071-24613",
+          "songNumber": "24613",
+          "versionTitle": "BRAND NEW SONG",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-103071-189127",
+          "songNumber": "189127",
+          "versionTitle": "BRAND NEW SONG《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103072",
+      "title": "Stay",
+      "artist": "KinKi Kids",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103072",
+      "variants": [
+        {
+          "id": "joysound-103072-24614",
+          "songNumber": "24614",
+          "versionTitle": "Stay",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103073",
+      "title": "hesitated",
+      "artist": "KinKi Kids",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103073",
+      "variants": [
+        {
+          "id": "joysound-103073-24615",
+          "songNumber": "24615",
+          "versionTitle": "hesitated",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1031131",
+      "title": "Kaiju",
+      "artist": "DREAMS COME TRUE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1031131",
+      "variants": [
+        {
+          "id": "joysound-1031131-626284",
+          "songNumber": "626284",
+          "versionTitle": "Kaiju",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103134",
+      "title": "Flavor Of Life〈Antidote Mix〉",
+      "artist": "宇多田ヒカル",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103134",
+      "variants": [
+        {
+          "id": "joysound-103134-162763",
+          "songNumber": "162763",
+          "versionTitle": "Flavor Of Life〈Antidote Mix〉",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103144",
+      "title": "雨のち晴れ〈Remix Version〉",
+      "artist": "Mr.Children",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103144",
+      "variants": [
+        {
+          "id": "joysound-103144-57082",
+          "songNumber": "57082",
+          "versionTitle": "雨のち晴れ〈Remix Version〉",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103145",
+      "title": "花",
+      "artist": "Mr.Children",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103145",
+      "variants": [
+        {
+          "id": "joysound-103145-57085",
+          "songNumber": "57085",
+          "versionTitle": "花",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103148",
+      "title": "軽蔑していた愛情",
+      "artist": "AKB48",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103148",
+      "variants": [
+        {
+          "id": "joysound-103148-162766",
+          "songNumber": "162766",
+          "versionTitle": "軽蔑していた愛情",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1031590",
+      "title": "[サビカラ]二度寝",
+      "artist": "Creepy Nuts(R-指定&DJ松永)",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1031590",
+      "variants": [
+        {
+          "id": "joysound-1031590-625997",
+          "songNumber": "625997",
+          "versionTitle": "[サビカラ]二度寝",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1031596",
+      "title": "[サビカラ]Lemon",
+      "artist": "米津玄師",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1031596",
+      "variants": [
+        {
+          "id": "joysound-1031596-626003",
+          "songNumber": "626003",
+          "versionTitle": "[サビカラ]Lemon",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1031598",
+      "title": "[サビカラ]ここでキスして。",
+      "artist": "椎名林檎",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1031598",
+      "variants": [
+        {
+          "id": "joysound-1031598-626005",
+          "songNumber": "626005",
+          "versionTitle": "[サビカラ]ここでキスして。",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1031600",
+      "title": "[サビカラ]春よ、来い",
+      "artist": "松任谷由実",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1031600",
+      "variants": [
+        {
+          "id": "joysound-1031600-626007",
+          "songNumber": "626007",
+          "versionTitle": "[サビカラ]春よ、来い",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1031604",
+      "title": "[サビカラ]少女A",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1031604",
+      "variants": [
+        {
+          "id": "joysound-1031604-626011",
+          "songNumber": "626011",
+          "versionTitle": "[サビカラ]少女A",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1031671",
+      "title": "べびちゅ",
+      "artist": "川崎鷹也",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1031671",
+      "variants": [
+        {
+          "id": "joysound-1031671-634102",
+          "songNumber": "634102",
+          "versionTitle": "べびちゅ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10320",
+      "title": "HERO",
+      "artist": "EXILE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10320",
+      "variants": [
+        {
+          "id": "joysound-10320-190029",
+          "songNumber": "190029",
+          "versionTitle": "HERO《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-10320-10324",
+          "songNumber": "10324",
+          "versionTitle": "HERO",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-10320-902725",
+          "songNumber": "902725",
+          "versionTitle": "HERO《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103205",
+      "title": "茜空〈Acoustic Version〉",
+      "artist": "レミオロメン",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103205",
+      "variants": [
+        {
+          "id": "joysound-103205-162799",
+          "songNumber": "162799",
+          "versionTitle": "茜空〈Acoustic Version〉",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1032327",
+      "title": "あいたい星人",
+      "artist": "DECO*27",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1032327",
+      "variants": [
+        {
+          "id": "joysound-1032327-717962",
+          "songNumber": "717962",
+          "versionTitle": "あいたい星人《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1032327-626571",
+          "songNumber": "626571",
+          "versionTitle": "あいたい星人",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1032338",
+      "title": "喉仏",
+      "artist": "クリープハイプ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1032338",
+      "variants": [
+        {
+          "id": "joysound-1032338-626731",
+          "songNumber": "626731",
+          "versionTitle": "喉仏",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10325",
+      "title": "金色のライオン",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10325",
+      "variants": [
+        {
+          "id": "joysound-10325-10329",
+          "songNumber": "10329",
+          "versionTitle": "金色のライオン",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-10325-902727",
+          "songNumber": "902727",
+          "versionTitle": "金色のライオン《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1032613",
+      "title": "きっとコースター",
+      "artist": "Ado",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1032613",
+      "variants": [
+        {
+          "id": "joysound-1032613-631596",
+          "songNumber": "631596",
+          "versionTitle": "きっとコースター",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1032656",
+      "title": "路上の片隅で",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1032656",
+      "variants": [
+        {
+          "id": "joysound-1032656-628266",
+          "songNumber": "628266",
+          "versionTitle": "路上の片隅で",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10327",
+      "title": "RED×BLUE",
+      "artist": "福山雅治",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10327",
+      "variants": [
+        {
+          "id": "joysound-10327-10331",
+          "songNumber": "10331",
+          "versionTitle": "RED×BLUE",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-10327-902729",
+          "songNumber": "902729",
+          "versionTitle": "RED×BLUE《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103271",
+      "title": "涙がただこぼれるだけ",
+      "artist": "松田聖子",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103271",
+      "variants": [
+        {
+          "id": "joysound-103271-24633",
+          "songNumber": "24633",
+          "versionTitle": "涙がただこぼれるだけ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103272",
+      "title": "Come on Stand up!",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103272",
+      "variants": [
+        {
+          "id": "joysound-103272-24631",
+          "songNumber": "24631",
+          "versionTitle": "Come on Stand up!",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103290",
+      "title": "鹿児島中央STATION",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103290",
+      "variants": [
+        {
+          "id": "joysound-103290-57175",
+          "songNumber": "57175",
+          "versionTitle": "鹿児島中央STATION",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103291",
+      "title": "夕焼けの歌",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103291",
+      "variants": [
+        {
+          "id": "joysound-103291-57189",
+          "songNumber": "57189",
+          "versionTitle": "夕焼けの歌",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103292",
+      "title": "鶴になった父ちゃん",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103292",
+      "variants": [
+        {
+          "id": "joysound-103292-57194",
+          "songNumber": "57194",
+          "versionTitle": "鶴になった父ちゃん",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103293",
+      "title": "Fighting Boxer",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103293",
+      "variants": [
+        {
+          "id": "joysound-103293-57177",
+          "songNumber": "57177",
+          "versionTitle": "Fighting Boxer",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103294",
+      "title": "いけ!いけ!GO!GO!",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103294",
+      "variants": [
+        {
+          "id": "joysound-103294-57178",
+          "songNumber": "57178",
+          "versionTitle": "いけ!いけ!GO!GO!",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103295",
+      "title": "愛して",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103295",
+      "variants": [
+        {
+          "id": "joysound-103295-57179",
+          "songNumber": "57179",
+          "versionTitle": "愛して",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103296",
+      "title": "観覧車",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103296",
+      "variants": [
+        {
+          "id": "joysound-103296-57180",
+          "songNumber": "57180",
+          "versionTitle": "観覧車",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-103296-907101",
+          "songNumber": "907101",
+          "versionTitle": "観覧車《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103297",
+      "title": "Run & Dash",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103297",
+      "variants": [
+        {
+          "id": "joysound-103297-57182",
+          "songNumber": "57182",
+          "versionTitle": "Run & Dash",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103298",
+      "title": "レオ",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103298",
+      "variants": [
+        {
+          "id": "joysound-103298-57183",
+          "songNumber": "57183",
+          "versionTitle": "レオ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103299",
+      "title": "神風特攻隊",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103299",
+      "variants": [
+        {
+          "id": "joysound-103299-57184",
+          "songNumber": "57184",
+          "versionTitle": "神風特攻隊",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10330",
+      "title": "冬のエトランジェ",
+      "artist": "MISIA",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10330",
+      "variants": [
+        {
+          "id": "joysound-10330-323691",
+          "songNumber": "323691",
+          "versionTitle": "冬のエトランジェ《生演奏》",
+          "versionType": "other",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-10330-10334",
+          "songNumber": "10334",
+          "versionTitle": "冬のエトランジェ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103300",
+      "title": "Tomorrow",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103300",
+      "variants": [
+        {
+          "id": "joysound-103300-57187",
+          "songNumber": "57187",
+          "versionTitle": "Tomorrow",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-103300-907102",
+          "songNumber": "907102",
+          "versionTitle": "Tomorrow《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1033132",
+      "title": "Zombie",
+      "artist": "ORANGE RANGE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1033132",
+      "variants": [
+        {
+          "id": "joysound-1033132-626214",
+          "songNumber": "626214",
+          "versionTitle": "Zombie",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1033163",
+      "title": "拝啓、わたしへ",
+      "artist": "LiSA",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1033163",
+      "variants": [
+        {
+          "id": "joysound-1033163-627681",
+          "songNumber": "627681",
+          "versionTitle": "拝啓、わたしへ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1033166",
+      "title": "ハルシネイト",
+      "artist": "LiSA",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1033166",
+      "variants": [
+        {
+          "id": "joysound-1033166-627660",
+          "songNumber": "627660",
+          "versionTitle": "ハルシネイト",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1033463",
+      "title": "366日 feat.大橋卓弥",
+      "artist": "HY",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1033463",
+      "variants": [
+        {
+          "id": "joysound-1033463-626286",
+          "songNumber": "626286",
+          "versionTitle": "366日 feat.大橋卓弥",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103348",
+      "title": "棘",
+      "artist": "GLAY",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103348",
+      "variants": [
+        {
+          "id": "joysound-103348-57210",
+          "songNumber": "57210",
+          "versionTitle": "棘",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1033574",
+      "title": "ねむい",
+      "artist": "あいみょん",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1033574",
+      "variants": [
+        {
+          "id": "joysound-1033574-626867",
+          "songNumber": "626867",
+          "versionTitle": "ねむい",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1033736",
+      "title": "Bad Liar",
+      "artist": "M!LK",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1033736",
+      "variants": [
+        {
+          "id": "joysound-1033736-627698",
+          "songNumber": "627698",
+          "versionTitle": "Bad Liar",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1033737",
+      "title": "Sparkle",
+      "artist": "M!LK",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1033737",
+      "variants": [
+        {
+          "id": "joysound-1033737-628241",
+          "songNumber": "628241",
+          "versionTitle": "Sparkle",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103379",
+      "title": "MILONGUITA(ミロンギータ)",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103379",
+      "variants": [
+        {
+          "id": "joysound-103379-57218",
+          "songNumber": "57218",
+          "versionTitle": "MILONGUITA(ミロンギータ)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1033902",
+      "title": "366日 feat. 與那城奨",
+      "artist": "HY",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1033902",
+      "variants": [
+        {
+          "id": "joysound-1033902-627203",
+          "songNumber": "627203",
+          "versionTitle": "366日 feat. 與那城奨",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1033905",
+      "title": "ルバート",
+      "artist": "ヨルシカ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1033905",
+      "variants": [
+        {
+          "id": "joysound-1033905-627133",
+          "songNumber": "627133",
+          "versionTitle": "ルバート",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1033905-980643",
+          "songNumber": "980643",
+          "versionTitle": "ルバート《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103400",
+      "title": "SJK06",
+      "artist": "ORANGE RANGE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103400",
+      "variants": [
+        {
+          "id": "joysound-103400-57237",
+          "songNumber": "57237",
+          "versionTitle": "SJK06",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103403",
+      "title": "いきものがかりメドレー1",
+      "artist": "いきものがかり",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103403",
+      "variants": [
+        {
+          "id": "joysound-103403-57234",
+          "songNumber": "57234",
+          "versionTitle": "いきものがかりメドレー1",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103410",
+      "title": "We can make it!",
+      "artist": "嵐",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103410",
+      "variants": [
+        {
+          "id": "joysound-103410-24639",
+          "songNumber": "24639",
+          "versionTitle": "We can make it!",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103411",
+      "title": "Di-Li-Li",
+      "artist": "嵐",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103411",
+      "variants": [
+        {
+          "id": "joysound-103411-24640",
+          "songNumber": "24640",
+          "versionTitle": "Di-Li-Li",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103412",
+      "title": "Future",
+      "artist": "嵐",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103412",
+      "variants": [
+        {
+          "id": "joysound-103412-57241",
+          "songNumber": "57241",
+          "versionTitle": "Future",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103413",
+      "title": "DANCE 2〈KAGAMI REMIX〉",
+      "artist": "ORANGE RANGE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103413",
+      "variants": [
+        {
+          "id": "joysound-103413-57242",
+          "songNumber": "57242",
+          "versionTitle": "DANCE 2〈KAGAMI REMIX〉",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103417",
+      "title": "GLAYメドレー3",
+      "artist": "GLAY",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103417",
+      "variants": [
+        {
+          "id": "joysound-103417-24644",
+          "songNumber": "24644",
+          "versionTitle": "GLAYメドレー3",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1034233",
+      "title": "whodunit",
+      "artist": "GLAY",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1034233",
+      "variants": [
+        {
+          "id": "joysound-1034233-627097",
+          "songNumber": "627097",
+          "versionTitle": "whodunit",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1034233-980659",
+          "songNumber": "980659",
+          "versionTitle": "whodunit《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1034234",
+      "title": "シェア",
+      "artist": "GLAY",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1034234",
+      "variants": [
+        {
+          "id": "joysound-1034234-627096",
+          "songNumber": "627096",
+          "versionTitle": "シェア",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1034251",
+      "title": "プレイボーイシンドローム",
+      "artist": "ヤングスキニー",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1034251",
+      "variants": [
+        {
+          "id": "joysound-1034251-626596",
+          "songNumber": "626596",
+          "versionTitle": "プレイボーイシンドローム",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1034324",
+      "title": "Chururi",
+      "artist": "ゆず",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1034324",
+      "variants": [
+        {
+          "id": "joysound-1034324-626718",
+          "songNumber": "626718",
+          "versionTitle": "Chururi",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1034326",
+      "title": "ひまわりの涙",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1034326",
+      "variants": [
+        {
+          "id": "joysound-1034326-628287",
+          "songNumber": "628287",
+          "versionTitle": "ひまわりの涙",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1034327",
+      "title": "ジャッキーレディ",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1034327",
+      "variants": [
+        {
+          "id": "joysound-1034327-628286",
+          "songNumber": "628286",
+          "versionTitle": "ジャッキーレディ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1034328",
+      "title": "FaceTime",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1034328",
+      "variants": [
+        {
+          "id": "joysound-1034328-628321",
+          "songNumber": "628321",
+          "versionTitle": "FaceTime",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1034329",
+      "title": "いいんだよ ばーか!",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1034329",
+      "variants": [
+        {
+          "id": "joysound-1034329-628320",
+          "songNumber": "628320",
+          "versionTitle": "いいんだよ ばーか!",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1034330",
+      "title": "黒いマントと真っ赤なリンゴ",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1034330",
+      "variants": [
+        {
+          "id": "joysound-1034330-628265",
+          "songNumber": "628265",
+          "versionTitle": "黒いマントと真っ赤なリンゴ",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1034330-980660",
+          "songNumber": "980660",
+          "versionTitle": "黒いマントと真っ赤なリンゴ《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1034331",
+      "title": "ステンドグラス",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1034331",
+      "variants": [
+        {
+          "id": "joysound-1034331-628319",
+          "songNumber": "628319",
+          "versionTitle": "ステンドグラス",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1034332",
+      "title": "ZYZY",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1034332",
+      "variants": [
+        {
+          "id": "joysound-1034332-628333",
+          "songNumber": "628333",
+          "versionTitle": "ZYZY",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1034333",
+      "title": "ダイヤモンド",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1034333",
+      "variants": [
+        {
+          "id": "joysound-1034333-628332",
+          "songNumber": "628332",
+          "versionTitle": "ダイヤモンド",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1034334",
+      "title": "BLOOD",
+      "artist": "長渕剛",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1034334",
+      "variants": [
+        {
+          "id": "joysound-1034334-628336",
+          "songNumber": "628336",
+          "versionTitle": "BLOOD",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103462",
+      "title": "RUN",
+      "artist": "レミオロメン",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103462",
+      "variants": [
+        {
+          "id": "joysound-103462-24655",
+          "songNumber": "24655",
+          "versionTitle": "RUN",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103463",
+      "title": "幸せのカタチ",
+      "artist": "レミオロメン",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103463",
+      "variants": [
+        {
+          "id": "joysound-103463-57262",
+          "songNumber": "57262",
+          "versionTitle": "幸せのカタチ",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-103463-907110",
+          "songNumber": "907110",
+          "versionTitle": "幸せのカタチ《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1034719",
+      "title": "飾りじゃないのよ涙は(ビター&スウィート(1985サマー・ツアー)ver.)《LIVEカラオケ》",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1034719",
+      "variants": [
+        {
+          "id": "joysound-1034719-717858",
+          "songNumber": "717858",
+          "versionTitle": "飾りじゃないのよ涙は(ビター&スウィート(1985サマー・ツアー)ver.)《LIVEカラオケ》",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1035068",
+      "title": "Specter《レコおと》",
+      "artist": "ORANGE RANGE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1035068",
+      "variants": [
+        {
+          "id": "joysound-1035068-817688",
+          "songNumber": "817688",
+          "versionTitle": "Specter《レコおと》",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103510",
+      "title": "ゆずメドレー3",
+      "artist": "ゆず",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103510",
+      "variants": [
+        {
+          "id": "joysound-103510-57275",
+          "songNumber": "57275",
+          "versionTitle": "ゆずメドレー3",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103528",
+      "title": "幾千の時を経て",
+      "artist": "徳永英明",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103528",
+      "variants": [
+        {
+          "id": "joysound-103528-57299",
+          "songNumber": "57299",
+          "versionTitle": "幾千の時を経て",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1035358",
+      "title": "まさか夢",
+      "artist": "aiko",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1035358",
+      "variants": [
+        {
+          "id": "joysound-1035358-627374",
+          "songNumber": "627374",
+          "versionTitle": "まさか夢",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1035359",
+      "title": "あなたは優しい",
+      "artist": "aiko",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1035359",
+      "variants": [
+        {
+          "id": "joysound-1035359-627373",
+          "songNumber": "627373",
+          "versionTitle": "あなたは優しい",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1035399",
+      "title": "Get Wild",
+      "artist": "B'z",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1035399",
+      "variants": [
+        {
+          "id": "joysound-1035399-627800",
+          "songNumber": "627800",
+          "versionTitle": "Get Wild",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1035864",
+      "title": "Mister",
+      "artist": "YOASOBI",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1035864",
+      "variants": [
+        {
+          "id": "joysound-1035864-626841",
+          "songNumber": "626841",
+          "versionTitle": "Mister",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1035865",
+      "title": "manimani",
+      "artist": "YOASOBI",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1035865",
+      "variants": [
+        {
+          "id": "joysound-1035865-626840",
+          "songNumber": "626840",
+          "versionTitle": "manimani",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1035866",
+      "title": "Seventeen",
+      "artist": "YOASOBI",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1035866",
+      "variants": [
+        {
+          "id": "joysound-1035866-626839",
+          "songNumber": "626839",
+          "versionTitle": "Seventeen",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1035867",
+      "title": "Loving You",
+      "artist": "YOASOBI",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1035867",
+      "variants": [
+        {
+          "id": "joysound-1035867-626838",
+          "songNumber": "626838",
+          "versionTitle": "Loving You",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1035882",
+      "title": "聖者たち",
+      "artist": "なとり",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1035882",
+      "variants": [
+        {
+          "id": "joysound-1035882-627004",
+          "songNumber": "627004",
+          "versionTitle": "聖者たち",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1036178",
+      "title": "Ref:rain -3 nuits ver.-",
+      "artist": "Aimer",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1036178",
+      "variants": [
+        {
+          "id": "joysound-1036178-627523",
+          "songNumber": "627523",
+          "versionTitle": "Ref:rain -3 nuits ver.-",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1036375",
+      "title": "Kick Start",
+      "artist": "なにわ男子",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1036375",
+      "variants": [
+        {
+          "id": "joysound-1036375-627441",
+          "songNumber": "627441",
+          "versionTitle": "Kick Start",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1036377",
+      "title": "名もなき旅人",
+      "artist": "なにわ男子",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1036377",
+      "variants": [
+        {
+          "id": "joysound-1036377-627589",
+          "songNumber": "627589",
+          "versionTitle": "名もなき旅人",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1036378",
+      "title": "夕虹",
+      "artist": "なにわ男子",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1036378",
+      "variants": [
+        {
+          "id": "joysound-1036378-627440",
+          "songNumber": "627440",
+          "versionTitle": "夕虹",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1036379",
+      "title": "Snap!",
+      "artist": "なにわ男子",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1036379",
+      "variants": [
+        {
+          "id": "joysound-1036379-627439",
+          "songNumber": "627439",
+          "versionTitle": "Snap!",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1036380",
+      "title": "ありふれた恋じゃ、もう満たされない",
+      "artist": "なにわ男子",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1036380",
+      "variants": [
+        {
+          "id": "joysound-1036380-627438",
+          "songNumber": "627438",
+          "versionTitle": "ありふれた恋じゃ、もう満たされない",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1036381",
+      "title": "SATISFACTION",
+      "artist": "なにわ男子",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1036381",
+      "variants": [
+        {
+          "id": "joysound-1036381-627437",
+          "songNumber": "627437",
+          "versionTitle": "SATISFACTION",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1036382",
+      "title": "Girlfriend",
+      "artist": "なにわ男子",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1036382",
+      "variants": [
+        {
+          "id": "joysound-1036382-627588",
+          "songNumber": "627588",
+          "versionTitle": "Girlfriend",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1036383",
+      "title": "So Good",
+      "artist": "なにわ男子",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1036383",
+      "variants": [
+        {
+          "id": "joysound-1036383-627436",
+          "songNumber": "627436",
+          "versionTitle": "So Good",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1036384",
+      "title": "Live in the moment",
+      "artist": "なにわ男子",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1036384",
+      "variants": [
+        {
+          "id": "joysound-1036384-627435",
+          "songNumber": "627435",
+          "versionTitle": "Live in the moment",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1036385",
+      "title": "ちゅきちゅきハネムーン",
+      "artist": "なにわ男子",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1036385",
+      "variants": [
+        {
+          "id": "joysound-1036385-627587",
+          "songNumber": "627587",
+          "versionTitle": "ちゅきちゅきハネムーン",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1036391",
+      "title": "TOKYO AM1:00",
+      "artist": "なにわ男子",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1036391",
+      "variants": [
+        {
+          "id": "joysound-1036391-627586",
+          "songNumber": "627586",
+          "versionTitle": "TOKYO AM1:00",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1036392",
+      "title": "Happy Happy Birthday!!",
+      "artist": "なにわ男子",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1036392",
+      "variants": [
+        {
+          "id": "joysound-1036392-627585",
+          "songNumber": "627585",
+          "versionTitle": "Happy Happy Birthday!!",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1036393",
+      "title": "恋やけどめ (西畑大吾・大西流星)",
+      "artist": "なにわ男子",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1036393",
+      "variants": [
+        {
+          "id": "joysound-1036393-627584",
+          "songNumber": "627584",
+          "versionTitle": "恋やけどめ (西畑大吾・大西流星)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1036394",
+      "title": "Precious One (道枝駿佑・藤原丈一郎)",
+      "artist": "なにわ男子",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1036394",
+      "variants": [
+        {
+          "id": "joysound-1036394-627434",
+          "songNumber": "627434",
+          "versionTitle": "Precious One (道枝駿佑・藤原丈一郎)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1036395",
+      "title": "ウルリルラリラリ (高橋恭平・長尾謙杜・大橋和也)",
+      "artist": "なにわ男子",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1036395",
+      "variants": [
+        {
+          "id": "joysound-1036395-627583",
+          "songNumber": "627583",
+          "versionTitle": "ウルリルラリラリ (高橋恭平・長尾謙杜・大橋和也)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103651",
+      "title": "ハロー・ハロー",
+      "artist": "Superfly",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103651",
+      "variants": [
+        {
+          "id": "joysound-103651-163063",
+          "songNumber": "163063",
+          "versionTitle": "ハロー・ハロー",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-103651-910917",
+          "songNumber": "910917",
+          "versionTitle": "ハロー・ハロー《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1037043",
+      "title": "ふれて未来を",
+      "artist": "HY",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1037043",
+      "variants": [
+        {
+          "id": "joysound-1037043-627853",
+          "songNumber": "627853",
+          "versionTitle": "ふれて未来を",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1037045",
+      "title": "雨待ち風",
+      "artist": "Aimer",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1037045",
+      "variants": [
+        {
+          "id": "joysound-1037045-627284",
+          "songNumber": "627284",
+          "versionTitle": "雨待ち風",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1037059",
+      "title": "ボクノート",
+      "artist": "いきものがかり",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1037059",
+      "variants": [
+        {
+          "id": "joysound-1037059-627283",
+          "songNumber": "627283",
+          "versionTitle": "ボクノート",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1037067",
+      "title": "1+1",
+      "artist": "徳永英明",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1037067",
+      "variants": [
+        {
+          "id": "joysound-1037067-627850",
+          "songNumber": "627850",
+          "versionTitle": "1+1",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10373",
+      "title": "About You",
+      "artist": "浜崎あゆみ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10373",
+      "variants": [
+        {
+          "id": "joysound-10373-900222",
+          "songNumber": "900222",
+          "versionTitle": "About You《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-10373-323697",
+          "songNumber": "323697",
+          "versionTitle": "About You《生演奏》",
+          "versionType": "other",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-10373-10377",
+          "songNumber": "10377",
+          "versionTitle": "About You",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10374",
+      "title": "my name's WOMEN",
+      "artist": "浜崎あゆみ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10374",
+      "variants": [
+        {
+          "id": "joysound-10374-761047",
+          "songNumber": "761047",
+          "versionTitle": "my name's WOMEN《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-10374-10378",
+          "songNumber": "10378",
+          "versionTitle": "my name's WOMEN",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1037425",
+      "title": "ROCK 'N' ROLL",
+      "artist": "Snow Man",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1037425",
+      "variants": [
+        {
+          "id": "joysound-1037425-631419",
+          "songNumber": "631419",
+          "versionTitle": "ROCK 'N' ROLL",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103745",
+      "title": "あの夏の日",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103745",
+      "variants": [
+        {
+          "id": "joysound-103745-163133",
+          "songNumber": "163133",
+          "versionTitle": "あの夏の日",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103746",
+      "title": "SOLITUDE〈2007 Ver.〉",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103746",
+      "variants": [
+        {
+          "id": "joysound-103746-163132",
+          "songNumber": "163132",
+          "versionTitle": "SOLITUDE〈2007 Ver.〉",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103747",
+      "title": "帰省 ～Never Forget～〈2007 Ver.〉",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103747",
+      "variants": [
+        {
+          "id": "joysound-103747-163134",
+          "songNumber": "163134",
+          "versionTitle": "帰省 ～Never Forget～〈2007 Ver.〉",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103748",
+      "title": "難破船〈2007 Ver.〉",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103748",
+      "variants": [
+        {
+          "id": "joysound-103748-163135",
+          "songNumber": "163135",
+          "versionTitle": "難破船〈2007 Ver.〉",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-103794",
+      "title": "カタストロフィの雨傘",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/103794",
+      "variants": [
+        {
+          "id": "joysound-103794-57325",
+          "songNumber": "57325",
+          "versionTitle": "カタストロフィの雨傘",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1038076",
+      "title": "抜け空",
+      "artist": "Ado",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1038076",
+      "variants": [
+        {
+          "id": "joysound-1038076-628842",
+          "songNumber": "628842",
+          "versionTitle": "抜け空",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1039133",
+      "title": "JUNKO",
+      "artist": "マカロニえんぴつ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1039133",
+      "variants": [
+        {
+          "id": "joysound-1039133-627016",
+          "songNumber": "627016",
+          "versionTitle": "JUNKO",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1039183",
+      "title": "図鑑",
+      "artist": "ゆず",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1039183",
+      "variants": [
+        {
+          "id": "joysound-1039183-628974",
+          "songNumber": "628974",
+          "versionTitle": "図鑑",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1039323",
+      "title": "[サビカラ]ベランダ feat. 戦慄かなの",
+      "artist": "ヤングスキニー",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1039323",
+      "variants": [
+        {
+          "id": "joysound-1039323-626988",
+          "songNumber": "626988",
+          "versionTitle": "[サビカラ]ベランダ feat. 戦慄かなの",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1039324",
+      "title": "[サビカラ]タイムパラドックス",
+      "artist": "Vaundy",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1039324",
+      "variants": [
+        {
+          "id": "joysound-1039324-626989",
+          "songNumber": "626989",
+          "versionTitle": "[サビカラ]タイムパラドックス",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1039325",
+      "title": "[サビカラ]800",
+      "artist": "Aimer",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1039325",
+      "variants": [
+        {
+          "id": "joysound-1039325-626990",
+          "songNumber": "626990",
+          "versionTitle": "[サビカラ]800",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1039327",
+      "title": "[サビカラ]正解 [18FES ver.]",
+      "artist": "RADWIMPS",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1039327",
+      "variants": [
+        {
+          "id": "joysound-1039327-626992",
+          "songNumber": "626992",
+          "versionTitle": "[サビカラ]正解 [18FES ver.]",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1039328",
+      "title": "[サビカラ]StaRt",
+      "artist": "Mrs. GREEN APPLE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1039328",
+      "variants": [
+        {
+          "id": "joysound-1039328-626993",
+          "songNumber": "626993",
+          "versionTitle": "[サビカラ]StaRt",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1039333",
+      "title": "[サビカラ]シーソーゲーム～勇敢な恋の歌～",
+      "artist": "Mr.Children",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1039333",
+      "variants": [
+        {
+          "id": "joysound-1039333-626998",
+          "songNumber": "626998",
+          "versionTitle": "[サビカラ]シーソーゲーム～勇敢な恋の歌～",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1039354",
+      "title": "がらくた",
+      "artist": "米津玄師",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1039354",
+      "variants": [
+        {
+          "id": "joysound-1039354-718036",
+          "songNumber": "718036",
+          "versionTitle": "がらくた《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1039354-629183",
+          "songNumber": "629183",
+          "versionTitle": "がらくた",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1039354-349826",
+          "songNumber": "349826",
+          "versionTitle": "がらくた《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1039354-980694",
+          "songNumber": "980694",
+          "versionTitle": "がらくた《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1039367",
+      "title": "二つの彗星",
+      "artist": "菅田将暉",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1039367",
+      "variants": [
+        {
+          "id": "joysound-1039367-628281",
+          "songNumber": "628281",
+          "versionTitle": "二つの彗星",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1039703",
+      "title": "ワンナイト (2024 ver.)",
+      "artist": "ヤングスキニー",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1039703",
+      "variants": [
+        {
+          "id": "joysound-1039703-627121",
+          "songNumber": "627121",
+          "versionTitle": "ワンナイト (2024 ver.)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1039704",
+      "title": "テレビの中だけ (2024 ver.)",
+      "artist": "ヤングスキニー",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1039704",
+      "variants": [
+        {
+          "id": "joysound-1039704-628881",
+          "songNumber": "628881",
+          "versionTitle": "テレビの中だけ (2024 ver.)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1040",
+      "title": "C調言葉に御用心",
+      "artist": "サザンオールスターズ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1040",
+      "variants": [
+        {
+          "id": "joysound-1040-321334",
+          "songNumber": "321334",
+          "versionTitle": "C調言葉に御用心《生演奏》",
+          "versionType": "other",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1040-1040",
+          "songNumber": "1040",
+          "versionTitle": "C調言葉に御用心",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1040-901343",
+          "songNumber": "901343",
+          "versionTitle": "C調言葉に御用心《ギタナビ》",
+          "versionType": "guitar-guide",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-10401",
+      "title": "愛されたいだけさ",
+      "artist": "玉置浩二",
+      "sourceUrl": "https://www.joysound.com/web/search/song/10401",
+      "variants": [
+        {
+          "id": "joysound-10401-10405",
+          "songNumber": "10405",
+          "versionTitle": "愛されたいだけさ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104014",
+      "title": "愛を止めないで",
+      "artist": "徳永英明",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104014",
+      "variants": [
+        {
+          "id": "joysound-104014-57339",
+          "songNumber": "57339",
+          "versionTitle": "愛を止めないで",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1040165",
+      "title": "キタニタツヤメドレー",
+      "artist": "キタニタツヤ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1040165",
+      "variants": [
+        {
+          "id": "joysound-1040165-627792",
+          "songNumber": "627792",
+          "versionTitle": "キタニタツヤメドレー",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104049",
+      "title": "こんな僕で良かったら",
+      "artist": "桑田佳祐",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104049",
+      "variants": [
+        {
+          "id": "joysound-104049-24684",
+          "songNumber": "24684",
+          "versionTitle": "こんな僕で良かったら",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104050",
+      "title": "男達の挽歌(エレジー)",
+      "artist": "桑田佳祐",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104050",
+      "variants": [
+        {
+          "id": "joysound-104050-24685",
+          "songNumber": "24685",
+          "versionTitle": "男達の挽歌(エレジー)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104051",
+      "title": "自壊",
+      "artist": "松山千春",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104051",
+      "variants": [
+        {
+          "id": "joysound-104051-24686",
+          "songNumber": "24686",
+          "versionTitle": "自壊",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1040620",
+      "title": "夢見てごめん",
+      "artist": "AKB48",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1040620",
+      "variants": [
+        {
+          "id": "joysound-1040620-628743",
+          "songNumber": "628743",
+          "versionTitle": "夢見てごめん",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104066",
+      "title": "サヨナラ59ers!(フィフティーナイナーズ)",
+      "artist": "DREAMS COME TRUE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104066",
+      "variants": [
+        {
+          "id": "joysound-104066-24690",
+          "songNumber": "24690",
+          "versionTitle": "サヨナラ59ers!(フィフティーナイナーズ)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104076",
+      "title": "明日天気になぁれ",
+      "artist": "ゆず",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104076",
+      "variants": [
+        {
+          "id": "joysound-104076-760764",
+          "songNumber": "760764",
+          "versionTitle": "明日天気になぁれ《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-104076-24692",
+          "songNumber": "24692",
+          "versionTitle": "明日天気になぁれ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1040893",
+      "title": "366日 feat. 藤牧京介",
+      "artist": "HY",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1040893",
+      "variants": [
+        {
+          "id": "joysound-1040893-627448",
+          "songNumber": "627448",
+          "versionTitle": "366日 feat. 藤牧京介",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1040966",
+      "title": "化かし愛",
+      "artist": "菅田将暉",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1040966",
+      "variants": [
+        {
+          "id": "joysound-1040966-628279",
+          "songNumber": "628279",
+          "versionTitle": "化かし愛",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1040967",
+      "title": "サディスティックに生きなくちゃ",
+      "artist": "菅田将暉",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1040967",
+      "variants": [
+        {
+          "id": "joysound-1040967-628278",
+          "songNumber": "628278",
+          "versionTitle": "サディスティックに生きなくちゃ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1040968",
+      "title": "エメラルド",
+      "artist": "菅田将暉",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1040968",
+      "variants": [
+        {
+          "id": "joysound-1040968-628277",
+          "songNumber": "628277",
+          "versionTitle": "エメラルド",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1040969",
+      "title": "Magic Hour",
+      "artist": "菅田将暉",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1040969",
+      "variants": [
+        {
+          "id": "joysound-1040969-628276",
+          "songNumber": "628276",
+          "versionTitle": "Magic Hour",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1040970",
+      "title": "スモア",
+      "artist": "菅田将暉",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1040970",
+      "variants": [
+        {
+          "id": "joysound-1040970-628275",
+          "songNumber": "628275",
+          "versionTitle": "スモア",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1040972",
+      "title": "もののあはれ",
+      "artist": "菅田将暉",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1040972",
+      "variants": [
+        {
+          "id": "joysound-1040972-628274",
+          "songNumber": "628274",
+          "versionTitle": "もののあはれ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1040980",
+      "title": "セカンド・ラブ(AKINA EAST LIVE INDEX-XXIII ver.)《LIVEカラオケ》",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1040980",
+      "variants": [
+        {
+          "id": "joysound-1040980-717892",
+          "songNumber": "717892",
+          "versionTitle": "セカンド・ラブ(AKINA EAST LIVE INDEX-XXIII ver.)《LIVEカラオケ》",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1040982",
+      "title": "少女A(AKINA EAST LIVE INDEX-XXIII ver.)《LIVEカラオケ》",
+      "artist": "中森明菜",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1040982",
+      "variants": [
+        {
+          "id": "joysound-1040982-717890",
+          "songNumber": "717890",
+          "versionTitle": "少女A(AKINA EAST LIVE INDEX-XXIII ver.)《LIVEカラオケ》",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104106",
+      "title": "僕の踵はなかなか減らない",
+      "artist": "斉藤和義",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104106",
+      "variants": [
+        {
+          "id": "joysound-104106-163359",
+          "songNumber": "163359",
+          "versionTitle": "僕の踵はなかなか減らない",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104107",
+      "title": "蝉",
+      "artist": "斉藤和義",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104107",
+      "variants": [
+        {
+          "id": "joysound-104107-163360",
+          "songNumber": "163360",
+          "versionTitle": "蝉",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104110",
+      "title": "輝く時代(とき)",
+      "artist": "松山千春",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104110",
+      "variants": [
+        {
+          "id": "joysound-104110-163364",
+          "songNumber": "163364",
+          "versionTitle": "輝く時代(とき)",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104111",
+      "title": "夏の日",
+      "artist": "松山千春",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104111",
+      "variants": [
+        {
+          "id": "joysound-104111-163363",
+          "songNumber": "163363",
+          "versionTitle": "夏の日",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104112",
+      "title": "十九まで",
+      "artist": "松山千春",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104112",
+      "variants": [
+        {
+          "id": "joysound-104112-163362",
+          "songNumber": "163362",
+          "versionTitle": "十九まで",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1041170",
+      "title": "光景",
+      "artist": "初星学園",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1041170",
+      "variants": [
+        {
+          "id": "joysound-1041170-819921",
+          "songNumber": "819921",
+          "versionTitle": "光景《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1041170-628437",
+          "songNumber": "628437",
+          "versionTitle": "光景",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104120",
+      "title": "わすれもの",
+      "artist": "斉藤和義",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104120",
+      "variants": [
+        {
+          "id": "joysound-104120-163371",
+          "songNumber": "163371",
+          "versionTitle": "わすれもの",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104121",
+      "title": "赤いヒマワリ",
+      "artist": "斉藤和義",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104121",
+      "variants": [
+        {
+          "id": "joysound-104121-163372",
+          "songNumber": "163372",
+          "versionTitle": "赤いヒマワリ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104179",
+      "title": "孤独のハイエナ",
+      "artist": "Superfly",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104179",
+      "variants": [
+        {
+          "id": "joysound-104179-163423",
+          "songNumber": "163423",
+          "versionTitle": "孤独のハイエナ",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1041870",
+      "title": "End of All",
+      "artist": "Aimer",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1041870",
+      "variants": [
+        {
+          "id": "joysound-1041870-627490",
+          "songNumber": "627490",
+          "versionTitle": "End of All",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104192",
+      "title": "Baby love",
+      "artist": "松田聖子",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104192",
+      "variants": [
+        {
+          "id": "joysound-104192-163436",
+          "songNumber": "163436",
+          "versionTitle": "Baby love",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104193",
+      "title": "挑戦して行こう!",
+      "artist": "松田聖子",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104193",
+      "variants": [
+        {
+          "id": "joysound-104193-163437",
+          "songNumber": "163437",
+          "versionTitle": "挑戦して行こう!",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1041931",
+      "title": "Aurora",
+      "artist": "浜崎あゆみ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1041931",
+      "variants": [
+        {
+          "id": "joysound-1041931-628024",
+          "songNumber": "628024",
+          "versionTitle": "Aurora",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1042144",
+      "title": "毎日",
+      "artist": "米津玄師",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1042144",
+      "variants": [
+        {
+          "id": "joysound-1042144-717927",
+          "songNumber": "717927",
+          "versionTitle": "毎日《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1042144-627447",
+          "songNumber": "627447",
+          "versionTitle": "毎日",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1042144-349743",
+          "songNumber": "349743",
+          "versionTitle": "毎日《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1042262",
+      "title": "366日 feat. キヨサク",
+      "artist": "HY",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1042262",
+      "variants": [
+        {
+          "id": "joysound-1042262-627446",
+          "songNumber": "627446",
+          "versionTitle": "366日 feat. キヨサク",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1042325",
+      "title": "MIRROR",
+      "artist": "Ado",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1042325",
+      "variants": [
+        {
+          "id": "joysound-1042325-717920",
+          "songNumber": "717920",
+          "versionTitle": "MIRROR《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1042325-627445",
+          "songNumber": "627445",
+          "versionTitle": "MIRROR",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104238",
+      "title": "コブクロメドレー2",
+      "artist": "コブクロ",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104238",
+      "variants": [
+        {
+          "id": "joysound-104238-24711",
+          "songNumber": "24711",
+          "versionTitle": "コブクロメドレー2",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1042599",
+      "title": "禁断症状",
+      "artist": "ヤングスキニー",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1042599",
+      "variants": [
+        {
+          "id": "joysound-1042599-627666",
+          "songNumber": "627666",
+          "versionTitle": "禁断症状",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1042622",
+      "title": "Wonder Scale",
+      "artist": "初星学園",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1042622",
+      "variants": [
+        {
+          "id": "joysound-1042622-819923",
+          "songNumber": "819923",
+          "versionTitle": "Wonder Scale《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1042622-628419",
+          "songNumber": "628419",
+          "versionTitle": "Wonder Scale",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1042623",
+      "title": "Fluorite",
+      "artist": "初星学園",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1042623",
+      "variants": [
+        {
+          "id": "joysound-1042623-819924",
+          "songNumber": "819924",
+          "versionTitle": "Fluorite《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1042623-628418",
+          "songNumber": "628418",
+          "versionTitle": "Fluorite",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1043001",
+      "title": "BREAKOUT",
+      "artist": "Snow Man",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1043001",
+      "variants": [
+        {
+          "id": "joysound-1043001-718102",
+          "songNumber": "718102",
+          "versionTitle": "BREAKOUT《本人映像》",
+          "versionType": "official-video",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1043001-628669",
+          "songNumber": "628669",
+          "versionTitle": "BREAKOUT",
+          "versionType": "standard",
+          "supportsX1": true
+        },
+        {
+          "id": "joysound-1043001-349833",
+          "songNumber": "349833",
+          "versionTitle": "BREAKOUT《ガイドボーカル入り》",
+          "versionType": "guide-vocal",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-1043010",
+      "title": "晴々 !",
+      "artist": "いきものがかり",
+      "sourceUrl": "https://www.joysound.com/web/search/song/1043010",
+      "variants": [
+        {
+          "id": "joysound-1043010-628446",
+          "songNumber": "628446",
+          "versionTitle": "晴々 !",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104303",
+      "title": "何度でも LOVE LOVE LOVE ～メインヴォーカルパート練習用～",
+      "artist": "DREAMS COME TRUE",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104303",
+      "variants": [
+        {
+          "id": "joysound-104303-57378",
+          "songNumber": "57378",
+          "versionTitle": "何度でも LOVE LOVE LOVE ～メインヴォーカルパート練習用～",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104306",
+      "title": "ねがい〈“BUZZ!!”STYLE〉",
+      "artist": "B'z",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104306",
+      "variants": [
+        {
+          "id": "joysound-104306-163474",
+          "songNumber": "163474",
+          "versionTitle": "ねがい〈“BUZZ!!”STYLE〉",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    },
+    {
+      "id": "joysound-104307",
+      "title": "Scarface Groove",
+      "artist": "SMAP",
+      "sourceUrl": "https://www.joysound.com/web/search/song/104307",
+      "variants": [
+        {
+          "id": "joysound-104307-57364",
+          "songNumber": "57364",
+          "versionTitle": "Scarface Groove",
+          "versionType": "standard",
+          "supportsX1": true
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "success": 419,
+    "no-x1": 1,
+    "unavailable": 0,
+    "error": 0
+  }
+}

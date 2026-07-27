@@ -10,6 +10,7 @@
     "audit:joysound": "bun run scripts/audit-joysound.ts",
     "crawl:joysound": "bun run scripts/crawl-joysound.ts",
     "discover:expanded": "bun run scripts/discover-expanded-songs.ts",
+    "discover:full-artists": "bun run scripts/discover-full-artist-songs.ts",
     "discover:joysound": "bun run scripts/discover-ranked-songs.ts",
     "review:joysound": "bun run scripts/review-joysound.ts",
     "lint": "eslint .",

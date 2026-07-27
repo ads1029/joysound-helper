@@ -59,6 +59,17 @@ bun run discover:joysound -- --confirm-authorized-discovery
 # 扩展热门歌手前 30 首与 1996～2011 年榜单
 bun run discover:expanded -- --confirm-authorized-discovery
 
+# 迁移可复用的历史分页并查看 95 位歌手全曲目计划
+bun run discover:full-artists -- --dry-run --limit=2000
+
+# 先读取不超过 20 个歌手列表分页验证解析
+bun run discover:full-artists -- --limit=20
+
+# 验证通过后按 100 个列表分页继续完整发现
+bun run discover:full-artists -- \
+  --limit=100 \
+  --confirm-authorized-discovery
+
 # 从榜单白名单采集全部 812 个尚未入库的详情页
 bun run crawl:joysound -- \
   --input-index=src/data/generated/joysound-ranked-candidates.json \
@@ -114,6 +125,34 @@ bun run audit:joysound -- \
 bun run review:joysound -- \
   --input=src/data/generated/joysound-expanded-songs.json \
   --output=src/data/generated/joysound-expanded-review-sample.json
+
+# 全曲目候选发现完成后，采集当前生产曲库尚未收录的详情
+bun run crawl:joysound -- \
+  --input-index=src/data/generated/joysound-full-artist-candidates.json \
+  --new-only \
+  --limit=<候选索引中的 newForProductionPages> \
+  --delay-ms=5000 \
+  --jitter-ms=2000 \
+  --batch-size=100 \
+  --batch-pause-min-ms=45000 \
+  --batch-pause-max-ms=60000 \
+  --output=src/data/generated/joysound-full-artist-songs.json \
+  --checkpoint=.cache/joysound-full-artist-crawler/checkpoint.json \
+  --confirm-authorized-large-run
+
+# 以当前 5,620 首生产曲库为稳定基线严格审计
+bun run audit:joysound -- \
+  --index=src/data/generated/joysound-full-artist-candidates.json \
+  --new-only \
+  --checkpoint=.cache/joysound-full-artist-crawler/checkpoint.json \
+  --baseline=expanded \
+  --output=src/data/generated/joysound-full-artist-catalog.json \
+  --require-complete
+
+# 等距抽取 20 首全曲目扩展歌曲重新核对官方来源
+bun run review:joysound -- \
+  --input=src/data/generated/joysound-full-artist-songs.json \
+  --output=src/data/generated/joysound-full-artist-review-sample.json
 ```
 
 默认歌曲结果写入 `src/data/generated/joysound-songs.json`，检查点写入 `.cache/joysound-crawler/checkpoint.json`。`--index-only` 只固化 Sitemap 中的候选链接和 `lastmod`，不请求歌曲详情页。重复执行详情采集会复用 `lastmod` 未变化的成功记录；使用 `--refresh` 可强制重新获取。
@@ -131,6 +170,12 @@ bun run review:joysound -- \
 扩展发现读取 95 位保留歌手的官方热门前 30 首及 1996～2011 平成榜，在详情采集前排除 7 位命中演歌榜的歌手。首次扩展得到 2,889 个去重页面，其中 454 个已在榜单曲库、2,435 个需要新增采集。详情阶段 2,435/2,435 成功，生成 5,607 个 X1 版本；严格审计错误 0、冲突 0，来源复核 20/20 一致。
 
 扩展审计必须使用 `--baseline=ranked` 固定接入前的 3,185 首榜单曲库快照。审计通过后，`src/data/songs.ts` 改用 `joysound-expanded-catalog.json`；当前生产曲库为 5,620 首歌曲、10,761 个 X1 版本。详情页中以“ミュージックビデオ観放題”为标题前缀的特殊模板由 `<title>` 提取歌名和歌手，页面内的 X1 版本仍按标准卡片校验。
+
+全曲目发现使用独立的 `.cache/joysound-full-artist-discovery/checkpoint.json`，按歌手记录声明曲目总数、计划分页、成功/不可用/错误/待处理分页及候选链接。历史热门前 30 首检查点中，第 2 页对大多数歌手只保存第 21～30 名，不能把该半页当作完整的 20 条分页；发现器只迁移通过预期范围和条数校验的 98 页。若历史首页与当前后续分页因热度排序变化而产生跨页重复，发现器会把受影响的历史分页重新标记为待处理，并在重抓一致前保持 `discoveryReady=false`。
+
+若官方歌手页在发现期间改变声明曲目总数，发现器会采用新总数重建该歌手的分页分母并清空其旧分页快照，不影响其他歌手的检查点。2026-07-27 首次触发该流程时，桑田佳祐由 175 首增加到 177 首，重建后错误项恢复为 0。
+
+全曲目候选索引只有在 1,108 个声明分页全部具有成功或不可用状态、错误为 0、跨页候选数量一致时才能达到 `discoveryReady=true`。详情采集、严格审计和生产接入必须等该门禁通过后执行；审计使用 `--baseline=expanded` 固定当前 5,620 首生产基线。
 
 ## 每轮标准操作
 
