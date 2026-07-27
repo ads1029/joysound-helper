@@ -3,6 +3,7 @@ import { dirname, resolve } from "node:path";
 
 import popularCatalog from "../src/data/generated/joysound-popular-catalog.json";
 import rankedCatalog from "../src/data/generated/joysound-ranked-catalog.json";
+import expandedCatalog from "../src/data/generated/joysound-expanded-catalog.json";
 import { manualSongs } from "../src/data/manual-songs";
 import type { Song } from "../src/types";
 import type {
@@ -48,7 +49,7 @@ type CliOptions = {
   indexPath: string;
   checkpointPath: string;
   outputPath: string;
-  baseline: "manual" | "popular" | "ranked";
+  baseline: "manual" | "popular" | "ranked" | "expanded";
   newOnly: boolean;
   requireComplete: boolean;
   help: boolean;
@@ -97,6 +98,9 @@ async function main() {
 function selectBaselineSongs(
   baseline: CliOptions["baseline"],
 ): Song[] {
+  if (baseline === "expanded") {
+    return expandedCatalog.songs as Song[];
+  }
   if (baseline === "ranked") {
     return rankedCatalog.songs as Song[];
   }
@@ -230,10 +234,11 @@ function parseCliOptions(args: string[]): CliOptions {
       if (
         baseline !== "manual" &&
         baseline !== "popular" &&
-        baseline !== "ranked"
+        baseline !== "ranked" &&
+        baseline !== "expanded"
       ) {
         throw new Error(
-          "baseline 必须是 manual、popular 或 ranked",
+          "baseline 必须是 manual、popular、ranked 或 expanded",
         );
       }
       options.baseline = baseline;
@@ -304,7 +309,7 @@ function printHelp() {
   --checkpoint=PATH     采集检查点，默认 ${DEFAULT_CHECKPOINT_PATH}
   --output=PATH         合并曲库与报告，默认 ${DEFAULT_OUTPUT_PATH}
   --new-only            审计本地榜单索引中尚未进入生产曲库的页面
-  --baseline=TYPE       合并基线：manual（默认）、popular 或 ranked
+  --baseline=TYPE       合并基线：manual（默认）、popular、ranked 或 expanded
   --require-complete    有待处理、错误或冲突时以失败状态退出
   --help                显示帮助
 `);
