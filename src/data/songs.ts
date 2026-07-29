@@ -1,4 +1,4 @@
-import catalog from "./generated/joysound-expanded-catalog.json";
+import catalog from "./generated/joysound-production-catalog.json";
 
 import type { Song } from "../types";
 

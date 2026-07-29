@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 
@@ -41,9 +42,8 @@ async function main() {
     return;
   }
 
-  const input = JSON.parse(
-    await readFile(options.inputPath, "utf8"),
-  ) as GeneratedSongs;
+  const inputContent = await readFile(options.inputPath, "utf8");
+  const input = JSON.parse(inputContent) as GeneratedSongs;
 
   if (
     input.schemaVersion !== 1 ||
@@ -107,6 +107,9 @@ async function main() {
     schemaVersion: 1,
     generatedAt: new Date().toISOString(),
     inputPath: options.inputPath,
+    inputSha256: createHash("sha256")
+      .update(inputContent)
+      .digest("hex"),
     sampleMethod: "按生成曲库位置等距抽取",
     delayPolicy: {
       delayMs: DELAY_MS,

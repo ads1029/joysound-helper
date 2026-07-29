@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-29T07:33:14.110Z",
+  "inputPath": "src/data/generated/joysound-full-artist-songs.json",
+  "inputSha256": "9ce1ca4c29a15eda64d0c425234dfb50863ac102e84dad64bb80bbe84b77e48e",
+  "sampleMethod": "按生成曲库位置等距抽取",
+  "delayPolicy": {
+    "delayMs": 5000,
+    "jitterMs": 2000,
+    "concurrency": 1
+  },
+  "sampleSize": 20,
+  "passed": true,
+  "samples": [
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000167",
+      "title": "ラジオ",
+      "artist": "aiko",
+      "songNumbers": [
+        "621651"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:31:06.048Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1043321",
+      "title": "366日 feat. 須田景凪",
+      "artist": "HY",
+      "songNumbers": [
+        "627815"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:31:12.582Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/10784",
+      "title": "Any",
+      "artist": "Mr.Children",
+      "songNumbers": [
+        "10790",
+        "714564",
+        "902854"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:31:19.398Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1112662",
+      "title": "アダルティー (西畑大吾・藤原丈一郎・大橋和也)",
+      "artist": "なにわ男子",
+      "songNumbers": [
+        "638104"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:31:25.629Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/115210",
+      "title": "二階の奥の部屋",
+      "artist": "HY",
+      "songNumbers": [
+        "58035"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:31:31.878Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/121277",
+      "title": "How Do I Survive?",
+      "artist": "Superfly",
+      "songNumbers": [
+        "189565",
+        "83849",
+        "900180",
+        "908528"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:31:38.045Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/133452",
+      "title": "18 ～eighteen～",
+      "artist": "福山雅治",
+      "songNumbers": [
+        "909023",
+        "91034"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:31:45.621Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/149320",
+      "title": "クリシェ",
+      "artist": "ポルノグラフィティ",
+      "songNumbers": [
+        "909304",
+        "92302"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:31:52.426Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/158737",
+      "title": "ANOTHER JUNK IN MY TRUNK",
+      "artist": "DREAMS COME TRUE",
+      "songNumbers": [
+        "93659"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:31:58.377Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/16992",
+      "title": "ケロケロ",
+      "artist": "DREAMS COME TRUE",
+      "songNumbers": [
+        "17002"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:32:05.918Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/187031",
+      "title": "Save the best for last(日本語バージョン)",
+      "artist": "松田聖子",
+      "songNumbers": [
+        "915158"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:32:13.286Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/203737",
+      "title": "Don't wanna lose you",
+      "artist": "松田聖子",
+      "songNumbers": [
+        "931909"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:32:21.177Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/21958",
+      "title": "甘い恋人",
+      "artist": "MISIA",
+      "songNumbers": [
+        "22661"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:32:27.839Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/232870",
+      "title": "直角Sunshine",
+      "artist": "AKB48",
+      "songNumbers": [
+        "199855"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:32:34.634Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/24995",
+      "title": "エンジェル",
+      "artist": "KinKi Kids",
+      "songNumbers": [
+        "26502"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:32:41.959Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/27816",
+      "title": "CHANGE THE FUTURE",
+      "artist": "B'z",
+      "songNumbers": [
+        "31800"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:32:48.799Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/30553",
+      "title": "THE NEPENTHES",
+      "artist": "L'Arc-en-Ciel",
+      "songNumbers": [
+        "35056"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:32:55.133Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/36252",
+      "title": "サーモン・ダンス",
+      "artist": "中島みゆき",
+      "songNumbers": [
+        "50783"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:33:01.051Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/406258",
+      "title": "日和姫",
+      "artist": "椎名林檎",
+      "songNumbers": [
+        "738846"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:33:06.802Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/41679",
+      "title": "NO MORE ENCORE",
+      "artist": "中森明菜",
+      "songNumbers": [
+        "59743"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-29T07:33:14.110Z",
+      "differences": []
+    }
+  ]
+}
