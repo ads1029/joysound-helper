@@ -19,7 +19,7 @@ export type SearchResult = Omit<Song, "variants"> & {
 
 export const CATALOG_PAGE_SIZE = 10;
 
-const romajiCollator = new Intl.Collator("en", {
+const titleCollator = new Intl.Collator("ja", {
   numeric: true,
   sensitivity: "base",
 });
@@ -43,19 +43,19 @@ function toSearchResult(song: Song): SearchResult | null {
   };
 }
 
-export function listSongsByRomaji(allSongs: Song[]): SearchResult[] {
+export function listSongsByTitle(allSongs: Song[]): SearchResult[] {
   return allSongs
     .map(toSearchResult)
     .filter((song): song is SearchResult => song !== null)
     .sort((first, second) => {
-      const firstSortName = first.romaji?.trim() || first.title;
-      const secondSortName = second.romaji?.trim() || second.title;
-      const romajiOrder = romajiCollator.compare(
-        firstSortName,
-        secondSortName,
-      );
+      const titleOrder = titleCollator.compare(first.title, second.title);
+      const artistOrder = titleCollator.compare(first.artist, second.artist);
 
-      return romajiOrder || first.title.localeCompare(second.title, "ja");
+      return (
+        titleOrder ||
+        artistOrder ||
+        first.sourceUrl.localeCompare(second.sourceUrl)
+      );
     });
 }
 

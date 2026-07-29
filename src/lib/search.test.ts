@@ -5,7 +5,7 @@ import { songs } from "../data/songs";
 import type { Song } from "../types";
 import {
   CATALOG_PAGE_SIZE,
-  listSongsByRomaji,
+  listSongsByTitle,
   searchSongs,
   searchSongsByArtist,
 } from "./search";
@@ -108,32 +108,32 @@ describe("searchSongs", () => {
     expect(searchSongs(songs, "一千棵樱花树")).toEqual([]);
   });
 
-  it("lists the catalog in romaji order with ten songs per page", () => {
-    const catalog = listSongsByRomaji(manualSongs);
+  it("lists the catalog in title order with ten songs per page", () => {
+    const catalog = listSongsByTitle(manualSongs);
 
     expect(catalog.slice(0, CATALOG_PAGE_SIZE)).toHaveLength(10);
     expect(catalog.slice(CATALOG_PAGE_SIZE)).toHaveLength(10);
-    expect(catalog.map((song) => song.romaji)).toEqual([
-      "aidoru",
-      "ao no sumika",
-      "ao to natsu",
-      "bansanka",
-      "bling-bang-bang-born",
-      "butter-fly",
-      "daarin",
-      "god knows",
-      "iris out",
-      "kaibutsu",
-      "kaijuu no hanauta",
-      "lemon",
-      "mariigoorudo",
+    expect(catalog.map((song) => song.title)).toEqual([
+      "Bling-Bang-Bang-Born",
+      "Butter-Fly",
+      "God knows...",
+      "IRIS OUT",
+      "Lemon",
       "only my railgun",
-      "rairakku",
-      "saudaaji",
-      "senbonzakura",
-      "suiheisen",
-      "yoru ni kakeru",
-      "zankoku na tenshi no teeze",
+      "アイドル",
+      "サウダージ",
+      "ダーリン",
+      "マリーゴールド",
+      "ライラック",
+      "怪獣の花唄",
+      "怪物",
+      "残酷な天使のテーゼ",
+      "水平線",
+      "青と夏",
+      "青のすみか",
+      "千本桜",
+      "晩餐歌",
+      "夜に駆ける",
     ]);
   });
 

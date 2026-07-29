@@ -13,7 +13,7 @@ import { normalizeSearchText } from "./lib/normalize";
 import { getPaginationItems } from "./lib/pagination";
 import {
   CATALOG_PAGE_SIZE,
-  listSongsByRomaji,
+  listSongsByTitle,
   searchSongs,
   searchSongsByArtist,
 } from "./lib/search";
@@ -37,7 +37,7 @@ const artistExamples = [
 ];
 
 const searchModes: SearchMode[] = ["song", "artist"];
-const catalogSongs = listSongsByRomaji(songs);
+const catalogSongs = listSongsByTitle(songs);
 
 export default function App() {
   const [searchMode, setSearchMode] = useState<SearchMode>("song");
@@ -336,7 +336,7 @@ export default function App() {
                 <h2>
                   {hasQuery
                     ? `找到 ${allResults.length} 首歌曲`
-                    : "按罗马音 A–Z 排列"}
+                    : "按歌曲标题排列"}
                 </h2>
               </div>
               {totalPages > 1 && (
