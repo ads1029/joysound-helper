@@ -8,7 +8,7 @@
 - GitHub Pages：[https://ads1029.github.io/joysound-helper/](https://ads1029.github.io/joysound-helper/)
 - GitHub 仓库：[https://github.com/ads1029/joysound-helper](https://github.com/ads1029/joysound-helper)
 
-Pull Request 会通过 GitHub Actions 运行代码检查、测试和构建。推送到 `main` 分支后，Vercel 会通过 Git 集成自动部署主站；GitHub Pages 工作流会再次完成检查并发布站点。
+Pull Request 会通过 GitHub Actions 运行代码检查、测试和构建，其中测试包含生产曲库及各阶段生成数据的校验。推送到 `main` 分支后，Vercel 会通过 Git 集成自动部署主站；GitHub Pages 工作流会再次完成检查、发布站点，并验证首页及其构建生成的脚本和样式资源均可访问。
 
 ## 技术栈
 
@@ -38,9 +38,10 @@ bun run lint
 bun run test
 bun run build
 bun run preview
+bun run verify:deployment -- https://example.com/
 ```
 
-生产构建输出在 `dist/`，可以直接部署到任意静态网站托管服务。
+生产构建输出在 `dist/`，可以直接部署到任意静态网站托管服务。`verify:deployment` 会在部署传播期间自动重试，并要求首页及其引用的脚本、样式都返回成功且内容非空。
 
 ## 数据维护
 

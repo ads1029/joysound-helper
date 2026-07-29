@@ -58,3 +58,6 @@ jobs:
       - name: 发布站点
         id: deployment
         uses: actions/deploy-pages@v5
+
+      - name: 验证已发布站点
+        run: bun run verify:deployment -- "${{ steps.deployment.outputs.page_url }}"

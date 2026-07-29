@@ -21,6 +21,7 @@
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest",
+    "verify:deployment": "bun run scripts/verify-deployment.ts",
     "preview": "vite preview"
   },
   "dependencies": {

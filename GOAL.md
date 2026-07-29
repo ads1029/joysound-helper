@@ -1,6 +1,6 @@
 # 长期目标
 
-> 最后更新：2026-07-29
+> 最后更新：2026-07-30
 > 本文档是项目目标与进度的动态记录。功能范围、优先级、数据规模、里程碑状态或关键决策发生变化时，必须在同一次改动中更新本文档。
 > 近期执行顺序与验收拆分记录在 `TODO.md`；`GOAL.md` 仍是长期目标和关键决策的唯一权威记录，两者发生冲突时以本文为准。
 
@@ -39,10 +39,10 @@
 - GitHub 仓库：<https://github.com/ads1029/joysound-helper>
 - Vercel 主站：<https://joysound-helper.vercel.app>
 - GitHub Pages：<https://ads1029.github.io/joysound-helper/>
-- GitHub Pages 使用 `.github/workflows/deploy-pages.yml`，在 `main` 分支更新后运行 lint、测试、构建和部署。
-- Pull Request 使用 `.github/workflows/ci.yml` 在合并前运行 lint、测试和构建，不执行生产部署。
+- GitHub Pages 使用 `.github/workflows/deploy-pages.yml`，在 `main` 分支更新后运行 lint、测试、构建和部署；部署完成后会自动验证首页及其构建生成的脚本、样式资源。
+- Pull Request 使用 `.github/workflows/ci.yml` 在合并前运行 lint、测试和构建，不执行生产部署；测试包含生产曲库及各阶段生成数据的无网络校验。
 - Vercel 项目 `joysound-helper` 已连接同一 GitHub 仓库，`main` 分支更新会自动部署生产环境。
-- 两个站点的发布验收标准为：部署状态成功、首页返回 HTTP 200、构建产物的脚本和样式资源可从对应站点路径加载。
+- 两个站点的发布验收标准为：部署状态成功、首页返回 HTTP 200、构建产物的脚本和样式资源可从对应站点路径加载；GitHub Pages 已在发布工作流中自动执行该检查，Vercel 可使用同一 `verify:deployment` 命令复核。
 
 ## 歌曲采集架构
 
