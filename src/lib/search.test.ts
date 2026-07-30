@@ -11,14 +11,31 @@ import {
 } from "./search";
 
 describe("searchSongs", () => {
-  it("finds a song by its exact Japanese title", () => {
-    const results = searchSongs(songs, "千本桜");
+  it("finds every exact Japanese title before considering partial matches", () => {
+    const fixture: Song[] = [
+      ["exact-a", "千本桜", "歌手 A"],
+      ["exact-b", "千本桜", "歌手 B"],
+      ["partial", "千本桜祭", "歌手 C"],
+    ].map(([id, title, artist], index) => ({
+      id,
+      title,
+      artist,
+      sourceUrl: `https://example.com/${id}`,
+      variants: [
+        {
+          id: `${id}-x1`,
+          songNumber: `12345${index}`,
+          versionTitle: title,
+          versionType: "standard",
+          supportsX1: true,
+        },
+      ],
+    }));
 
-    expect(results).toHaveLength(1);
-    expect(results[0]).toMatchObject({
-      title: "千本桜",
-      artist: "WhiteFlame feat.初音ミク",
-    });
+    const results = searchSongs(fixture, "千本桜");
+
+    expect(results).toHaveLength(2);
+    expect(results.map((song) => song.artist)).toEqual(["歌手 A", "歌手 B"]);
   });
 
   it("matches equivalent simplified and traditional Chinese characters", () => {
@@ -102,10 +119,28 @@ describe("searchSongs", () => {
   });
 
   it("allows a cross-kana exact title without fuzzy-matching one character", () => {
-    expect(searchSongs(songs, "ふ").map((song) => song.title)).toContain("フ");
-    expect(searchSongs(songs, "千")).toEqual([]);
-    expect(searchSongs(songs, "g")).toEqual([]);
-    expect(searchSongs(songs, "一千棵樱花树")).toEqual([]);
+    const fixture: Song[] = ["フ", "千本桜", "God knows..."].map(
+      (title, index): Song => ({
+        id: `single-character-${index}`,
+        title,
+        artist: "テスト",
+        sourceUrl: `https://example.com/${index}`,
+        variants: [
+          {
+            id: `single-character-${index}-x1`,
+            songNumber: `12345${index}`,
+            versionTitle: title,
+            versionType: "standard",
+            supportsX1: true,
+          },
+        ],
+      }),
+    );
+
+    expect(searchSongs(fixture, "ふ").map((song) => song.title)).toContain("フ");
+    expect(searchSongs(fixture, "千")).toEqual([]);
+    expect(searchSongs(fixture, "g")).toEqual([]);
+    expect(searchSongs(fixture, "一千棵樱花树")).toEqual([]);
   });
 
   it("lists the catalog in title order with ten songs per page", () => {
@@ -202,6 +237,19 @@ describe("searchSongsByArtist", () => {
     expect(
       searchSongsByArtist(songs, "藤井风").some(
         (song) => song.artist === "藤井 風",
+      ),
+    ).toBe(true);
+  });
+
+  it("matches a consecutive artist fragment from any position", () => {
+    expect(
+      searchSongsByArtist(songs, "玄師").some(
+        (song) => song.artist === "米津玄師",
+      ),
+    ).toBe(true);
+    expect(
+      searchSongsByArtist(songs, "APPLE").some(
+        (song) => song.artist === "Mrs. GREEN APPLE",
       ),
     ).toBe(true);
   });

@@ -36,12 +36,17 @@ describe("App", () => {
       "千本樱",
     );
 
-    expect(
-      screen.getByRole("heading", { name: "找到 1 首歌曲" }),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole("heading", { name: "千本桜" }),
-    ).toBeInTheDocument();
+    const resultHeadings = screen.getAllByRole("heading", {
+      name: "千本桜",
+    });
+    const resultSummary = screen.getByRole("heading", {
+      name: /^找到 \d+ 首歌曲$/,
+    });
+
+    expect(resultHeadings.length).toBeGreaterThan(0);
+    expect(resultSummary).toHaveTextContent(
+      `找到 ${resultHeadings.length} 首歌曲`,
+    );
     expect(screen.getByText("116296")).toBeInTheDocument();
 
     await user.click(screen.getByRole("button", { name: "清空搜索" }));
@@ -63,12 +68,13 @@ describe("App", () => {
     });
     expect(artistSearchbox).toBeInTheDocument();
 
-    await user.type(artistSearchbox, "米津玄師");
+    await user.type(artistSearchbox, "玄師");
 
     expect(
       screen.getByText("歌手即时搜索结果"),
     ).toBeInTheDocument();
     expect(screen.getByText(/^找到 \d+ 首歌曲$/)).toBeInTheDocument();
+    expect(screen.getAllByText("米津玄師").length).toBeGreaterThan(0);
   });
 
   it("输入法组合期间保留目录并在确认文字后更新结果", () => {
@@ -88,7 +94,10 @@ describe("App", () => {
     fireEvent.compositionEnd(searchbox);
 
     expect(
-      screen.getByRole("heading", { name: "找到 1 首歌曲" }),
+      screen.getByRole("heading", { name: /^找到 \d+ 首歌曲$/ }),
     ).toBeInTheDocument();
+    expect(
+      screen.getAllByRole("heading", { name: "千本桜" }).length,
+    ).toBeGreaterThan(0);
   });
 });

@@ -131,7 +131,8 @@ export function searchSongsByArtist(
       exactMatches.push(song);
     } else if (
       canUsePartialSearch &&
-      normalizedArtist.includes(query)
+      // 使用任意位置的连续片段，不要求用户从歌手名第一个字符开始输入。
+      normalizedArtist.indexOf(query) >= 0
     ) {
       partialMatches.push(song);
     }
