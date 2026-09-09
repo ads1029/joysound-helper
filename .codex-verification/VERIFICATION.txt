@@ -381,3 +381,40 @@ restored .codex-verification/rollback-test-current/package.json from .codex-veri
 ROLLBACK_EXIT_STATUS=0
 CMP_EXIT_STATUS=0
 Restored behavior/status: rollback-test-current/package.json is byte-identical to original-package.json; current .codex-verification/MODIFIED_FILE remains changed.
+
+STATUS REFRESH: DOCUMENTATION AND DEPLOYMENT
+--------------------------------------------
+Changed branch/field: progress records now reflect the latest live checkpoints, with first-batch detail collection at 1,051/3,086 and source-expansion discovery at 1,339 requests.
+Four artifacts:
+- /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/MODIFIED_FILE
+- /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/DIFF_FILE
+- /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/VERIFICATION.txt
+- /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/ROLLBACK.sh
+
+MODIFIED STATUS REFRESH
+Command: bun run lint && bun run test && bun run build
+Input: worktree after the live checkpoint and documentation refresh.
+Literal output/result:
+$ eslint .
+$ vitest run
+Test Files  27 passed (27)
+Tests  93 passed (93)
+$ tsc -b && vite build
+vite v8.1.5 building client environment for production...
+23 modules transformed.
+dist/index.html 0.60 kB; dist/assets/index-CyhHkykY.css 7.92 kB gzip; dist/assets/index-DWsxVmrX.js 10,024.18 kB gzip
+✓ built in 750ms
+MODIFIED_STATUS_REFRESH_EXIT=0
+exit status: 0
+
+DEPLOYMENT
+Command: bunx vercel --prod --yes
+Input: commit 741dcdd from the clean develop worktree.
+Literal output/result: deployment dpl_97Q3a4fvcPVERxKhZP1ysyoMebtF, READY, aliased to https://joysound-helper.vercel.app
+exit status: 0
+
+DEPLOYMENT VERIFICATION
+Command: bun run verify:deployment -- https://joysound-helper.vercel.app/
+Literal output/result: 首页 HTTP 200; script https://joysound-helper.vercel.app/assets/index-DWsxVmrX.js; style https://joysound-helper.vercel.app/assets/index-CyhHkykY.css
+exit status: 0
+Restored behavior/status: rollback-test-current remains byte-identical after the prior rollback test; MODIFIED_FILE remains the changed discovery script.
