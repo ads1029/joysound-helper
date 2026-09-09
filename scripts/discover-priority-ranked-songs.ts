@@ -34,7 +34,16 @@ type SeedSource = {
   id: string;
   label: string;
   url: string;
-  parser: "ranking" | "annual" | "released" | "age" | "exclude";
+  parser:
+    | "ranking"
+    | "artist-ranking"
+    | "annual"
+    | "annual-v2"
+    | "released"
+    | "released-v2"
+    | "age"
+    | "feature"
+    | "exclude";
   category?: Category;
   year?: number;
   yearKind?: "ranking" | "release";
@@ -389,6 +398,24 @@ function createRankingSources(minimumYear: number | undefined): SeedSource[] {
       yearKind: "ranking",
     },
     {
+      id: "priority-current-artist-weekly",
+      label: "当前歌手周榜",
+      url: "https://www.joysound.com/web/karaoke/ranking/artist/weekly",
+      parser: "artist-ranking",
+      category: "pop",
+      year: CURRENT_RANKING_YEAR,
+      yearKind: "ranking",
+    },
+    {
+      id: "priority-current-artist-monthly",
+      label: "当前歌手月榜",
+      url: "https://www.joysound.com/web/karaoke/ranking/artist/monthly",
+      parser: "artist-ranking",
+      category: "pop",
+      year: CURRENT_RANKING_YEAR,
+      yearKind: "ranking",
+    },
+    {
       id: "priority-current-hot",
       label: "当前急上升榜",
       url: "https://www.joysound.com/web/karaoke/ranking/hot",
@@ -432,7 +459,7 @@ function createRankingSources(minimumYear: number | undefined): SeedSource[] {
       label: `${year} 年度榜（综合、ACG、流行分类）`,
       url:
         `https://www.joysound.com/web/s/karaoke/contents/annual_ranking/${year}`,
-      parser: "annual",
+      parser: "annual-v2",
       year,
       yearKind: "ranking",
     });
@@ -445,7 +472,7 @@ function createRankingSources(minimumYear: number | undefined): SeedSource[] {
       label: `${year} 年发行歌曲榜`,
       url:
         `https://www.joysound.com/web/s/karaoke/contents/annual_ranking/${year}-02`,
-      parser: "released",
+      parser: "released-v2",
       year,
       yearKind: "release",
     });
@@ -460,6 +487,142 @@ function createRankingSources(minimumYear: number | undefined): SeedSource[] {
       parser: "age",
       category: "pop",
       year,
+      yearKind: "ranking",
+    });
+  }
+
+  const featureSources: Array<{
+    id: string;
+    label: string;
+    path: string;
+    category: Category;
+    year: number;
+  }> = [
+    {
+      id: "priority-feature-hitsong-2025",
+      label: "2025 热门歌曲特集",
+      path: "/web/s/karaoke/feature/hitsong_2025",
+      category: "pop",
+      year: 2025,
+    },
+    {
+      id: "priority-feature-hit-anime-2025",
+      label: "2025 动漫热门歌曲特集",
+      path: "/web/s/karaoke/feature/hit_anime2025",
+      category: "acg",
+      year: 2025,
+    },
+    {
+      id: "priority-feature-anime-ranking-2601",
+      label: "2026 年初动漫榜特集",
+      path: "/web/s/karaoke/feature/anime/ranking/2601",
+      category: "acg",
+      year: 2026,
+    },
+    {
+      id: "priority-feature-anime-ranking-2604",
+      label: "2026 春季动漫榜特集",
+      path: "/web/s/karaoke/feature/anime/ranking/2604",
+      category: "acg",
+      year: 2026,
+    },
+    {
+      id: "priority-feature-anime-ranking-2607",
+      label: "2026 夏季动漫榜特集",
+      path: "/web/s/karaoke/feature/anime/2607",
+      category: "acg",
+      year: 2026,
+    },
+    {
+      id: "priority-feature-anime-videorank",
+      label: "动漫视频榜特集",
+      path: "/web/s/karaoke/feature/anime_videorank",
+      category: "acg",
+      year: 2026,
+    },
+    {
+      id: "priority-feature-animesong",
+      label: "动漫歌曲特集",
+      path: "/web/s/karaoke/feature/animesong",
+      category: "acg",
+      year: 2026,
+    },
+    {
+      id: "priority-feature-character-songs",
+      label: "角色歌曲特集",
+      path: "/web/s/karaoke/feature/character-songs",
+      category: "acg",
+      year: 2026,
+    },
+    {
+      id: "priority-feature-nijisanji",
+      label: "にじさんじ歌曲特集",
+      path: "/web/s/karaoke/feature/nijisanji",
+      category: "acg",
+      year: 2026,
+    },
+    {
+      id: "priority-feature-vtuber",
+      label: "VTuber 歌曲特集",
+      path: "/web/s/karaoke/feature/vtuber",
+      category: "acg",
+      year: 2026,
+    },
+    {
+      id: "priority-feature-idol-ranking",
+      label: "偶像歌曲榜特集",
+      path: "/web/s/karaoke/feature/idolranking",
+      category: "pop",
+      year: 2026,
+    },
+    {
+      id: "priority-feature-tiktok",
+      label: "TikTok 热门歌曲特集",
+      path: "/web/s/karaoke/feature/tiktok",
+      category: "pop",
+      year: 2026,
+    },
+    {
+      id: "priority-feature-oshikatsu-2025",
+      label: "2025 应援歌曲特集",
+      path: "/web/s/karaoke/feature/oshikatsu2025",
+      category: "pop",
+      year: 2025,
+    },
+    {
+      id: "priority-feature-kouhaku-2025",
+      label: "2025 红白相关歌曲特集",
+      path: "/web/s/karaoke/feature/kouhaku_2025",
+      category: "pop",
+      year: 2025,
+    },
+    {
+      id: "priority-feature-sabikara",
+      label: "副歌热门歌曲特集",
+      path: "/web/s/karaoke/feature/sabikara",
+      category: "pop",
+      year: 2026,
+    },
+    {
+      id: "priority-feature-moteuta",
+      label: "热门点唱歌曲特集",
+      path: "/web/s/karaoke/feature/moteuta",
+      category: "pop",
+      year: 2026,
+    },
+  ];
+
+  for (const feature of featureSources) {
+    if (minimumYear !== undefined && feature.year < minimumYear) {
+      continue;
+    }
+    sources.push({
+      id: feature.id,
+      label: feature.label,
+      url: `https://www.joysound.com${feature.path}`,
+      parser: "feature",
+      category: feature.category,
+      year: feature.year,
       yearKind: "ranking",
     });
   }
@@ -555,7 +718,7 @@ async function loadOrFetchSource(
     saved.source.url === source.url &&
     saved.source.parser === source.parser &&
     !(
-      source.parser === "ranking" &&
+      (source.parser === "ranking" || source.parser === "artist-ranking") &&
       "artistUrls" in saved &&
       saved.artistUrls.length === 0
     )
@@ -630,6 +793,20 @@ function parseSource(source: SeedSource, html: string): ParsedSource {
     };
   }
 
+  if (source.parser === "artist-ranking") {
+    return {
+      source,
+      status: "success",
+      fetchedAt: new Date().toISOString(),
+      songCandidates: [],
+      artistUrls: extractOrderedOfficialUrls(
+        html,
+        /^\/web\/search\/artist\/\d+$/,
+      ),
+      excludedArtistNames: [],
+    };
+  }
+
   if (source.parser === "age") {
     return {
       source,
@@ -647,6 +824,29 @@ function parseSource(source: SeedSource, html: string): ParsedSource {
     };
   }
 
+  if (source.parser === "feature") {
+    return {
+      source,
+      status: "success",
+      fetchedAt: new Date().toISOString(),
+      songCandidates: extractOrderedOfficialUrls(
+        html,
+        /^\/web\/search\/song\/\d+$/,
+      ).map((url, index) => ({
+        url,
+        category: source.category ?? "pop",
+        rank: index + 1,
+        year: source.year,
+        yearKind: source.yearKind,
+      })),
+      artistUrls: extractOrderedOfficialUrls(
+        html,
+        /^\/web\/search\/artist\/\d+$/,
+      ),
+      excludedArtistNames: [],
+    };
+  }
+
   const $ = load(html);
   const songCandidates: ParsedSource["songCandidates"] = [];
   const rules: Array<{ match: RegExp; category: Category }> = [
@@ -656,6 +856,14 @@ function parseSource(source: SeedSource, html: string): ParsedSource {
     { match: /東方系ランキング/, category: "acg" },
     {
       match: /(?:ボーイズグループ|ガールズグループ|ネット発アーティスト楽曲|サビカラ).*ランキング/,
+      category: "pop",
+    },
+    {
+      match: /ドラマ関連曲ランキング/,
+      category: "pop",
+    },
+    {
+      match: /(?:STREAMER|スマホアプリ|Nintendo Switch).*ランキング/,
       category: "pop",
     },
   ];
@@ -886,7 +1094,7 @@ function createOutput(
       yearSemantics:
         "year 是候选来源的榜单年份；released 来源使用发行榜年份，严格模式排除低于下限或缺少年份的候选",
       priorityOrder:
-        "当前 ACG 榜单 → 当前流行榜单 → 年度 ACG/流行榜单 → 发行榜 → 年龄榜 → 歌手热门前 N 首",
+        "当前 ACG/流行榜单 → 当前歌手榜 → 官方热门特集 → 年度 ACG/流行榜单 → 发行榜 → 年龄榜 → 歌手热门前 N 首",
       requiredCategories: ["acg", "pop"],
       excludedCategories: ["演歌／歌謡曲", "洋楽", "K-POP／韓国曲"],
     },

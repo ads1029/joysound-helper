@@ -55695,3 +55695,424 @@ index 0000000..62e8d30
 +    }
 +  ]
 +}
+
+# CONTINUATION DIFF: THIRD-ROUND SOURCE EXPANSION
+# Generated against commit aee2100; large generated JSON files are represented by their staged stats below.
+diff --git a/CRAWLER.md b/CRAWLER.md
+index af17a1a..f5f4566 100644
+--- a/CRAWLER.md
++++ b/CRAWLER.md
+@@ -234,16 +234,16 @@ bun run promote:joysound -- \
+ ```bash
+ bun run discover:priority -- \
+   --target=20000 \
+-  --artist-limit=200 \
++  --artist-limit=1000 \
+   --min-year=2000 \
+   --exclude-index=src/data/generated/joysound-priority-ranked-candidates.json \
+   --exclude-index=src/data/generated/joysound-priority-ranked-next-candidates.json \
+-  --output=src/data/generated/joysound-priority-ranked-2000-next-candidates.json \
+-  --checkpoint=.cache/joysound-priority-ranked-2000-next/checkpoint.json \
++  --output=src/data/generated/joysound-priority-ranked-2000-next-feature-candidates.json \
++  --checkpoint=.cache/joysound-priority-ranked-2000-next-feature/checkpoint.json \
+   --confirm-authorized-discovery
+ 
+ bun run crawl:joysound -- \
+-  --input-index=src/data/generated/joysound-priority-ranked-2000-next-candidates.json \
++  --input-index=src/data/generated/joysound-priority-ranked-2000-next-feature-candidates.json \
+   --new-only \
+   --limit=20000 \
+   --delay-ms=5000 \
+@@ -251,18 +251,20 @@ bun run crawl:joysound -- \
+   --batch-size=100 \
+   --batch-pause-min-ms=45000 \
+   --batch-pause-max-ms=60000 \
+-  --output=src/data/generated/joysound-priority-ranked-2000-next-songs.json \
+-  --checkpoint=.cache/joysound-priority-ranked-2000-next/crawler-checkpoint.json \
++  --output=src/data/generated/joysound-priority-ranked-2000-next-feature-songs.json \
++  --checkpoint=.cache/joysound-priority-ranked-2000-next-feature/crawler-checkpoint.json \
+   --confirm-authorized-large-run
+ ```
+ 
++当前已固化的一阶段来源扩展为 `joysound-priority-ranked-2000-next-expansion-candidates.json`：10,087 个候选、4,486 个生产未收录页面；对应的阶段审计报告为 `joysound-priority-ranked-2000-next-expansion-audit.json`，在详情采集开始前覆盖率为 0/4,486。首批 3,086 页仍使用旧的 `joysound-priority-ranked-2000-next` 检查点采集，最近检查点为 987/3,086（成功 969、无 X1 18）。更广来源的发现进程完成后，优先使用其新的 feature 索引和检查点继续，不混用两个详情分母。
++
+ 默认歌曲结果写入 `src/data/generated/joysound-songs.json`，检查点写入 `.cache/joysound-crawler/checkpoint.json`。`--index-only` 只固化 Sitemap 中的候选链接和 `lastmod`，不请求歌曲详情页。重复执行详情采集会复用 `lastmod` 未变化的成功记录；使用 `--refresh` 可强制重新获取。
+ 
+ 默认审计命令读取热门候选索引、检查点和 `src/data/manual-songs.ts`，将热门阶段合并曲库写入 `src/data/generated/joysound-popular-catalog.json`。榜单阶段使用上方的显式参数和独立输出。报告包含逐页状态、待处理链接、冲突明细和 `summary`；`--require-complete` 会在存在待处理页面、请求错误或数据冲突时返回失败，适合作为最终验收和 CI 门禁。
+ 
+ 复核命令从成功生成的数据中等距抽取 20 首，重新读取官方页面并比对歌名、歌手、X1 版本名、类型和曲号。结果写入 `src/data/generated/joysound-review-sample.json`；该过程保持单线程和 5～7 秒间隔，不保存网页源码。
+ 
+-榜单发现命令读取综合、急升、新曲趋势、2012～2025 年度榜、2016～2025 年发行歌曲榜、2014～2025 年 10～40 岁榜，以及当前热门歌手的热门歌曲。动漫和 Vocaloid 的当前周榜、月榜及年度分类榜是强制入口；演歌、洋乐和 K-POP 段落不读取。优先榜单发现支持独立输出、独立检查点、排除上一批候选和 `--new-only`；第二轮已检查 29 个入口并生成 10,000 个排除首轮后的候选页面，其中 3,054 页尚未进入生产曲库。
++榜单发现命令读取综合、急升、新曲趋势、2012～2025 年度榜、2016～2025 年发行歌曲榜、2014～2025 年 10～40 岁榜，以及当前热门歌手的热门歌曲。动漫和 Vocaloid 的当前周榜、月榜及年度分类榜是强制入口；演歌、洋乐和 K-POP 段落不读取。第三轮还读取官方热门特集与当前歌手周/月榜，并把歌手热门展开上限提高到前 1,000 首。年份过滤使用榜单/特集来源年份字段，不宣称为单曲发行年份。优先榜单发现支持独立输出、独立检查点、排除上一批候选和 `--new-only`；第二轮已检查 29 个入口并生成 10,000 个排除首轮后的候选页面，其中 3,054 页尚未进入生产曲库；第三轮一阶段扩展已得到 10,087 个候选，其中 4,486 页尚未进入生产曲库。
+ 
+ 详情采集器可通过 `--input-index` 直接读取本地榜单白名单；`--new-only` 会排除索引生成时已进入生产曲库的页面。榜单任务必须使用独立的 `--output` 和 `--checkpoint`，避免与热门 Sitemap 采集记录混合。2026-07-26 首次先试采 200 页，随后复用检查点完成剩余 612 页；完整结果为 812/812 成功。
+ 
+diff --git a/GOAL.md b/GOAL.md
+index 0f028ad..d25bee3 100644
+--- a/GOAL.md
++++ b/GOAL.md
+@@ -31,7 +31,7 @@
+ - 全曲目详情已累计处理 17,987/18,287 页（98.36%）：成功 17,667、无 X1 320、失效 0、错误 0，得到 20,699 个 X1 版本；以原 5,620 首稳定曲库为审计基线，错误和冲突均为 0。今日最后一批按用户要求在 90 页后安全收束，歌曲输出已按权威检查点刷新，20 首来源复核全部一致并完成阶段性晋级。剩余 300 页，下次从 `offset=17987` 谨慎继续。
+ - 已完成优先榜单批次：29/29 个当前与年度入口成功，按当前 ACG、当前流行、2026～2012 年代榜和歌手热门前 100 首排序得到 10,000 个候选页，其中 ACG 7,025、流行 2,975；生产曲库原有 4,873 页，本批待新增 5,127 页。详情采集最终覆盖 5,127/5,127（100%）：成功 5,024、无 X1 103、错误 0、冲突 0；20 首来源复核全部一致并完成完整轮次晋级，生产曲库增至 28,311 首、37,649 个版本。
+ - 已完成第二轮优先榜单批次：复用 29/29 个成功入口并将歌手热门范围扩展到前 200 首，排除首轮 10,000 个候选后按同一优先级得到 10,000 个候选页，其中 ACG 2,125、流行 7,875；其中 6,946 页已在生产曲库、3,054 页待新增。详情采集最终覆盖 3,054/3,054（100%）：成功 2,824、无 X1 230、错误 0、冲突 0；20 首来源复核全部一致并完成完整轮次晋级，生产曲库增至 31,135 首、41,171 个版本。
+-- 第三轮优先榜单批次正在进行：按用户要求排除前两轮候选，并启用 `year >= 2000` 的严格年份字段过滤；当前 93 个来源入口中 51 个成功、42 个历史入口不可用，生成 3,741 个不重复候选页，其中 3,086 页尚未进入生产曲库。当前候选无年份缺失、无 2000 年以前年份，且与前两轮候选零重叠；目标仍为 20,000 页，下一步扩展来源后补齐候选规模，再采集新增详情。
++- 第三轮优先榜单批次正在进行：按用户要求排除前两轮候选，并启用 `year >= 2000` 的严格来源年份字段过滤（该字段表示榜单/特集来源年份，不等同于单曲发行年份）；当前一阶段扩展已处理 93 个来源入口中的 51 个成功、42 个历史入口不可用，生成 10,087 个不重复候选页，其中 4,486 页尚未进入生产曲库。当前候选无年份缺失、无 2000 年以前年份，且与前两轮候选零重叠；目标仍为 20,000 页。详情采集已按 3,086 页首批新增候选启动，检查点最新为 987/3,086（成功 969、无 X1 18、错误 0）；更广的官方热门特集和当前歌手榜扩展仍在继续。
+ - 项目负责人已于 2026-07-25 确认取得大规模采集及生成数据二次使用授权；因目标网站存在反爬机制，全量任务采用单线程、5 秒基础间隔加 0～2 秒随机抖动，并在每 100 个真实请求后随机冷却 45～60 秒。
+ - 源码已发布到公开 GitHub 仓库，并通过 GitHub Pages 与 Vercel 提供两个生产站点；`main` 分支已接入两套自动部署流程。
+ 
+@@ -287,6 +287,7 @@
+ | 优先榜单发现轮次 124 | 2026-09-09 | 排除首轮候选后，将热门歌手范围扩展到前 200 首并生成第二轮优先候选 | 10,000 个候选 | - | 0 | 0 | 29/29 个入口成功；ACG 2,125、流行 7,875；其中 3,054 页进入详情采集 |
+ | 优先榜单详情与晋级轮次 125 | 2026-09-09 | 完成第二轮优先榜单详情采集、重试、审计、复核和生产接入 | 3,054 | 230 | 0 | 2,824 | 覆盖 100%；首轮 3 个解析失败页重试恢复；冲突 0；20/20 来源复核通过；生产曲库增至 31,135 首、41,171 个版本 |
+ | 优先榜单年份过滤发现轮次 126 | 2026-09-10 | 排除前两轮候选，来源年份下限 2000，目标 20,000 页 | 3,741 个候选 | - | 42 个入口不可用 | 0 | 当前候选无缺少年份、无 2000 年以前年份、与前两轮零重叠；3,086 页待详情采集，目标规模仍需扩展来源 |
++| 优先榜单来源扩展轮次 127 | 2026-09-10 | 在同一年份过滤与排除规则下扩展官方热门特集、当前歌手榜和前 1,000 首歌手热门曲 | 10,087 个候选 | - | 42 个入口不可用 | 0 | 51/93 个来源成功；ACG 1,334、流行 8,753；4,486 页待详情采集；审计覆盖 0/4,486，待处理 4,486 |
+ 
+ 每轮结束后追加一行，不覆盖历史记录。失败项必须保留原因，并在后续轮次标记重试结果。
+ 
+@@ -294,7 +295,7 @@
+ 
+ - [x] **P0（优先榜单详情与晋级）**：已按当前 ACG 榜单、当前流行榜单、2026～2012 年度榜及热门歌手前 100 首建立 10,000 首优先候选；候选按榜单类别、年代降序和榜内名次排序，排除演歌、洋乐与 K-POP。5,127 个生产未收录详情已全部处理：成功 5,024、无 X1 103、错误 0；严格审计覆盖 5,127/5,127、冲突 0，20 首来源复核通过并完成生产晋级。
+ - [x] **P0（第二轮优先榜单详情与晋级）**：在首轮候选之外将热门歌手范围扩展到前 200 首，生成 10,000 个第二轮候选，其中 3,054 个生产未收录详情已全部处理：成功 2,824、无 X1 230、错误 0；严格审计覆盖 3,054/3,054、冲突 0，20 首来源复核通过并完成生产晋级。
+-- [ ] **P0（第三轮优先榜单，年份过滤）**：排除前两轮候选，启用 `year >= 2000` 严格过滤并以 20,000 页为目标；当前已发现 3,741 个候选，其中 3,086 个生产未收录详情，所有候选均有年份且无 2000 年以前年份。继续扩展官方热门来源后补齐候选，再完成详情采集、严格审计、20 首复核和生产晋级。
++- [ ] **P0（第三轮优先榜单，年份过滤）**：排除前两轮候选，启用 `year >= 2000` 严格过滤并以 20,000 页为目标；当前一阶段来源扩展已发现 10,087 个候选，其中 4,486 个生产未收录详情，所有候选均有年份且无 2000 年以前年份。首批 3,086 页详情已处理 987 页（成功 969、无 X1 18、错误 0）；继续完成当前歌手/特集来源扩展后，再执行剩余详情采集、严格审计、20 首复核和生产晋级。
+ 
+ - [x] 确定首次“热门歌曲”清单：2026-07-25 热门 Sitemap 快照，共 2,355 个候选页面。
+ - [x] 实现 Sitemap 发现、限速请求、重试、检查点恢复、X1 过滤、数据校验和 JSON 生成流程。
+diff --git a/TODO.md b/TODO.md
+index 148e848..25eb855 100644
+--- a/TODO.md
++++ b/TODO.md
+@@ -5,7 +5,7 @@
+ 
+ ## P0：扩大 JOYSOUND X1 曲库覆盖
+ 
+-状态：第三轮年份过滤优先榜单正在进行；当前候选 3,741/20,000，全曲目详情另剩 300 页
++状态：第三轮年份过滤优先榜单正在进行；当前候选 10,087/20,000，首批详情 987/3,086，全曲目详情另剩 300 页
+ 
+ ### 当前机会
+ 
+@@ -27,9 +27,9 @@
+ 
+ ### 下一轮范围
+ 
+-0. [进行中] 排除前两轮优先候选，严格保留 `year >= 2000` 且有年份字段的候选；当前生成 3,741 页，其中 3,086 页尚未进入生产曲库，与前两轮零重叠、2000 年以前 0 页，目标仍为 20,000 页。
+-1. [待执行] 扩展官方热门来源并补齐第三轮候选规模；发现阶段不使用 `--new-only`，详情阶段再按生产曲库执行 `--new-only`。
+-2. [待执行] 对第三轮新增详情执行低速采集、严格审计、20 首来源复核和生产晋级。
++0. [进行中] 排除前两轮优先候选，严格保留 `year >= 2000` 且有年份字段的候选；当前一阶段来源扩展生成 10,087 页，其中 4,486 页尚未进入生产曲库，与前两轮零重叠、2000 年以前 0 页，目标仍为 20,000 页。
++1. [进行中] 扩展官方热门来源并补齐第三轮候选规模；当前歌手榜与官方热门特集扩展仍在检查点运行，发现阶段不使用 `--new-only`，详情阶段再按生产曲库执行 `--new-only`。
++2. [进行中] 首批第三轮详情低速采集已处理 987/3,086 页：成功 969、无 X1 18、错误 0；完成候选发现后继续详情采集、严格审计、20 首来源复核和生产晋级。
+ 
+ 3. [已完成] 使用 `discover:full-artists` 完整读取 95 位保留歌手的官方曲目分页：1,108/1,108 页成功，`discoveryReady=true`。
+ 4. [已完成] 使用独立检查点记录每个歌手的声明总数、计划页数、成功页数、失败页数和候选链接，并自动拒绝历史半页及跨时间排序漂移。
+diff --git a/scripts/discover-priority-ranked-songs.ts b/scripts/discover-priority-ranked-songs.ts
+index 0b9ea8f..3033eb3 100644
+--- a/scripts/discover-priority-ranked-songs.ts
++++ b/scripts/discover-priority-ranked-songs.ts
+@@ -34,7 +34,16 @@ type SeedSource = {
+   id: string;
+   label: string;
+   url: string;
+-  parser: "ranking" | "annual" | "released" | "age" | "exclude";
++  parser:
++    | "ranking"
++    | "artist-ranking"
++    | "annual"
++    | "annual-v2"
++    | "released"
++    | "released-v2"
++    | "age"
++    | "feature"
++    | "exclude";
+   category?: Category;
+   year?: number;
+   yearKind?: "ranking" | "release";
+@@ -388,6 +397,24 @@ function createRankingSources(minimumYear: number | undefined): SeedSource[] {
+       year: CURRENT_RANKING_YEAR,
+       yearKind: "ranking",
+     },
++    {
++      id: "priority-current-artist-weekly",
++      label: "当前歌手周榜",
++      url: "https://www.joysound.com/web/karaoke/ranking/artist/weekly",
++      parser: "artist-ranking",
++      category: "pop",
++      year: CURRENT_RANKING_YEAR,
++      yearKind: "ranking",
++    },
++    {
++      id: "priority-current-artist-monthly",
++      label: "当前歌手月榜",
++      url: "https://www.joysound.com/web/karaoke/ranking/artist/monthly",
++      parser: "artist-ranking",
++      category: "pop",
++      year: CURRENT_RANKING_YEAR,
++      yearKind: "ranking",
++    },
+     {
+       id: "priority-current-hot",
+       label: "当前急上升榜",
+@@ -432,7 +459,7 @@ function createRankingSources(minimumYear: number | undefined): SeedSource[] {
+       label: `${year} 年度榜（综合、ACG、流行分类）`,
+       url:
+         `https://www.joysound.com/web/s/karaoke/contents/annual_ranking/${year}`,
+-      parser: "annual",
++      parser: "annual-v2",
+       year,
+       yearKind: "ranking",
+     });
+@@ -445,7 +472,7 @@ function createRankingSources(minimumYear: number | undefined): SeedSource[] {
+       label: `${year} 年发行歌曲榜`,
+       url:
+         `https://www.joysound.com/web/s/karaoke/contents/annual_ranking/${year}-02`,
+-      parser: "released",
++      parser: "released-v2",
+       year,
+       yearKind: "release",
+     });
+@@ -464,6 +491,142 @@ function createRankingSources(minimumYear: number | undefined): SeedSource[] {
+     });
+   }
+ 
++  const featureSources: Array<{
++    id: string;
++    label: string;
++    path: string;
++    category: Category;
++    year: number;
++  }> = [
++    {
++      id: "priority-feature-hitsong-2025",
++      label: "2025 热门歌曲特集",
++      path: "/web/s/karaoke/feature/hitsong_2025",
++      category: "pop",
++      year: 2025,
++    },
++    {
++      id: "priority-feature-hit-anime-2025",
++      label: "2025 动漫热门歌曲特集",
++      path: "/web/s/karaoke/feature/hit_anime2025",
++      category: "acg",
++      year: 2025,
++    },
++    {
++      id: "priority-feature-anime-ranking-2601",
++      label: "2026 年初动漫榜特集",
++      path: "/web/s/karaoke/feature/anime/ranking/2601",
++      category: "acg",
++      year: 2026,
++    },
++    {
++      id: "priority-feature-anime-ranking-2604",
++      label: "2026 春季动漫榜特集",
++      path: "/web/s/karaoke/feature/anime/ranking/2604",
++      category: "acg",
++      year: 2026,
++    },
++    {
++      id: "priority-feature-anime-ranking-2607",
++      label: "2026 夏季动漫榜特集",
++      path: "/web/s/karaoke/feature/anime/2607",
++      category: "acg",
++      year: 2026,
++    },
++    {
++      id: "priority-feature-anime-videorank",
++      label: "动漫视频榜特集",
++      path: "/web/s/karaoke/feature/anime_videorank",
++      category: "acg",
++      year: 2026,
++    },
++    {
++      id: "priority-feature-animesong",
++      label: "动漫歌曲特集",
++      path: "/web/s/karaoke/feature/animesong",
++      category: "acg",
++      year: 2026,
++    },
++    {
++      id: "priority-feature-character-songs",
++      label: "角色歌曲特集",
++      path: "/web/s/karaoke/feature/character-songs",
++      category: "acg",
++      year: 2026,
++    },
++    {
++      id: "priority-feature-nijisanji",
++      label: "にじさんじ歌曲特集",
++      path: "/web/s/karaoke/feature/nijisanji",
++      category: "acg",
++      year: 2026,
++    },
++    {
++      id: "priority-feature-vtuber",
++      label: "VTuber 歌曲特集",
++      path: "/web/s/karaoke/feature/vtuber",
++      category: "acg",
++      year: 2026,
++    },
++    {
++      id: "priority-feature-idol-ranking",
++      label: "偶像歌曲榜特集",
++      path: "/web/s/karaoke/feature/idolranking",
++      category: "pop",
++      year: 2026,
++    },
++    {
++      id: "priority-feature-tiktok",
++      label: "TikTok 热门歌曲特集",
++      path: "/web/s/karaoke/feature/tiktok",
++      category: "pop",
++      year: 2026,
++    },
++    {
++      id: "priority-feature-oshikatsu-2025",
++      label: "2025 应援歌曲特集",
++      path: "/web/s/karaoke/feature/oshikatsu2025",
++      category: "pop",
++      year: 2025,
++    },
++    {
++      id: "priority-feature-kouhaku-2025",
++      label: "2025 红白相关歌曲特集",
++      path: "/web/s/karaoke/feature/kouhaku_2025",
++      category: "pop",
++      year: 2025,
++    },
++    {
++      id: "priority-feature-sabikara",
++      label: "副歌热门歌曲特集",
++      path: "/web/s/karaoke/feature/sabikara",
++      category: "pop",
++      year: 2026,
++    },
++    {
++      id: "priority-feature-moteuta",
++      label: "热门点唱歌曲特集",
++      path: "/web/s/karaoke/feature/moteuta",
++      category: "pop",
++      year: 2026,
++    },
++  ];
++
++  for (const feature of featureSources) {
++    if (minimumYear !== undefined && feature.year < minimumYear) {
++      continue;
++    }
++    sources.push({
++      id: feature.id,
++      label: feature.label,
++      url: `https://www.joysound.com${feature.path}`,
++      parser: "feature",
++      category: feature.category,
++      year: feature.year,
++      yearKind: "ranking",
++    });
++  }
++
+   return sources;
+ }
+ 
+@@ -555,7 +718,7 @@ async function loadOrFetchSource(
+     saved.source.url === source.url &&
+     saved.source.parser === source.parser &&
+     !(
+-      source.parser === "ranking" &&
++      (source.parser === "ranking" || source.parser === "artist-ranking") &&
+       "artistUrls" in saved &&
+       saved.artistUrls.length === 0
+     )
+@@ -630,6 +793,20 @@ function parseSource(source: SeedSource, html: string): ParsedSource {
+     };
+   }
+ 
++  if (source.parser === "artist-ranking") {
++    return {
++      source,
++      status: "success",
++      fetchedAt: new Date().toISOString(),
++      songCandidates: [],
++      artistUrls: extractOrderedOfficialUrls(
++        html,
++        /^\/web\/search\/artist\/\d+$/,
++      ),
++      excludedArtistNames: [],
++    };
++  }
++
+   if (source.parser === "age") {
+     return {
+       source,
+@@ -647,6 +824,29 @@ function parseSource(source: SeedSource, html: string): ParsedSource {
+     };
+   }
+ 
++  if (source.parser === "feature") {
++    return {
++      source,
++      status: "success",
++      fetchedAt: new Date().toISOString(),
++      songCandidates: extractOrderedOfficialUrls(
++        html,
++        /^\/web\/search\/song\/\d+$/,
++      ).map((url, index) => ({
++        url,
++        category: source.category ?? "pop",
++        rank: index + 1,
++        year: source.year,
++        yearKind: source.yearKind,
++      })),
++      artistUrls: extractOrderedOfficialUrls(
++        html,
++        /^\/web\/search\/artist\/\d+$/,
++      ),
++      excludedArtistNames: [],
++    };
++  }
++
+   const $ = load(html);
+   const songCandidates: ParsedSource["songCandidates"] = [];
+   const rules: Array<{ match: RegExp; category: Category }> = [
+@@ -658,6 +858,14 @@ function parseSource(source: SeedSource, html: string): ParsedSource {
+       match: /(?:ボーイズグループ|ガールズグループ|ネット発アーティスト楽曲|サビカラ).*ランキング/,
+       category: "pop",
+     },
++    {
++      match: /ドラマ関連曲ランキング/,
++      category: "pop",
++    },
++    {
++      match: /(?:STREAMER|スマホアプリ|Nintendo Switch).*ランキング/,
++      category: "pop",
++    },
+   ];
+ 
+   for (const rule of rules) {
+@@ -886,7 +1094,7 @@ function createOutput(
+       yearSemantics:
+         "year 是候选来源的榜单年份；released 来源使用发行榜年份，严格模式排除低于下限或缺少年份的候选",
+       priorityOrder:
+-        "当前 ACG 榜单 → 当前流行榜单 → 年度 ACG/流行榜单 → 发行榜 → 年龄榜 → 歌手热门前 N 首",
++        "当前 ACG/流行榜单 → 当前歌手榜 → 官方热门特集 → 年度 ACG/流行榜单 → 发行榜 → 年龄榜 → 歌手热门前 N 首",
+       requiredCategories: ["acg", "pop"],
+       excludedCategories: ["演歌／歌謡曲", "洋楽", "K-POP／韓国曲"],
+     },
+diff --git a/src/data/generated/README.md b/src/data/generated/README.md
+index c5104cf..98ca29e 100644
+--- a/src/data/generated/README.md
++++ b/src/data/generated/README.md
+@@ -29,8 +29,10 @@
+ - `joysound-priority-ranked-next-catalog.json`：第二轮优先榜单的严格审计与生产曲库合并结果。
+ - `joysound-priority-ranked-next-review-sample.json`：第二轮优先榜单的 20 首低速来源复核报告。
+ - `joysound-priority-ranked-2000-next-candidates.json`：第三轮优先候选索引，排除前两轮候选并严格保留来源年份不早于 2000 年的 3,741 个页面，其中 3,086 页尚未进入生产曲库；目标规模为 20,000 页，仍在扩展官方来源。
++- `joysound-priority-ranked-2000-next-expansion-candidates.json`：第三轮一阶段来源扩展候选索引，加入官方热门特集、当前歌手榜和前 1,000 首歌手热门曲后共 10,087 个页面，其中 4,486 页尚未进入生产曲库；仍需继续扩展到 20,000 页并采集详情。
++- `joysound-priority-ranked-2000-next-expansion-audit.json`：上述 4,486 个生产未收录页面的阶段审计报告；详情采集尚未开始时覆盖 0/4,486，待处理 4,486。
+ - `joysound-production-catalog.json`：通过生产晋级门禁后生成的精简前端曲库；当前包含 31,135 首歌曲和 41,171 个版本，不包含待处理 URL、错误明细等审计状态。
+ 
+ 完整采集轮次仍必须通过严格审计和 20 首来源复核，不能只根据文件存在判断完成。固定分母的长周期任务可以通过 `bun run promote:joysound -- --allow-partial` 发布干净的阶段性检查点，但必须满足错误 0、冲突 0、至少 20 首来源复核一致，且复核输入指纹与当前生成歌曲完全相同。
+ 
+-两轮优先榜单批次均已完成：首轮 5,127/5,127 页、第二轮 3,054/3,054 页覆盖，第二轮成功 2,824、无 X1 230、错误和冲突均为 0；第二轮 20 首来源复核通过，当前复核输入指纹与生成歌曲一致，完整轮次已晋级为 31,135 首歌曲、41,171 个版本。全曲目详情长期任务仍剩余 300 页，下次从 `offset=17987` 谨慎继续。
++两轮优先榜单批次均已完成：首轮 5,127/5,127 页、第二轮 3,054/3,054 页覆盖，第二轮成功 2,824、无 X1 230、错误和冲突均为 0；第二轮 20 首来源复核通过，当前复核输入指纹与生成歌曲一致，完整轮次已晋级为 31,135 首歌曲、41,171 个版本。第三轮一阶段候选已完成来源扩展审计但详情尚未晋级；首批旧分母 3,086 页正在低速采集。全曲目详情长期任务仍剩余 300 页，下次从 `offset=17987` 谨慎继续。
+
+# GENERATED DATA STATS
+ ...-priority-ranked-2000-next-expansion-audit.json | 541821 ++++++++++++++++++
+ ...rity-ranked-2000-next-expansion-candidates.json | 175652 ++++++
+ 2 files changed, 717473 insertions(+)

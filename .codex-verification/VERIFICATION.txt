@@ -305,3 +305,79 @@ Command: bunx vercel promote https://joysound-helper-fvf0byija-ads1029s-projects
 Result: production deployment dpl_9EiiXgKufmCSveN8cMvEhqKkD83D at https://joysound-helper-jgifbq0wl-ads1029s-projects.vercel.app; status Ready; alias https://joysound-helper.vercel.app; exit status 0.
 Command: bunx vercel inspect https://joysound-helper-jgifbq0wl-ads1029s-projects.vercel.app
 Literal output/result: target production; status ● Ready; alias https://joysound-helper.vercel.app; exit status 0.
+
+CONTINUATION: THIRD-ROUND SOURCE EXPANSION, AUDIT, AND CURRENT CHECKPOINT
+---------------------------------------------------------------------
+Changed branch/field
+--------------------
+Branch: third-round year-filtered priority-ranked source expansion.
+Field: current artist ranking parsers, official feature parsers, and artist popular limit 1000 now extend the same `year >= 2000` candidate policy while excluding both prior 10,000-page indexes; the intermediate expansion contains 10,087 unique pages and 4,486 production-missing pages.
+
+Four artifacts (reopened and updated)
+-------------------------------------
+MODIFIED_FILE: /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/MODIFIED_FILE
+DIFF_FILE: /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/DIFF_FILE
+VERIFICATION.txt: /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/VERIFICATION.txt
+ROLLBACK.sh: /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/ROLLBACK.sh
+
+BASELINE
+--------
+Command: bun run lint && bun run test && bun run build
+Input: detached worktree at commit aee2100 before the current source-expansion and documentation changes.
+Literal output/result:
+$ eslint .
+$ vitest run
+Test Files  27 passed (27)
+Tests  93 passed (93)
+$ tsc -b && vite build
+vite v8.1.5 building client environment for production...
+23 modules transformed.
+dist/index.html 0.60 kB; dist/assets/index-CyhHkykY.css 7.92 kB gzip; dist/assets/index-DWsxVmrX.js 10,024.18 kB gzip
+✓ built in 765ms
+BASELINE_EXIT_STATUS=0
+exit status: 0
+
+MODIFIED
+--------
+Command: bun run lint && bun run test && bun run build
+Input: current worktree with source-expansion parsers, 10,087-page expansion candidate index, pending expansion audit, CRAWLER.md, GOAL.md, TODO.md, and generated-data README updates.
+Literal output/result:
+$ eslint .
+$ vitest run
+Test Files  27 passed (27)
+Tests  93 passed (93)
+$ tsc -b && vite build
+vite v8.1.5 building client environment for production...
+23 modules transformed.
+dist/index.html 0.60 kB; dist/assets/index-CyhHkykY.css 7.92 kB gzip; dist/assets/index-DWsxVmrX.js 10,024.18 kB gzip
+✓ built in 741ms
+MODIFIED_EXIT_STATUS=0
+exit status: 0
+
+AUDIT
+-----
+Command: bun run audit:joysound -- --index=src/data/generated/joysound-priority-ranked-2000-next-expansion-candidates.json --new-only --checkpoint=.cache/joysound-priority-ranked-2000-next-expansion/crawler-checkpoint.json --baseline=production --output=src/data/generated/joysound-priority-ranked-2000-next-expansion-audit.json
+Input: 4,486 production-missing pages from the 10,087-page expansion index and an empty matching detail checkpoint.
+Literal output/result:
+采集覆盖：0/4486 (0%)，待处理 4486
+页面状态：成功 0，无 X1 0，不可用 0，错误 0
+合并结果：31135 首、41171 个版本，新增 0 首、冲突 0 项
+采集验收：未完成
+exit status: 0
+
+CURRENT DETAIL CHECKPOINT
+-------------------------
+Command: bun -e 'read .cache/joysound-priority-ranked-2000-next/crawler-checkpoint.json and count statuses'
+Input: first 3,086 production-missing pages from the committed 3,741-page candidate index.
+Literal output/result: items=987, success=969, no-x1=18, error=0; feature discovery checkpoint: items=1276, success=1232, unavailable=44.
+exit status: 0
+
+ROLLBACK
+--------
+Command: .codex-verification/ROLLBACK.sh .codex-verification/rollback-test-current/package.json .codex-verification/rollback-test-current/original-package.json
+Input: modified copy of package.json plus its original-package.json backup.
+Literal output/result:
+restored .codex-verification/rollback-test-current/package.json from .codex-verification/rollback-test-current/original-package.json
+ROLLBACK_EXIT_STATUS=0
+CMP_EXIT_STATUS=0
+Restored behavior/status: rollback-test-current/package.json is byte-identical to original-package.json; current .codex-verification/MODIFIED_FILE remains changed.
