@@ -140,7 +140,7 @@ bun run crawl:joysound -- \
   --checkpoint=.cache/joysound-full-artist-crawler/checkpoint.json \
   --confirm-authorized-large-run
 
-# 以当前 5,620 首生产曲库为稳定基线严格审计
+# 以原 5,620 首稳定曲库为基线严格审计
 bun run audit:joysound -- \
   --index=src/data/generated/joysound-full-artist-candidates.json \
   --new-only \
@@ -153,6 +153,80 @@ bun run audit:joysound -- \
 bun run review:joysound -- \
   --input=src/data/generated/joysound-full-artist-songs.json \
   --output=src/data/generated/joysound-full-artist-review-sample.json
+
+# 按当前与年度榜单优先生成 1 万首 ACG/流行候选，优先最新年份和前排名次
+bun run discover:priority -- \
+  --target=10000 \
+  --artist-limit=100 \
+  --confirm-authorized-discovery
+
+# 采集优先榜单候选中尚未进入当前生产曲库的详情页
+bun run crawl:joysound -- \
+  --input-index=src/data/generated/joysound-priority-ranked-candidates.json \
+  --new-only \
+  --limit=10000 \
+  --delay-ms=5000 \
+  --jitter-ms=2000 \
+  --batch-size=100 \
+  --batch-pause-min-ms=45000 \
+  --batch-pause-max-ms=60000 \
+  --output=src/data/generated/joysound-priority-ranked-songs.json \
+  --checkpoint=.cache/joysound-priority-ranked-crawler/checkpoint.json \
+  --confirm-authorized-large-run
+
+# 以当前生产曲库为基线审计优先榜单批次
+bun run audit:joysound -- \
+  --index=src/data/generated/joysound-priority-ranked-candidates.json \
+  --new-only \
+  --checkpoint=.cache/joysound-priority-ranked-crawler/checkpoint.json \
+  --baseline=production \
+  --output=src/data/generated/joysound-priority-ranked-catalog.json
+
+# 全量未完成时，显式晋级已审计并复核的干净检查点
+bun run promote:joysound -- --allow-partial
+```
+
+第二轮优先榜单批次使用独立检查点，排除首轮候选并将歌手热门范围扩展到前 200 首：
+
+```bash
+bun run discover:priority -- \
+  --target=10000 \
+  --artist-limit=200 \
+  --exclude-index=src/data/generated/joysound-priority-ranked-candidates.json \
+  --output=src/data/generated/joysound-priority-ranked-next-candidates.json \
+  --checkpoint=.cache/joysound-priority-ranked-next/checkpoint.json \
+  --confirm-authorized-discovery
+
+bun run crawl:joysound -- \
+  --input-index=src/data/generated/joysound-priority-ranked-next-candidates.json \
+  --new-only \
+  --limit=10000 \
+  --delay-ms=5000 \
+  --jitter-ms=2000 \
+  --batch-size=100 \
+  --batch-pause-min-ms=45000 \
+  --batch-pause-max-ms=60000 \
+  --output=src/data/generated/joysound-priority-ranked-next-songs.json \
+  --checkpoint=.cache/joysound-priority-ranked-next/crawler-checkpoint.json \
+  --confirm-authorized-large-run
+
+bun run audit:joysound -- \
+  --index=src/data/generated/joysound-priority-ranked-next-candidates.json \
+  --new-only \
+  --checkpoint=.cache/joysound-priority-ranked-next/crawler-checkpoint.json \
+  --baseline=production \
+  --output=src/data/generated/joysound-priority-ranked-next-catalog.json \
+  --require-complete
+
+bun run review:joysound -- \
+  --input=src/data/generated/joysound-priority-ranked-next-songs.json \
+  --output=src/data/generated/joysound-priority-ranked-next-review-sample.json
+
+bun run promote:joysound -- \
+  --catalog=src/data/generated/joysound-priority-ranked-next-catalog.json \
+  --generated-songs=src/data/generated/joysound-priority-ranked-next-songs.json \
+  --review=src/data/generated/joysound-priority-ranked-next-review-sample.json \
+  --output=src/data/generated/joysound-production-catalog.json
 ```
 
 默认歌曲结果写入 `src/data/generated/joysound-songs.json`，检查点写入 `.cache/joysound-crawler/checkpoint.json`。`--index-only` 只固化 Sitemap 中的候选链接和 `lastmod`，不请求歌曲详情页。重复执行详情采集会复用 `lastmod` 未变化的成功记录；使用 `--refresh` 可强制重新获取。
@@ -161,7 +235,7 @@ bun run review:joysound -- \
 
 复核命令从成功生成的数据中等距抽取 20 首，重新读取官方页面并比对歌名、歌手、X1 版本名、类型和曲号。结果写入 `src/data/generated/joysound-review-sample.json`；该过程保持单线程和 5～7 秒间隔，不保存网页源码。
 
-榜单发现命令读取综合、急升、新曲趋势、2012～2025 年度榜、2016～2025 年发行歌曲榜、2014～2025 年 10～40 岁榜，以及当前热门歌手的热门歌曲。动漫和 Vocaloid 的当前周榜、月榜及年度分类榜是强制入口；演歌、洋乐和 K-POP 段落不读取。首次快照共检查 151 个入口页，得到 839 个去重歌曲页面，其中 812 页尚未进入生产曲库。
+榜单发现命令读取综合、急升、新曲趋势、2012～2025 年度榜、2016～2025 年发行歌曲榜、2014～2025 年 10～40 岁榜，以及当前热门歌手的热门歌曲。动漫和 Vocaloid 的当前周榜、月榜及年度分类榜是强制入口；演歌、洋乐和 K-POP 段落不读取。优先榜单发现支持独立输出、独立检查点、排除上一批候选和 `--new-only`；第二轮已检查 29 个入口并生成 10,000 个排除首轮后的候选页面，其中 3,054 页尚未进入生产曲库。
 
 详情采集器可通过 `--input-index` 直接读取本地榜单白名单；`--new-only` 会排除索引生成时已进入生产曲库的页面。榜单任务必须使用独立的 `--output` 和 `--checkpoint`，避免与热门 Sitemap 采集记录混合。2026-07-26 首次先试采 200 页，随后复用检查点完成剩余 612 页；完整结果为 812/812 成功。
 
@@ -169,13 +243,15 @@ bun run review:joysound -- \
 
 扩展发现读取 95 位保留歌手的官方热门前 30 首及 1996～2011 平成榜，在详情采集前排除 7 位命中演歌榜的歌手。首次扩展得到 2,889 个去重页面，其中 454 个已在榜单曲库、2,435 个需要新增采集。详情阶段 2,435/2,435 成功，生成 5,607 个 X1 版本；严格审计错误 0、冲突 0，来源复核 20/20 一致。
 
-扩展审计必须使用 `--baseline=ranked` 固定接入前的 3,185 首榜单曲库快照。审计通过后，`src/data/songs.ts` 改用 `joysound-expanded-catalog.json`；当前生产曲库为 5,620 首歌曲、10,761 个 X1 版本。详情页中以“ミュージックビデオ観放題”为标题前缀的特殊模板由 `<title>` 提取歌名和歌手，页面内的 X1 版本仍按标准卡片校验。
+扩展审计必须使用 `--baseline=ranked` 固定接入前的 3,185 首榜单曲库快照。该阶段审计通过后形成 `joysound-expanded-catalog.json`，作为后续全曲目审计固定使用的 5,620 首歌曲、10,761 个 X1 版本稳定基线。详情页中以“ミュージックビデオ観放題”为标题前缀的特殊模板由 `<title>` 提取歌名和歌手，页面内的 X1 版本仍按标准卡片校验。
 
 全曲目发现使用独立的 `.cache/joysound-full-artist-discovery/checkpoint.json`，按歌手记录声明曲目总数、计划分页、成功/不可用/错误/待处理分页及候选链接。历史热门前 30 首检查点中，第 2 页对大多数歌手只保存第 21～30 名，不能把该半页当作完整的 20 条分页；发现器只迁移通过预期范围和条数校验的 98 页。若历史首页与当前后续分页因热度排序变化而产生跨页重复，发现器会把受影响的历史分页重新标记为待处理，并在重抓一致前保持 `discoveryReady=false`。
 
 若官方歌手页在发现期间改变声明曲目总数，发现器会采用新总数重建该歌手的分页分母并清空其旧分页快照，不影响其他歌手的检查点。2026-07-27 首次触发该流程时，桑田佳祐由 175 首增加到 177 首，重建后错误项恢复为 0。
 
-全曲目候选索引只有在 1,108 个声明分页全部具有成功或不可用状态、错误为 0、跨页候选数量一致时才能达到 `discoveryReady=true`。详情采集、严格审计和生产接入必须等该门禁通过后执行；审计使用 `--baseline=expanded` 固定当前 5,620 首生产基线。
+全曲目候选索引只有在 1,108 个声明分页全部具有成功或不可用状态、错误为 0、跨页候选数量一致时才能达到 `discoveryReady=true`。详情采集必须等该门禁通过后执行；审计始终使用 `--baseline=expanded` 固定原 5,620 首生产基线，避免阶段性发布后重跑摘要发生变化。
+
+完整轮次必须在 `crawlReady=true`、严格审计和至少 20 首来源复核通过后晋级。固定分母的长周期任务也可发布阶段性检查点，但必须显式使用 `bun run promote:joysound -- --allow-partial`。晋级脚本只允许待处理项存在，会拒绝请求错误、数据冲突、索引外页面、少于 20 首的复核、复核差异及复核后发生变化的生成歌曲文件，并生成不含审计状态的 `joysound-production-catalog.json`。
 
 ## 每轮标准操作
 
@@ -214,6 +290,7 @@ bun run build
 
 - 生成数据先与 `src/data/manual-songs.ts` 去重，不直接覆盖手工数据。
 - 逐项解决审计报告中的冲突并补充回归测试，再接入前端搜索。
+- 运行来源复核后使用 `bun run promote:joysound` 生成精简生产曲库；未完成轮次必须额外显式传入 `--allow-partial`。
 - 更新 `README.md` 中的歌曲与版本数量。
 - 更新 `GOAL.md` 的当前基线、待办状态和“采集轮次记录”。
 - 记录未解决的失败项及下一轮重试范围。

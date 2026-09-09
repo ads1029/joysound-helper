@@ -1,21 +1,44 @@
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+
 import { describe, expect, it } from "vitest";
 
-import catalog from "./generated/joysound-expanded-catalog.json";
+import catalog from "./generated/joysound-production-catalog.json";
 import { manualSongs } from "./manual-songs";
 import { songs } from "./songs";
 
 describe("songs", () => {
-  it("收录审计通过的完整生产曲库", () => {
+  it("收录通过晋级门禁的生产曲库", () => {
     const variantCount = songs.reduce(
       (count, song) => count + song.variants.length,
       0,
     );
 
-    expect(catalog.crawlReady).toBe(true);
-    expect(songs).toHaveLength(5620);
-    expect(songs).toHaveLength(catalog.summary.mergedSongs);
-    expect(variantCount).toBe(10761);
-    expect(variantCount).toBe(catalog.summary.mergedVariants);
+    expect(catalog.productionReady).toBe(true);
+    expect(catalog.summary.reviewedSamples).toBeGreaterThanOrEqual(20);
+    expect(songs).toHaveLength(catalog.summary.songs);
+    expect(variantCount).toBe(catalog.summary.variants);
+  });
+
+  it("生产曲库引用的审计、生成歌曲和复核报告均未发生变化", () => {
+    const sources = [
+      [catalog.source.catalogPath, catalog.source.catalogSha256],
+      [
+        catalog.source.generatedSongsPath,
+        catalog.source.generatedSongsSha256,
+      ],
+      [catalog.source.reviewPath, catalog.source.reviewSha256],
+    ];
+
+    for (const [path, expectedSha256] of sources) {
+      const content = readFileSync(resolve(path), "utf8");
+      const actualSha256 = createHash("sha256")
+        .update(content)
+        .digest("hex");
+
+      expect(actualSha256).toBe(expectedSha256);
+    }
   });
 
   it("歌曲和版本标识保持唯一", () => {

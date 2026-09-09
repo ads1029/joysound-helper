@@ -1,6 +1,6 @@
 # JOYSOUND X1 日语点歌助手
 
-一个没有后端的静态 React 应用。用户输入完整歌名后，应用直接在浏览器中查询随网页打包的歌曲数据，并展示支持 JOYSOUND X1 的点歌编号。
+一个没有后端的静态 React 应用。用户可以输入完整或片段歌名、歌手名，直接在浏览器中查询随网页打包的歌曲数据，并查看支持 JOYSOUND X1 的点歌编号。
 
 ## 在线访问
 
@@ -8,7 +8,7 @@
 - GitHub Pages：[https://ads1029.github.io/joysound-helper/](https://ads1029.github.io/joysound-helper/)
 - GitHub 仓库：[https://github.com/ads1029/joysound-helper](https://github.com/ads1029/joysound-helper)
 
-推送到 `main` 分支后，Vercel 会通过 Git 集成自动部署主站；GitHub Actions 会依次运行代码检查、测试和构建，成功后更新 GitHub Pages。
+Pull Request 会通过 GitHub Actions 运行代码检查、测试和构建，其中测试包含生产曲库及各阶段生成数据的校验。推送到 `main` 分支后，Vercel 会通过 Git 集成自动部署主站；GitHub Pages 工作流会再次完成检查、发布站点，并验证首页及其构建生成的脚本和样式资源均可访问。
 
 ## 技术栈
 
@@ -22,7 +22,7 @@
 
 ## 本地运行
 
-需要 Bun。当前项目使用的版本记录在 `package.json` 的 `packageManager` 字段中。
+需要 Bun 1.2.17 和 Node.js 22.12.0 或更高版本。Bun 版本记录在 `package.json` 的 `packageManager` 字段中，Node.js 版本记录在 `.node-version`。
 
 ```bash
 bun install
@@ -38,9 +38,10 @@ bun run lint
 bun run test
 bun run build
 bun run preview
+bun run verify:deployment -- https://example.com/
 ```
 
-生产构建输出在 `dist/`，可以直接部署到任意静态网站托管服务。
+生产构建输出在 `dist/`，可以直接部署到任意静态网站托管服务。`verify:deployment` 会在部署传播期间自动重试，并要求首页及其引用的脚本、样式都返回成功且内容非空。
 
 ## 数据维护
 
@@ -49,7 +50,8 @@ bun run preview
 ```text
 src/data/songs.ts                              # 前端生产入口
 src/data/manual-songs.ts                       # 手工核心曲库
-src/data/generated/joysound-expanded-catalog.json # 审计后的最终合并曲库
+src/data/generated/joysound-production-catalog.json # 通过晋级门禁的精简生产曲库
+scripts/promote-joysound.ts                    # 生产晋级与复核指纹门禁
 ```
 
 每首歌曲包含：
@@ -60,7 +62,7 @@ src/data/generated/joysound-expanded-catalog.json # 审计后的最终合并曲�
 - 一个或多个点歌版本
 - X1 支持状态
 
-应用目前包含 5,620 首歌曲和 10,761 个 X1 版本。修改歌曲数据后重新构建网页即可，不需要数据库迁移。
+应用目前包含 23,287 首歌曲和 31,460 个 X1 版本。修改歌曲数据后重新构建网页即可，不需要数据库迁移。
 
 批量歌曲元数据采集工具位于 `scripts/crawl-joysound.ts`。开始使用前请阅读 [JOYSOUND 元数据采集指南](./CRAWLER.md)，并确认大规模采集和数据二次使用已经获得授权。
 
@@ -71,6 +73,25 @@ src/data/generated/joysound-expanded-catalog.json # 审计后的最终合并曲�
 `bun run discover:joysound -- --confirm-authorized-discovery` 会先从官方综合、年龄、歌手、动漫和 Vocaloid 榜单生成白名单，再由详情采集器读取曲号。本轮白名单共有 839 个去重歌曲页面，其中 27 个原已收录、812 个新增页面现已全部采集并接入；严格审计覆盖 812/812，来源复核 20/20 一致。
 
 `bun run discover:expanded -- --confirm-authorized-discovery` 将 95 位保留歌手扩展到官方热门前 30 首，并补充 1996～2011 平成榜。扩展阶段新增的 2,435 个页面已全部采集并接入，共增加 5,607 个 X1 版本；严格审计覆盖 2,435/2,435，来源复核 20/20 一致。
+
+95 位保留歌手的全曲目发现已完成，共得到 21,195 个唯一歌曲页面，其中以原 5,620 首生产曲库为基线固定了 18,287 个新增详情候选。详情采集当前处理 17,987 页（98.36%），成功 17,667 页、无 X1 320 页、错误和冲突均为 0；今日最后一批按用户要求在 90 页后安全收束，20 首来源复核首次通过，3 个无 X1 代表页面抽查一致，当前检查点已晋级生产。下次从 `offset=17987` 谨慎继续。
+
+阶段性生产晋级使用：
+
+```bash
+bun run audit:joysound -- \
+  --index=src/data/generated/joysound-full-artist-candidates.json \
+  --new-only \
+  --checkpoint=.cache/joysound-full-artist-crawler/checkpoint.json \
+  --baseline=expanded \
+  --output=src/data/generated/joysound-full-artist-catalog.json
+bun run review:joysound -- \
+  --input=src/data/generated/joysound-full-artist-songs.json \
+  --output=src/data/generated/joysound-full-artist-review-sample.json
+bun run promote:joysound -- --allow-partial
+```
+
+晋级命令会拒绝包含请求错误、数据冲突、少于 20 首复核、复核差异或过期复核指纹的输入。完整轮次结束后不使用 `--allow-partial`，并先执行严格审计。
 
 ## 中日汉字对照表
 
@@ -87,18 +108,21 @@ src/lib/kanji-variants.ts
 夜に駆ける = 夜に驱ける = 夜に驅ける
 ```
 
-这个过程只处理同源汉字的字形差异，不进行翻译或模糊搜索。因此：
+这个过程只处理同源汉字的字形差异，不进行翻译。完整歌名优先匹配；没有完整匹配时，至少两个字符可进行片段搜索。因此：
 
 ```text
 千本樱     → 可以匹配「千本桜」
-千本       → 不匹配
+千本       → 可以片段匹配「千本桜」
 青之栖所   → 不匹配「青のすみか」
 ```
 
 ## 当前范围
 
-- 只做完整歌名匹配
-- 忽略空格、英文大小写和常见标点
+- 支持歌曲和歌手两种搜索方式
+- 完整名称优先匹配，片段搜索至少需要两个标准化字符
+- 统一简体、繁体、日文汉字字形，以及平假名、全角和半角片假名
+- 忽略空格、数字、英文大小写和常见标点
+- 歌曲目录按官方歌曲标题排列
 - 只显示支持 JOYSOUND X1 的版本
 - 不调用 AI
 - 不连接线上数据库

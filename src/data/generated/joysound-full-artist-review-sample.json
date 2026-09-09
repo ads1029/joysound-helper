@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-30T13:20:14.927Z",
+  "inputPath": "src/data/generated/joysound-full-artist-songs.json",
+  "inputSha256": "59db3c91898d69c9a1c8dad80623a46bf5d08f1a91b5bb7ae968aa26a6ed7974",
+  "sampleMethod": "按生成曲库位置等距抽取",
+  "delayPolicy": {
+    "delayMs": 5000,
+    "jitterMs": 2000,
+    "concurrency": 1
+  },
+  "sampleSize": 20,
+  "passed": true,
+  "samples": [
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000167",
+      "title": "ラジオ",
+      "artist": "aiko",
+      "songNumbers": [
+        "621651"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:18:09.077Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1087124",
+      "title": "Electricity (Karen Nyame KG Remix)",
+      "artist": "宇多田ヒカル",
+      "songNumbers": [
+        "634434"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:18:15.446Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/116610",
+      "title": "約束",
+      "artist": "aiko",
+      "songNumbers": [
+        "83576"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:18:21.996Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/14583",
+      "title": "SMILE",
+      "artist": "徳永英明",
+      "songNumbers": [
+        "14591"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:18:29.266Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/16882",
+      "title": "月光",
+      "artist": "DREAMS COME TRUE",
+      "songNumbers": [
+        "16892"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:18:35.821Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/20469",
+      "title": "銀の翼で翔べ",
+      "artist": "B'z",
+      "songNumbers": [
+        "20499"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:18:42.418Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/24120",
+      "title": "夏のラジオ",
+      "artist": "徳永英明",
+      "songNumbers": [
+        "25418"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:18:48.304Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/29589",
+      "title": "私のロンサム・タウン",
+      "artist": "松任谷由実",
+      "songNumbers": [
+        "34092"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:18:55.060Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/403665",
+      "title": "いつだって",
+      "artist": "松山千春",
+      "songNumbers": [
+        "737203"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:19:02.090Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/42628",
+      "title": "カンカラ三線うむしるむん",
+      "artist": "BEGIN",
+      "songNumbers": [
+        "60692"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:19:09.082Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/527482",
+      "title": "リフレインが叫んでる",
+      "artist": "Aimer",
+      "songNumbers": [
+        "255511"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:19:14.995Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/579958",
+      "title": "進化してねえじゃん(ネクストガールズ)",
+      "artist": "AKB48",
+      "songNumbers": [
+        "687674"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:19:22.169Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/5858837",
+      "title": "ワインレッドの心『LIVE No Reason』",
+      "artist": "高橋真梨子",
+      "songNumbers": [
+        "858837"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:19:28.125Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/5877042",
+      "title": "ロマンス拳銃(Team B)",
+      "artist": "AKB48",
+      "songNumbers": [
+        "877247"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:19:34.474Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/5895064",
+      "title": "美しき花",
+      "artist": "福山雅治",
+      "songNumbers": [
+        "512940"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:19:41.196Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/616735",
+      "title": "君という花",
+      "artist": "KANA-BOON",
+      "songNumbers": [
+        "694819"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:19:46.935Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/678850",
+      "title": "さよならパーティー",
+      "artist": "クリープハイプ",
+      "songNumbers": [
+        "428404"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:19:53.442Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/805294",
+      "title": "秦 基博ヒットソングメドレー2",
+      "artist": "秦 基博",
+      "songNumbers": [
+        "445180"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:20:00.708Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/892080",
+      "title": "15才",
+      "artist": "Creepy Nuts(R-指定&DJ松永)",
+      "songNumbers": [
+        "492539"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:20:07.931Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/973064",
+      "title": "バタフライエフェクト",
+      "artist": "SEKAI NO OWARI",
+      "songNumbers": [
+        "618713"
+      ],
+      "matched": true,
+      "checkedAt": "2026-07-30T13:20:14.927Z",
+      "differences": []
+    }
+  ]
+}

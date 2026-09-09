@@ -13,7 +13,7 @@ import { normalizeSearchText } from "./lib/normalize";
 import { getPaginationItems } from "./lib/pagination";
 import {
   CATALOG_PAGE_SIZE,
-  listSongsByRomaji,
+  listSongsByTitle,
   searchSongs,
   searchSongsByArtist,
 } from "./lib/search";
@@ -37,7 +37,7 @@ const artistExamples = [
 ];
 
 const searchModes: SearchMode[] = ["song", "artist"];
-const catalogSongs = listSongsByRomaji(songs);
+const catalogSongs = listSongsByTitle(songs);
 
 export default function App() {
   const [searchMode, setSearchMode] = useState<SearchMode>("song");
@@ -93,7 +93,7 @@ export default function App() {
               description:
                 searchMode === "song"
                   ? "可以尝试缩短歌名；标点、空格、数字和中日汉字字形会自动处理。"
-                  : "可以尝试缩短歌手名；空格、大小写、标点和中日汉字字形会自动处理。",
+                  : "可以输入歌手名中任意位置的连续片段；空格、大小写、标点和中日汉字字形会自动处理。",
             }
       : null;
 
@@ -284,7 +284,7 @@ export default function App() {
             <p className="form-help" id="search-help">
               {searchMode === "song"
                 ? "结果随输入即时更新；片段搜索至少需要两个字符，不匹配翻译名。"
-                : "结果随输入即时更新；支持完整歌手名、至少两个字符的片段及合作署名。"}
+                : "结果随输入即时更新；支持完整歌手名、任意位置至少两个连续字符及合作署名。"}
             </p>
           </form>
         </div>
@@ -336,7 +336,7 @@ export default function App() {
                 <h2>
                   {hasQuery
                     ? `找到 ${allResults.length} 首歌曲`
-                    : "按罗马音 A–Z 排列"}
+                    : "按歌曲标题排列"}
                 </h2>
               </div>
               {totalPages > 1 && (

@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-08T22:15:28.106Z",
+  "inputPath": "src/data/generated/joysound-priority-ranked-songs.json",
+  "inputSha256": "844e00b72ea548a212c905f25d8809423005aedb3f9a6056c6738787885331d9",
+  "sampleMethod": "按生成曲库位置等距抽取",
+  "delayPolicy": {
+    "delayMs": 5000,
+    "jitterMs": 2000,
+    "concurrency": 1
+  },
+  "sampleSize": 20,
+  "passed": true,
+  "samples": [
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1000231",
+      "title": "夢に出てくんな",
+      "artist": "忘れらんねえよ",
+      "songNumbers": [
+        "623501"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:13:11.549Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1060881",
+      "title": "田中愛愛愛子",
+      "artist": "大森靖子",
+      "songNumbers": [
+        "630582"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:13:18.597Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1120125",
+      "title": "Chasing destiny",
+      "artist": "涼宮ハルヒ(C.V.平野綾)",
+      "songNumbers": [
+        "639158",
+        "823505"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:13:26.149Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/11907",
+      "title": "E.O.",
+      "artist": "AI",
+      "songNumbers": [
+        "11915"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:13:32.194Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/147308",
+      "title": "distant moon",
+      "artist": "fripSide",
+      "songNumbers": [
+        "127061"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:13:39.715Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/167535",
+      "title": "アンハッピーリフレイン",
+      "artist": "wowaka feat.初音ミク",
+      "songNumbers": [
+        "108536",
+        "913415"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:13:46.721Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/220364",
+      "title": "囮",
+      "artist": "シド",
+      "songNumbers": [
+        "30188"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:13:55.147Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/250020",
+      "title": "人生リセットボタン<Megpoid the Music#>《本人映像》",
+      "artist": "kemu",
+      "songNumbers": [
+        "702206"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:14:01.792Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/30664",
+      "title": "心の向こう側",
+      "artist": "FIELD OF VIEW",
+      "songNumbers": [
+        "35168"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:14:09.732Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/411941",
+      "title": "Story (English Version)",
+      "artist": "AI",
+      "songNumbers": [
+        "119865",
+        "343263"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:14:16.735Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/51524",
+      "title": "はじまりの場所",
+      "artist": "ロードオブメジャー",
+      "songNumbers": [
+        "70623"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:14:24.276Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/572805",
+      "title": "8月、昼中の流れ星と飛行機雲",
+      "artist": "UNISON SQUARE GARDEN",
+      "songNumbers": [
+        "687203"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:14:31.153Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/5892818",
+      "title": "ルルージュ",
+      "artist": "MIMI",
+      "songNumbers": [
+        "511032"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:14:38.476Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/64098",
+      "title": "たんぽぽ",
+      "artist": "つじあやの",
+      "songNumbers": [
+        "86520"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:14:45.659Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/7079",
+      "title": "紅葉",
+      "artist": "芹洋子",
+      "songNumbers": [
+        "195368",
+        "327852",
+        "7079"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:14:53.160Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/795859",
+      "title": "孤独な勇者の応援歌",
+      "artist": "傘村トータ",
+      "songNumbers": [
+        "444321"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:14:59.022Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/850283",
+      "title": "東京にて《本人映像》",
+      "artist": "ヒグチアイ",
+      "songNumbers": [
+        "805317"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:15:06.377Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/894698",
+      "title": "カレシのジュード",
+      "artist": "syudou feat.初音ミク",
+      "songNumbers": [
+        "499167"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:15:14.166Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/9566",
+      "title": "唇のかたち",
+      "artist": "中西保志",
+      "songNumbers": [
+        "9566"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:15:21.107Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/999452",
+      "title": "男子中学三年生",
+      "artist": "the奥歯's",
+      "songNumbers": [
+        "639450"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-08T22:15:28.106Z",
+      "differences": []
+    }
+  ]
+}

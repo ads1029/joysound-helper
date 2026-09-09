@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-09T05:34:21.359Z",
+  "inputPath": "src/data/generated/joysound-priority-ranked-next-songs.json",
+  "inputSha256": "6938185d08e15f1d6a699de833fe94d0e2bcc41694a6a082988dd6722ffbfc25",
+  "sampleMethod": "按生成曲库位置等距抽取",
+  "delayPolicy": {
+    "delayMs": 5000,
+    "jitterMs": 2000,
+    "concurrency": 1
+  },
+  "sampleSize": 20,
+  "passed": true,
+  "samples": [
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1001444",
+      "title": "ROOOTS",
+      "artist": "NEWS",
+      "songNumbers": [
+        "622186"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:32:10.184Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1109782",
+      "title": "チルノのパーフェクトさんすう学園",
+      "artist": "ビートまりお(COOL&CREATE)",
+      "songNumbers": [
+        "642553"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:32:16.997Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/123244",
+      "title": "TABOO",
+      "artist": "倖田來未",
+      "songNumbers": [
+        "180391",
+        "189595",
+        "504181",
+        "83948"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:32:23.623Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/154771",
+      "title": "Spring Shower",
+      "artist": "C-CLAYS feat.小峠舞",
+      "songNumbers": [
+        "101114"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:32:31.013Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/172022",
+      "title": "今夜も眠れない(病的な意味で)",
+      "artist": "ゴールデンボンバー",
+      "songNumbers": [
+        "111119",
+        "702031"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:32:37.421Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/211798",
+      "title": "恋に生きる",
+      "artist": "谷村新司",
+      "songNumbers": [
+        "940010"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:32:44.508Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/231810",
+      "title": "777 ～We can sing a song!～",
+      "artist": "AAA",
+      "songNumbers": [
+        "31240",
+        "341270",
+        "761302"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:32:51.101Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/258240",
+      "title": "Beautiful Rain [Vocal:小山慶一郎]",
+      "artist": "NEWS",
+      "songNumbers": [
+        "727257"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:32:57.981Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/402758",
+      "title": "未来への大航海 ～Great voyage～",
+      "artist": "JAM Project",
+      "songNumbers": [
+        "736520"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:33:03.982Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/418632",
+      "title": "JUMP -Japanese Ver.-",
+      "artist": "BTS",
+      "songNumbers": [
+        "672617"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:33:11.651Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/492512",
+      "title": "LOVER",
+      "artist": "AAA",
+      "songNumbers": [
+        "156278",
+        "193202",
+        "343883"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:33:19.457Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/573615",
+      "title": "Shining Storm ～烈火の如く～",
+      "artist": "JAM Project",
+      "songNumbers": [
+        "685860"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:33:27.046Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/5864630",
+      "title": "愛の季節",
+      "artist": "アンジェラ・アキ",
+      "songNumbers": [
+        "864766"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:33:34.173Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/5898581",
+      "title": "Clear Sky -2024-",
+      "artist": "ClariS",
+      "songNumbers": [
+        "516643"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:33:40.304Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/638735",
+      "title": "シリウス",
+      "artist": "UVERworld",
+      "songNumbers": [
+        "697947"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:33:46.521Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/72219",
+      "title": "Friday Party",
+      "artist": "AAA",
+      "songNumbers": [
+        "120777",
+        "900181"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:33:54.346Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/814739",
+      "title": "Angel Or Devil [Japanese Ver.]",
+      "artist": "TOMORROW X TOGETHER",
+      "songNumbers": [
+        "446790"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:34:01.815Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/903853",
+      "title": "Shout it out",
+      "artist": "DISH//",
+      "songNumbers": [
+        "494610"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:34:08.165Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/975915",
+      "title": "さびしくなかった",
+      "artist": "スピッツ",
+      "songNumbers": [
+        "617680"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:34:14.870Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/999928",
+      "title": "Biscuit",
+      "artist": "ちゃんみな",
+      "songNumbers": [
+        "622371"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T05:34:21.359Z",
+      "differences": []
+    }
+  ]
+}
