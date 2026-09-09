@@ -5,8 +5,10 @@ import { load } from "cheerio";
 
 import {
   extractArtistCatalogPage,
+  extractAge10To40SongUrls,
   extractRankingArtistNames,
 } from "./lib/joysound-ranking";
+import { filterByMinimumYear } from "./lib/priority-year";
 
 const OUTPUT_PATH =
   "src/data/generated/joysound-priority-ranked-candidates.json";
@@ -19,6 +21,7 @@ const FULL_ARTIST_INDEX_PATH =
 const ARTIST_PAGE_SIZE = 20;
 const DEFAULT_TARGET_PAGES = 10_000;
 const DEFAULT_ARTIST_LIMIT = 100;
+const CURRENT_RANKING_YEAR = 2026;
 const DELAY_MS = 5_000;
 const JITTER_MS = 2_000;
 const BATCH_SIZE = 50;
@@ -31,9 +34,10 @@ type SeedSource = {
   id: string;
   label: string;
   url: string;
-  parser: "ranking" | "annual" | "exclude";
+  parser: "ranking" | "annual" | "released" | "age" | "exclude";
   category?: Category;
   year?: number;
+  yearKind?: "ranking" | "release";
 };
 
 type Candidate = {
@@ -45,6 +49,7 @@ type Candidate = {
   year?: number;
   artistId?: string;
   artistName?: string;
+  yearKind?: "ranking" | "release";
 };
 
 type ParsedSource = {
@@ -56,6 +61,7 @@ type ParsedSource = {
     category: Category;
     rank: number;
     year?: number;
+    yearKind?: "ranking" | "release";
   }>;
   artistUrls: string[];
   excludedArtistNames: string[];
@@ -108,6 +114,8 @@ type ArtistSeed = {
   priority: number;
   categories: Set<Category>;
   sourceIds: Set<string>;
+  year?: number;
+  yearKind?: "ranking" | "release";
 };
 
 type CliOptions = {
@@ -115,7 +123,8 @@ type CliOptions = {
   artistLimit: number;
   outputPath: string;
   checkpointPath: string;
-  excludeIndexPath?: string;
+  excludeIndexPaths: string[];
+  minimumYear?: number;
   newOnly: boolean;
   refresh: boolean;
   confirmAuthorizedDiscovery: boolean;
@@ -148,7 +157,7 @@ async function main() {
   const productionCatalog = await readJson<ProductionCatalog>(
     PRODUCTION_CATALOG_PATH,
   );
-  const excludedUrls = await readExcludedUrls(options.excludeIndexPath);
+  const excludedUrls = await readExcludedUrls(options.excludeIndexPaths);
   const fullArtistIndex = await readJson<FullArtistCandidateIndex>(
     FULL_ARTIST_INDEX_PATH,
   );
@@ -171,7 +180,7 @@ async function main() {
     }
   }
 
-  for (const source of createRankingSources()) {
+  for (const source of createRankingSources(options.minimumYear)) {
     const parsed = await loadOrFetchSource(
       source,
       checkpoint,
@@ -204,6 +213,7 @@ async function main() {
         sourceIds: [parsed.source.id],
         rank: song.rank,
         year: song.year,
+        yearKind: song.yearKind,
       });
     }
   }
@@ -271,6 +281,7 @@ async function main() {
     excludedUrls,
     options.targetPages,
     options.newOnly,
+    options.minimumYear,
   );
   const output = createOutput(
     entries,
@@ -312,7 +323,7 @@ function createExcludeSources(): SeedSource[] {
   ];
 }
 
-function createRankingSources(): SeedSource[] {
+function createRankingSources(minimumYear: number | undefined): SeedSource[] {
   const sources: SeedSource[] = [
     {
       id: "priority-current-anime-weekly",
@@ -320,6 +331,8 @@ function createRankingSources(): SeedSource[] {
       url: "https://www.joysound.com/web/karaoke/ranking/anime/weekly",
       parser: "ranking",
       category: "acg",
+      year: CURRENT_RANKING_YEAR,
+      yearKind: "ranking",
     },
     {
       id: "priority-current-anime-monthly",
@@ -327,6 +340,8 @@ function createRankingSources(): SeedSource[] {
       url: "https://www.joysound.com/web/karaoke/ranking/anime/monthly",
       parser: "ranking",
       category: "acg",
+      year: CURRENT_RANKING_YEAR,
+      yearKind: "ranking",
     },
     {
       id: "priority-current-vocaloid-weekly",
@@ -334,6 +349,8 @@ function createRankingSources(): SeedSource[] {
       url: "https://www.joysound.com/web/karaoke/ranking/vocaloid/weekly",
       parser: "ranking",
       category: "acg",
+      year: CURRENT_RANKING_YEAR,
+      yearKind: "ranking",
     },
     {
       id: "priority-current-vocaloid-monthly",
@@ -341,6 +358,8 @@ function createRankingSources(): SeedSource[] {
       url: "https://www.joysound.com/web/karaoke/ranking/vocaloid/monthly",
       parser: "ranking",
       category: "acg",
+      year: CURRENT_RANKING_YEAR,
+      yearKind: "ranking",
     },
     {
       id: "priority-current-general-daily",
@@ -348,6 +367,8 @@ function createRankingSources(): SeedSource[] {
       url: "https://www.joysound.com/web/karaoke/ranking/all",
       parser: "ranking",
       category: "pop",
+      year: CURRENT_RANKING_YEAR,
+      yearKind: "ranking",
     },
     {
       id: "priority-current-general-weekly",
@@ -355,6 +376,8 @@ function createRankingSources(): SeedSource[] {
       url: "https://www.joysound.com/web/karaoke/ranking/all/weekly",
       parser: "ranking",
       category: "pop",
+      year: CURRENT_RANKING_YEAR,
+      yearKind: "ranking",
     },
     {
       id: "priority-current-general-monthly",
@@ -362,6 +385,8 @@ function createRankingSources(): SeedSource[] {
       url: "https://www.joysound.com/web/karaoke/ranking/all/monthly",
       parser: "ranking",
       category: "pop",
+      year: CURRENT_RANKING_YEAR,
+      yearKind: "ranking",
     },
     {
       id: "priority-current-hot",
@@ -369,6 +394,8 @@ function createRankingSources(): SeedSource[] {
       url: "https://www.joysound.com/web/karaoke/ranking/hot",
       parser: "ranking",
       category: "pop",
+      year: CURRENT_RANKING_YEAR,
+      yearKind: "ranking",
     },
     {
       id: "priority-current-trends",
@@ -376,6 +403,8 @@ function createRankingSources(): SeedSource[] {
       url: "https://www.joysound.com/web/karaoke/ranking/trends/all",
       parser: "ranking",
       category: "pop",
+      year: CURRENT_RANKING_YEAR,
+      yearKind: "ranking",
     },
     {
       id: "priority-current-access",
@@ -383,6 +412,8 @@ function createRankingSources(): SeedSource[] {
       url: "https://www.joysound.com/web/karaoke/ranking/pv",
       parser: "ranking",
       category: "pop",
+      year: CURRENT_RANKING_YEAR,
+      yearKind: "ranking",
     },
     {
       id: "priority-half-year-2026",
@@ -390,10 +421,12 @@ function createRankingSources(): SeedSource[] {
       url: "https://www.joysound.com/web/s/karaoke/feature/ranking/2026-half",
       parser: "annual",
       year: 2026,
+      yearKind: "ranking",
     },
   ];
 
-  for (let year = 2025; year >= 2012; year -= 1) {
+  const annualStartYear = Math.max(2000, minimumYear ?? 2012);
+  for (let year = 2025; year >= annualStartYear; year -= 1) {
     sources.push({
       id: `priority-annual-${year}`,
       label: `${year} 年度榜（综合、ACG、流行分类）`,
@@ -401,6 +434,33 @@ function createRankingSources(): SeedSource[] {
         `https://www.joysound.com/web/s/karaoke/contents/annual_ranking/${year}`,
       parser: "annual",
       year,
+      yearKind: "ranking",
+    });
+  }
+
+  const releasedStartYear = Math.max(2000, minimumYear ?? 2016);
+  for (let year = 2025; year >= releasedStartYear; year -= 1) {
+    sources.push({
+      id: `priority-released-${year}`,
+      label: `${year} 年发行歌曲榜`,
+      url:
+        `https://www.joysound.com/web/s/karaoke/contents/annual_ranking/${year}-02`,
+      parser: "released",
+      year,
+      yearKind: "release",
+    });
+  }
+
+  const ageStartYear = Math.max(2000, minimumYear ?? 2014);
+  for (let year = 2025; year >= ageStartYear; year -= 1) {
+    sources.push({
+      id: `priority-age-${year}`,
+      label: `${year} 年 10～40 岁榜`,
+      url: `https://www.joysound.com/web/s/karaoke/feature/annual_age_${year}`,
+      parser: "age",
+      category: "pop",
+      year,
+      yearKind: "ranking",
     });
   }
 
@@ -428,6 +488,8 @@ function createArtistSeeds(parsedSources: ParsedSource[]): Map<string, ArtistSee
         priority: sourcePriority(parsed.source, 1),
         categories: new Set<Category>(),
         sourceIds: new Set<string>(),
+        year: parsed.source.year,
+        yearKind: parsed.source.yearKind,
       };
       current.priority = Math.min(
         current.priority,
@@ -468,9 +530,11 @@ function addExistingArtistCandidates(
         category: artist.categories.has("acg") ? "acg" : "pop",
         priority: artist.priority + 100 + source.rank,
         sourceIds: [...artist.sourceIds],
-        rank: source.rank,
-        artistId: source.artistId,
-        artistName: source.artistName,
+      rank: source.rank,
+      artistId: source.artistId,
+      artistName: source.artistName,
+      year: artist.year,
+      yearKind: artist.yearKind,
       });
     }
   }
@@ -555,11 +619,30 @@ function parseSource(source: SeedSource, html: string): ParsedSource {
         url,
         category: source.category ?? "pop",
         rank: index + 1,
+        year: source.year,
+        yearKind: source.yearKind,
       })),
       artistUrls: extractOrderedOfficialUrls(
         html,
         /^\/web\/search\/artist\/\d+$/,
       ),
+      excludedArtistNames: [],
+    };
+  }
+
+  if (source.parser === "age") {
+    return {
+      source,
+      status: "success",
+      fetchedAt: new Date().toISOString(),
+      songCandidates: extractAge10To40SongUrls(html).map((url, index) => ({
+        url,
+        category: source.category ?? "pop",
+        rank: index + 1,
+        year: source.year,
+        yearKind: source.yearKind,
+      })),
+      artistUrls: [],
       excludedArtistNames: [],
     };
   }
@@ -598,6 +681,7 @@ function parseSource(source: SeedSource, html: string): ParsedSource {
                 category: rule.category,
                 rank,
                 year: source.year,
+                yearKind: source.yearKind,
               });
             }
           },
@@ -707,6 +791,8 @@ function addArtistPageCandidates(
       rank: song.rank,
       artistId: artist.artistId,
       artistName: parsed.artistName,
+      year: artist.year,
+      yearKind: artist.yearKind,
     });
   }
 }
@@ -717,6 +803,7 @@ function mergeAndSelectCandidates(
   excludedUrls: Set<string>,
   targetPages: number,
   newOnly: boolean,
+  minimumYear: number | undefined,
 ) {
   const byUrl = new Map<string, Candidate>();
   for (const candidate of candidates) {
@@ -741,23 +828,29 @@ function mergeAndSelectCandidates(
     ) {
       existing.rank = candidate.rank;
       existing.year = candidate.year;
+      existing.yearKind = candidate.yearKind;
       existing.artistId = candidate.artistId;
       existing.artistName = candidate.artistName;
     }
   }
 
-  return [...byUrl.values()]
-    .sort(
-      (first, second) =>
-        first.priority - second.priority ||
-        first.category.localeCompare(second.category) ||
-        first.url.localeCompare(second.url),
-    )
-    .filter(
-      (candidate) =>
-        !excludedUrls.has(candidate.url) &&
-        (!newOnly || !productionUrls.has(candidate.url)),
-    )
+  const filteredCandidates = filterByMinimumYear(
+    [...byUrl.values()]
+      .sort(
+        (first, second) =>
+          first.priority - second.priority ||
+          first.category.localeCompare(second.category) ||
+          first.url.localeCompare(second.url),
+      )
+      .filter(
+        (candidate) =>
+          !excludedUrls.has(candidate.url) &&
+          (!newOnly || !productionUrls.has(candidate.url)),
+      ),
+    minimumYear,
+  );
+
+  return filteredCandidates
     .slice(0, targetPages)
     .map((candidate) => ({
       ...candidate,
@@ -785,12 +878,15 @@ function createOutput(
       artistLimit: options.artistLimit,
       selection: options.newOnly
         ? "排除生产曲库与上一批候选后按优先级取前 N 页"
-        : options.excludeIndexPath
+        : options.excludeIndexPaths.length > 0
           ? "排除上一批候选后按优先级取前 N 页"
           : "按优先级取前 N 页",
-      excludeIndexPath: options.excludeIndexPath ?? null,
+      excludeIndexPaths: options.excludeIndexPaths,
+      minimumYear: options.minimumYear ?? null,
+      yearSemantics:
+        "year 是候选来源的榜单年份；released 来源使用发行榜年份，严格模式排除低于下限或缺少年份的候选",
       priorityOrder:
-        "当前 ACG 榜单 → 当前流行榜单 → 2026～2012 年度 ACG/流行榜单 → 歌手热门前 N 首",
+        "当前 ACG 榜单 → 当前流行榜单 → 年度 ACG/流行榜单 → 发行榜 → 年龄榜 → 歌手热门前 N 首",
       requiredCategories: ["acg", "pop"],
       excludedCategories: ["演歌／歌謡曲", "洋楽", "K-POP／韓国曲"],
     },
@@ -930,16 +1026,20 @@ async function loadCheckpoint(checkpointPath: string): Promise<Checkpoint> {
 }
 
 async function readExcludedUrls(
-  excludeIndexPath: string | undefined,
+  excludeIndexPaths: string[],
 ): Promise<Set<string>> {
-  if (!excludeIndexPath) {
-    return new Set();
+  const excludedUrls = new Set<string>();
+
+  for (const excludeIndexPath of excludeIndexPaths) {
+    const index = await readJson<{ entries: Array<{ url: string }> }>(
+      excludeIndexPath,
+    );
+    for (const entry of index.entries) {
+      excludedUrls.add(entry.url);
+    }
   }
 
-  const index = await readJson<{ entries: Array<{ url: string }> }>(
-    excludeIndexPath,
-  );
-  return new Set(index.entries.map((entry) => entry.url));
+  return excludedUrls;
 }
 
 async function readJson<T>(path: string): Promise<T> {
@@ -1031,6 +1131,7 @@ function parseOptions(args: string[]): CliOptions {
     artistLimit: DEFAULT_ARTIST_LIMIT,
     outputPath: OUTPUT_PATH,
     checkpointPath: CHECKPOINT_PATH,
+    excludeIndexPaths: [],
     newOnly: false,
     refresh: false,
     confirmAuthorizedDiscovery: false,
@@ -1059,7 +1160,14 @@ function parseOptions(args: string[]): CliOptions {
     } else if (argument.startsWith("--checkpoint=")) {
       options.checkpointPath = argument.slice("--checkpoint=".length);
     } else if (argument.startsWith("--exclude-index=")) {
-      options.excludeIndexPath = argument.slice("--exclude-index=".length);
+      options.excludeIndexPaths.push(
+        argument.slice("--exclude-index=".length),
+      );
+    } else if (argument.startsWith("--min-year=")) {
+      options.minimumYear = parsePositiveInteger(
+        "min-year",
+        argument.slice("--min-year=".length),
+      );
     } else if (argument === "--help" || argument === "-h") {
       options.help = true;
     } else {
@@ -1107,7 +1215,8 @@ function printHelp() {
   --artist-limit=N               每位歌手取热门前 N 首，默认 100
   --output=PATH                  候选索引输出路径
   --checkpoint=PATH              发现检查点路径
-  --exclude-index=PATH           排除上一批候选索引中的歌曲页面
+  --exclude-index=PATH           可重复，排除已有批次候选索引中的歌曲页面
+  --min-year=YYYY                严格保留来源年份不早于 YYYY 的候选
   --new-only                     同时排除当前生产曲库中的歌曲页面
   --refresh                      忽略本任务检查点重新读取
   --help                         显示帮助

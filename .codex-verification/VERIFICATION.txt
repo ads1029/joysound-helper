@@ -203,3 +203,105 @@ Final verified second-batch state
 Candidate index: 10,000 unique pages, 0 overlap with the first candidate index, 29/29 ranking sources successful, 6,946 already in production and 3,054 new pages.
 Detail checkpoint: 3,054/3,054 processed; 2,824 success, 230 no-X1, 0 unavailable, 0 error.
 Audit/promotion: productionReady=true, partialRelease=false, 31,135 songs, 41,171 versions, 20/20 source review passed.
+
+CONTINUATION: THIRD ROUND, YEAR FILTER, COMMIT, AND PRODUCTION DEPLOYMENT
+-------------------------------------------------------------------------
+Changed branch/field
+--------------------
+Branch: year-filtered third priority-ranked discovery and in-progress detail crawl.
+Field: discovery adds repeated --exclude-index and strict --min-year=2000 filtering; the committed candidate index contains 3,741 unique official pages, 3,086 not yet in production, with no missing year and no year below 2000.
+
+Four artifacts (reopened and updated)
+-------------------------------------
+MODIFIED_FILE: /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/MODIFIED_FILE
+DIFF_FILE: /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/DIFF_FILE
+VERIFICATION.txt: /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/VERIFICATION.txt
+ROLLBACK.sh: /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/ROLLBACK.sh
+
+BASELINE
+--------
+Command: bun run lint && bun run test && bun run build
+Input: detached worktree at commit 4ed1e3e before commit 78ae84d.
+Literal output/result:
+$ eslint .
+$ vitest run
+Test Files  26 passed (26)
+Tests  91 passed (91)
+$ tsc -b && vite build
+vite v8.1.5 building client environment for production...
+23 modules transformed.
+dist/assets/index-DWsxVmrX.js   10,024.18 kB │ gzip: 1,507.77 kB
+✓ built in 936ms
+BASELINE_EXIT_STATUS=0
+exit status: 0
+
+MODIFIED
+--------
+Command: set -o pipefail; bun run lint && bun run test && bun run build 2>&1 | tee /tmp/joysound-third-modified.log; rc=${pipestatus[1]}; printf '\nMODIFIED_EXIT_STATUS=%s\n' "$rc"; exit "$rc"
+Input: current worktree at commit 78ae84d with year filtering, third-round candidate index, documentation, and regression test.
+Literal output/result:
+$ eslint .
+$ vitest run
+Test Files  27 passed (27)
+Tests  93 passed (93)
+$ tsc -b && vite build
+vite v8.1.5 building client environment for production...
+23 modules transformed.
+dist/assets/index-DWsxVmrX.js   10,024.18 kB │ gzip: 1,507.77 kB
+✓ built in 737ms
+MODIFIED_EXIT_STATUS=0
+exit status: 0
+
+DISCOVERY
+---------
+Command: bun run discover:priority -- --target=20000 --artist-limit=200 --min-year=2000 --exclude-index=src/data/generated/joysound-priority-ranked-candidates.json --exclude-index=src/data/generated/joysound-priority-ranked-next-candidates.json --output=src/data/generated/joysound-priority-ranked-2000-next-candidates.json --checkpoint=.cache/joysound-priority-ranked-2000-next/checkpoint.json --confirm-authorized-discovery
+Input: official JOYSOUND ranking and artist pages, with the first two priority candidate indexes excluded; the 2000 year lower bound was applied to source years and missing years were excluded.
+Literal output/result:
+入口ページ：成功 51/93，不可用 42
+歌曲页面：3741，ACG 370，流行 3371，待新增 3086
+歌手入口：281
+exit status: 0
+
+DETAIL CRAWL CHECKPOINT
+-----------------------
+Command: bun run crawl:joysound -- --input-index=src/data/generated/joysound-priority-ranked-2000-next-candidates.json --new-only --limit=20000 --delay-ms=5000 --jitter-ms=2000 --batch-size=100 --batch-pause-min-ms=45000 --batch-pause-max-ms=60000 --output=src/data/generated/joysound-priority-ranked-2000-next-songs.json --checkpoint=.cache/joysound-priority-ranked-2000-next/crawler-checkpoint.json --confirm-authorized-large-run
+Input: 3,086 production-missing candidate pages.
+Literal output/result at commit/deploy time:
+检查点 total=100, success=100, error=0
+exit status: 0 (process remains active; checkpoint is the authoritative progress state)
+
+ROLLBACK
+--------
+Command: .codex-verification/ROLLBACK.sh /tmp/joysound-third-rollback-EowbpQ/rollback-test-package.json /tmp/joysound-third-rollback-EowbpQ/original-package.json
+Input: mutated rollback-test-package.json plus its original-package.json backup.
+Literal output/result:
+restored /tmp/joysound-third-rollback-EowbpQ/rollback-test-package.json from /tmp/joysound-third-rollback-EowbpQ/original-package.json
+ROLLBACK_EXIT_STATUS=0
+CMP_EXIT_STATUS=0
+exit status: 0
+Restored behavior/status: rollback-test-package.json is byte-identical to original-package.json; the working MODIFIED_FILE remains the changed discovery script.
+
+COMMIT AND DEPLOYMENT
+---------------------
+Commit command: git commit -m "data: 启动年份过滤第三轮榜单扩充"
+Commit result: [develop 78ae84d] data: 启动年份过滤第三轮榜单扩充; exit status 0.
+Push command: git push origin develop
+Push result: 4ed1e3e..78ae84d develop -> develop; exit status 0.
+Deploy command: bunx vercel promote https://joysound-helper-m4amhzq5n-ads1029s-projects.vercel.app --yes
+Deploy result: Successfully created new deployment at https://vercel.com/ads1029s-projects/joysound-helper/9nwpajjRnhacmXrSSBdEMf6Hybzo; production deployment dpl_9nwpajjRnhacmXrSSBdEMf6Hybzo status Ready; exit status 0.
+Verification command: bun run verify:deployment -- https://joysound-helper.vercel.app/
+Literal output/result:
+部署检查通过：首页 https://joysound-helper.vercel.app/
+- 脚本 https://joysound-helper.vercel.app/assets/index-DWsxVmrX.js
+- 样式 https://joysound-helper.vercel.app/assets/index-CyhHkykY.css
+exit status: 0
+Restored behavior/status: production homepage returned HTTP 200; browser rendered 日语点歌助手 with 31,135 首歌曲; git worktree is clean at develop...origin/develop.
+
+FINAL DEPLOYMENT AFTER VERIFICATION-ARTIFACT COMMIT
+---------------------------------------------------
+Command: bunx vercel --yes
+Result: preview deployment dpl_5sZU5VyFMHKhY4XBhSF3ZbAXJSJL at https://joysound-helper-fvf0byija-ads1029s-projects.vercel.app, readyState=READY; exit status 0.
+Command: bunx vercel promote https://joysound-helper-fvf0byija-ads1029s-projects.vercel.app --yes
+Result: production deployment dpl_9EiiXgKufmCSveN8cMvEhqKkD83D at https://joysound-helper-jgifbq0wl-ads1029s-projects.vercel.app; status Ready; alias https://joysound-helper.vercel.app; exit status 0.
+Command: bunx vercel inspect https://joysound-helper-jgifbq0wl-ads1029s-projects.vercel.app
+Literal output/result: target production; status ● Ready; alias https://joysound-helper.vercel.app; exit status 0.

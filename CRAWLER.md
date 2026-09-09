@@ -229,6 +229,33 @@ bun run promote:joysound -- \
   --output=src/data/generated/joysound-production-catalog.json
 ```
 
+第三轮优先榜单候选使用独立检查点，排除前两轮候选并严格保留来源年份不早于 2000 年的页面。发现阶段不要使用 `--new-only`，以便固定候选分母；详情阶段再使用 `--new-only` 只采集生产曲库尚未收录的页面：
+
+```bash
+bun run discover:priority -- \
+  --target=20000 \
+  --artist-limit=200 \
+  --min-year=2000 \
+  --exclude-index=src/data/generated/joysound-priority-ranked-candidates.json \
+  --exclude-index=src/data/generated/joysound-priority-ranked-next-candidates.json \
+  --output=src/data/generated/joysound-priority-ranked-2000-next-candidates.json \
+  --checkpoint=.cache/joysound-priority-ranked-2000-next/checkpoint.json \
+  --confirm-authorized-discovery
+
+bun run crawl:joysound -- \
+  --input-index=src/data/generated/joysound-priority-ranked-2000-next-candidates.json \
+  --new-only \
+  --limit=20000 \
+  --delay-ms=5000 \
+  --jitter-ms=2000 \
+  --batch-size=100 \
+  --batch-pause-min-ms=45000 \
+  --batch-pause-max-ms=60000 \
+  --output=src/data/generated/joysound-priority-ranked-2000-next-songs.json \
+  --checkpoint=.cache/joysound-priority-ranked-2000-next/crawler-checkpoint.json \
+  --confirm-authorized-large-run
+```
+
 默认歌曲结果写入 `src/data/generated/joysound-songs.json`，检查点写入 `.cache/joysound-crawler/checkpoint.json`。`--index-only` 只固化 Sitemap 中的候选链接和 `lastmod`，不请求歌曲详情页。重复执行详情采集会复用 `lastmod` 未变化的成功记录；使用 `--refresh` 可强制重新获取。
 
 默认审计命令读取热门候选索引、检查点和 `src/data/manual-songs.ts`，将热门阶段合并曲库写入 `src/data/generated/joysound-popular-catalog.json`。榜单阶段使用上方的显式参数和独立输出。报告包含逐页状态、待处理链接、冲突明细和 `summary`；`--require-complete` 会在存在待处理页面、请求错误或数据冲突时返回失败，适合作为最终验收和 CI 门禁。

@@ -28,6 +28,7 @@
 - `joysound-priority-ranked-next-songs.json`：第二轮优先候选详情结果，覆盖 3,054 个生产未收录页面，成功 2,824、无 X1 230。
 - `joysound-priority-ranked-next-catalog.json`：第二轮优先榜单的严格审计与生产曲库合并结果。
 - `joysound-priority-ranked-next-review-sample.json`：第二轮优先榜单的 20 首低速来源复核报告。
+- `joysound-priority-ranked-2000-next-candidates.json`：第三轮优先候选索引，排除前两轮候选并严格保留来源年份不早于 2000 年的 3,741 个页面，其中 3,086 页尚未进入生产曲库；目标规模为 20,000 页，仍在扩展官方来源。
 - `joysound-production-catalog.json`：通过生产晋级门禁后生成的精简前端曲库；当前包含 31,135 首歌曲和 41,171 个版本，不包含待处理 URL、错误明细等审计状态。
 
 完整采集轮次仍必须通过严格审计和 20 首来源复核，不能只根据文件存在判断完成。固定分母的长周期任务可以通过 `bun run promote:joysound -- --allow-partial` 发布干净的阶段性检查点，但必须满足错误 0、冲突 0、至少 20 首来源复核一致，且复核输入指纹与当前生成歌曲完全相同。
