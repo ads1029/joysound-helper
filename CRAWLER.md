@@ -256,7 +256,7 @@ bun run crawl:joysound -- \
   --confirm-authorized-large-run
 ```
 
-当前已固化的一阶段来源扩展为 `joysound-priority-ranked-2000-next-expansion-candidates.json`：10,087 个候选、4,486 个生产未收录页面；对应的阶段审计报告为 `joysound-priority-ranked-2000-next-expansion-audit.json`，在详情采集开始前覆盖率为 0/4,486。首批 3,086 页仍使用旧的 `joysound-priority-ranked-2000-next` 检查点采集，最近检查点为 1,051/3,086（成功 1,029、无 X1 22）。更广来源的发现进程检查点为 1,339 个请求（成功 1,290、不可用 49）；进程完成后，优先使用其新的 feature 索引和检查点继续，不混用两个详情分母。
+当前已固化的一阶段来源扩展为 `joysound-priority-ranked-2000-next-expansion-candidates.json`：10,087 个候选、4,486 个生产未收录页面；对应的阶段审计报告为 `joysound-priority-ranked-2000-next-expansion-audit.json`，在详情采集开始前覆盖率为 0/4,486。首批 3,086 页仍使用旧的 `joysound-priority-ranked-2000-next` 检查点采集，最近检查点为 1,873/3,086（成功 1,806、无 X1 67）。更广来源的发现进程检查点为 2,111 个请求（成功 2,061、不可用 50）；进程完成后，优先使用其新的 feature 索引和检查点继续，不混用两个详情分母。
 
 默认歌曲结果写入 `src/data/generated/joysound-songs.json`，检查点写入 `.cache/joysound-crawler/checkpoint.json`。`--index-only` 只固化 Sitemap 中的候选链接和 `lastmod`，不请求歌曲详情页。重复执行详情采集会复用 `lastmod` 未变化的成功记录；使用 `--refresh` 可强制重新获取。
 
