@@ -15,6 +15,7 @@
     "crawl:joysound": "bun run scripts/crawl-joysound.ts",
     "discover:expanded": "bun run scripts/discover-expanded-songs.ts",
     "discover:full-artists": "bun run scripts/discover-full-artist-songs.ts",
+    "discover:priority": "bun run scripts/discover-priority-ranked-songs.ts",
     "discover:joysound": "bun run scripts/discover-ranked-songs.ts",
     "promote:joysound": "bun run scripts/promote-joysound.ts",
     "review:joysound": "bun run scripts/review-joysound.ts",

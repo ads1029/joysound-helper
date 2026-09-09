@@ -154,8 +154,79 @@ bun run review:joysound -- \
   --input=src/data/generated/joysound-full-artist-songs.json \
   --output=src/data/generated/joysound-full-artist-review-sample.json
 
+# 按当前与年度榜单优先生成 1 万首 ACG/流行候选，优先最新年份和前排名次
+bun run discover:priority -- \
+  --target=10000 \
+  --artist-limit=100 \
+  --confirm-authorized-discovery
+
+# 采集优先榜单候选中尚未进入当前生产曲库的详情页
+bun run crawl:joysound -- \
+  --input-index=src/data/generated/joysound-priority-ranked-candidates.json \
+  --new-only \
+  --limit=10000 \
+  --delay-ms=5000 \
+  --jitter-ms=2000 \
+  --batch-size=100 \
+  --batch-pause-min-ms=45000 \
+  --batch-pause-max-ms=60000 \
+  --output=src/data/generated/joysound-priority-ranked-songs.json \
+  --checkpoint=.cache/joysound-priority-ranked-crawler/checkpoint.json \
+  --confirm-authorized-large-run
+
+# 以当前生产曲库为基线审计优先榜单批次
+bun run audit:joysound -- \
+  --index=src/data/generated/joysound-priority-ranked-candidates.json \
+  --new-only \
+  --checkpoint=.cache/joysound-priority-ranked-crawler/checkpoint.json \
+  --baseline=production \
+  --output=src/data/generated/joysound-priority-ranked-catalog.json
+
 # 全量未完成时，显式晋级已审计并复核的干净检查点
 bun run promote:joysound -- --allow-partial
+```
+
+第二轮优先榜单批次使用独立检查点，排除首轮候选并将歌手热门范围扩展到前 200 首：
+
+```bash
+bun run discover:priority -- \
+  --target=10000 \
+  --artist-limit=200 \
+  --exclude-index=src/data/generated/joysound-priority-ranked-candidates.json \
+  --output=src/data/generated/joysound-priority-ranked-next-candidates.json \
+  --checkpoint=.cache/joysound-priority-ranked-next/checkpoint.json \
+  --confirm-authorized-discovery
+
+bun run crawl:joysound -- \
+  --input-index=src/data/generated/joysound-priority-ranked-next-candidates.json \
+  --new-only \
+  --limit=10000 \
+  --delay-ms=5000 \
+  --jitter-ms=2000 \
+  --batch-size=100 \
+  --batch-pause-min-ms=45000 \
+  --batch-pause-max-ms=60000 \
+  --output=src/data/generated/joysound-priority-ranked-next-songs.json \
+  --checkpoint=.cache/joysound-priority-ranked-next/crawler-checkpoint.json \
+  --confirm-authorized-large-run
+
+bun run audit:joysound -- \
+  --index=src/data/generated/joysound-priority-ranked-next-candidates.json \
+  --new-only \
+  --checkpoint=.cache/joysound-priority-ranked-next/crawler-checkpoint.json \
+  --baseline=production \
+  --output=src/data/generated/joysound-priority-ranked-next-catalog.json \
+  --require-complete
+
+bun run review:joysound -- \
+  --input=src/data/generated/joysound-priority-ranked-next-songs.json \
+  --output=src/data/generated/joysound-priority-ranked-next-review-sample.json
+
+bun run promote:joysound -- \
+  --catalog=src/data/generated/joysound-priority-ranked-next-catalog.json \
+  --generated-songs=src/data/generated/joysound-priority-ranked-next-songs.json \
+  --review=src/data/generated/joysound-priority-ranked-next-review-sample.json \
+  --output=src/data/generated/joysound-production-catalog.json
 ```
 
 默认歌曲结果写入 `src/data/generated/joysound-songs.json`，检查点写入 `.cache/joysound-crawler/checkpoint.json`。`--index-only` 只固化 Sitemap 中的候选链接和 `lastmod`，不请求歌曲详情页。重复执行详情采集会复用 `lastmod` 未变化的成功记录；使用 `--refresh` 可强制重新获取。
@@ -164,7 +235,7 @@ bun run promote:joysound -- --allow-partial
 
 复核命令从成功生成的数据中等距抽取 20 首，重新读取官方页面并比对歌名、歌手、X1 版本名、类型和曲号。结果写入 `src/data/generated/joysound-review-sample.json`；该过程保持单线程和 5～7 秒间隔，不保存网页源码。
 
-榜单发现命令读取综合、急升、新曲趋势、2012～2025 年度榜、2016～2025 年发行歌曲榜、2014～2025 年 10～40 岁榜，以及当前热门歌手的热门歌曲。动漫和 Vocaloid 的当前周榜、月榜及年度分类榜是强制入口；演歌、洋乐和 K-POP 段落不读取。首次快照共检查 151 个入口页，得到 839 个去重歌曲页面，其中 812 页尚未进入生产曲库。
+榜单发现命令读取综合、急升、新曲趋势、2012～2025 年度榜、2016～2025 年发行歌曲榜、2014～2025 年 10～40 岁榜，以及当前热门歌手的热门歌曲。动漫和 Vocaloid 的当前周榜、月榜及年度分类榜是强制入口；演歌、洋乐和 K-POP 段落不读取。优先榜单发现支持独立输出、独立检查点、排除上一批候选和 `--new-only`；第二轮已检查 29 个入口并生成 10,000 个排除首轮后的候选页面，其中 3,054 页尚未进入生产曲库。
 
 详情采集器可通过 `--input-index` 直接读取本地榜单白名单；`--new-only` 会排除索引生成时已进入生产曲库的页面。榜单任务必须使用独立的 `--output` 和 `--checkpoint`，避免与热门 Sitemap 采集记录混合。2026-07-26 首次先试采 200 页，随后复用检查点完成剩余 612 页；完整结果为 812/812 成功。
 

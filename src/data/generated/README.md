@@ -20,8 +20,16 @@
 - `joysound-full-artist-songs.json`：从全曲目候选索引低速采集的详情结果；当前处理 17,987 页，成功 17,667、无 X1 320、错误 0，得到 20,699 个 X1 版本。
 - `joysound-full-artist-catalog.json`：以稳定的 5,620 首扩展曲库为基线生成的渐进式审计结果。
 - `joysound-full-artist-review-sample.json`：记录最近一次通过的 20 首来源复核及其生成歌曲 SHA-256 指纹；采集更新后若指纹不一致，该报告即视为过期，不得用于晋级。
-- `joysound-production-catalog.json`：通过生产晋级门禁后生成的精简前端曲库；不包含待处理 URL、错误明细等审计状态。
+- `joysound-priority-ranked-candidates.json`：按当前 ACG、当前流行、2026～2012 年度榜及热门歌手前 100 首排序得到的 10,000 个优先候选页。
+- `joysound-priority-ranked-songs.json`：优先榜单候选详情结果，覆盖 5,127 个生产未收录页面，成功 5,024、无 X1 103。
+- `joysound-priority-ranked-catalog.json`：优先榜单批次的严格审计与生产曲库合并结果。
+- `joysound-priority-ranked-review-sample.json`：优先榜单批次的 20 首低速来源复核报告。
+- `joysound-priority-ranked-next-candidates.json`：排除首轮候选、将热门歌手范围扩展到前 200 首后生成的第二轮 10,000 个优先候选页，其中 3,054 页尚未进入生产曲库。
+- `joysound-priority-ranked-next-songs.json`：第二轮优先候选详情结果，覆盖 3,054 个生产未收录页面，成功 2,824、无 X1 230。
+- `joysound-priority-ranked-next-catalog.json`：第二轮优先榜单的严格审计与生产曲库合并结果。
+- `joysound-priority-ranked-next-review-sample.json`：第二轮优先榜单的 20 首低速来源复核报告。
+- `joysound-production-catalog.json`：通过生产晋级门禁后生成的精简前端曲库；当前包含 31,135 首歌曲和 41,171 个版本，不包含待处理 URL、错误明细等审计状态。
 
 完整采集轮次仍必须通过严格审计和 20 首来源复核，不能只根据文件存在判断完成。固定分母的长周期任务可以通过 `bun run promote:joysound -- --allow-partial` 发布干净的阶段性检查点，但必须满足错误 0、冲突 0、至少 20 首来源复核一致，且复核输入指纹与当前生成歌曲完全相同。
 
-当前全曲目详情处理 17,987/18,287 页（98.36%），成功 17,667、无 X1 320、错误和冲突均为 0。今日最后一批按用户要求在 90 页后安全收束，20 首来源复核首次通过；当前复核输入指纹与生成歌曲一致，阶段性生产曲库已晋级为 23,287 首歌曲、31,460 个版本。下次从 `offset=17987` 谨慎继续。
+两轮优先榜单批次均已完成：首轮 5,127/5,127 页、第二轮 3,054/3,054 页覆盖，第二轮成功 2,824、无 X1 230、错误和冲突均为 0；第二轮 20 首来源复核通过，当前复核输入指纹与生成歌曲一致，完整轮次已晋级为 31,135 首歌曲、41,171 个版本。全曲目详情长期任务仍剩余 300 页，下次从 `offset=17987` 谨慎继续。

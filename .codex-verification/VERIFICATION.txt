@@ -1,0 +1,205 @@
+Changed branch/field
+--------------------
+Branch: priority ranked discovery and crawl target.
+Field: candidate selection now orders current ACG rankings, current pop rankings, 2026-2012 annual ACG/pop rankings, then artist popular top 100; audit baseline adds production.
+
+Four artifacts
+--------------
+MODIFIED_FILE: /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/MODIFIED_FILE
+DIFF_FILE: /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/DIFF_FILE
+VERIFICATION.txt: /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/VERIFICATION.txt
+ROLLBACK.sh: /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/ROLLBACK.sh
+
+BASELINE
+--------
+Command: bun run lint && bun run test && bun run build
+Input: repository at HEAD before the priority-ranked change
+Literal output/result:
+$ eslint .
+$ vitest run
+Test Files  26 passed (26)
+Tests  91 passed (91)
+$ tsc -b && vite build
+vite v8.1.5 building client environment for production...
+23 modules transformed.
+exit status: 0
+
+MODIFIED
+--------
+Command: bun run lint && bun run test && bun run build
+Input: current worktree with priority-ranked discovery, production audit baseline, generated priority catalog, review report, production catalog, CRAWLER.md, GOAL.md, TODO.md, and package.json changes
+Literal output/result:
+$ eslint .
+$ vitest run
+Test Files  26 passed (26)
+Tests  91 passed (91)
+$ tsc -b && vite build
+vite v8.1.5 building client environment for production...
+23 modules transformed.
+dist/assets/index-DXwG2RD7.js   9,171.64 kB │ gzip: 1,378.73 kB
+✓ built in 639ms
+exit status: 0
+
+Command: bun run discover:priority -- --target=10000 --artist-limit=100 --confirm-authorized-discovery
+Input: authorized JOYSOUND ranking and artist pages; rate limited 5-7 seconds, 50-request cooling
+Literal output/result:
+入口页面：成功 29/29，不可用 0
+歌曲页面：10000，ACG 7025，流行 2975，待新增 5127
+歌手入口：281
+exit status: 0
+
+Command: bun run crawl:joysound -- --input-index=src/data/generated/joysound-priority-ranked-candidates.json --new-only --limit=10000 --delay-ms=5000 --jitter-ms=2000 --batch-size=100 --batch-pause-min-ms=45000 --batch-pause-max-ms=60000 --output=src/data/generated/joysound-priority-ranked-songs.json --checkpoint=.cache/joysound-priority-ranked-crawler/checkpoint.json --confirm-authorized-large-run
+Input: 5127 production-missing candidate pages
+Literal output/result:
+输入来源：/Users/minjiehuang/Code/_side_proj/joysound-helper/src/data/generated/joysound-priority-ranked-candidates.json（仅生产曲库未收录项）
+发现 5127 个官方歌曲页面
+已生成 5022 首歌曲：/Users/minjiehuang/Code/_side_proj/joysound-helper/src/data/generated/joysound-priority-ranked-songs.json
+首次终态检查点：items=5127, success=5022, no-x1=103, error=2
+exit status: 0
+
+Retry command: bun run crawl:joysound -- --input-index=src/data/generated/joysound-priority-ranked-candidates.json --new-only --limit=10000 --delay-ms=5000 --jitter-ms=2000 --batch-size=100 --batch-pause-min-ms=45000 --batch-pause-max-ms=60000 --output=src/data/generated/joysound-priority-ranked-songs.json --checkpoint=.cache/joysound-priority-ranked-crawler/checkpoint.json --confirm-authorized-large-run
+Retry input: the same authoritative 5127-page index, with the two error entries removed from the checkpoint for re-request
+Literal output/result:
+已生成 5024 首歌曲：/Users/minjiehuang/Code/_side_proj/joysound-helper/src/data/generated/joysound-priority-ranked-songs.json
+最终检查点：items=5127, success=5024, no-x1=103, error=0
+exit status: 0
+
+Audit command: bun run audit:joysound -- --index=src/data/generated/joysound-priority-ranked-candidates.json --new-only --checkpoint=.cache/joysound-priority-ranked-crawler/checkpoint.json --baseline=production --output=src/data/generated/joysound-priority-ranked-catalog.json --require-complete
+Audit input: final 5127-page checkpoint, production baseline, final generated songs
+Literal output/result:
+采集覆盖：5127/5127 (100%)，待处理 0
+页面状态：成功 5024，无 X1 103，不可用 0，错误 0
+合并结果：28311 首、37649 个版本，新增 5024 首，冲突 0 项
+采集验收：通过
+exit status: 0
+
+Review command: bun run review:joysound -- --input=src/data/generated/joysound-priority-ranked-songs.json --output=src/data/generated/joysound-priority-ranked-review-sample.json
+Review input: final 5024-song generated output
+Literal output/result: sampleSize=20, passed=true, all 20 samples matched with differences=[]; inputSha256=844e00b72ea548a212c905f25d8809423005aedb3f9a6056c6738787885331d
+exit status: 0
+
+Promotion command: bun run promote:joysound -- --catalog=src/data/generated/joysound-priority-ranked-catalog.json --generated-songs=src/data/generated/joysound-priority-ranked-songs.json --review=src/data/generated/joysound-priority-ranked-review-sample.json --output=src/data/generated/joysound-production-catalog.json
+Promotion input: final strict audit catalog, final generated songs, final 20-sample review
+Literal output/result:
+发布结果：28311 首、37649 个版本
+详情进度：5127/5127，待处理 0
+发布类型：完整轮次
+exit status: 0
+
+ROLLBACK
+--------
+Command: .codex-verification/ROLLBACK.sh .codex-verification/rollback-test/package.json .codex-verification/original/package.json
+Input: modified rollback-test/package.json plus original package.json copy
+Literal output/result:
+restored .codex-verification/rollback-test/package.json from .codex-verification/original/package.json
+rollback verification: restored exact copy
+exit status: 0
+Restored behavior/status: rollback-test/package.json byte-identical to original; working MODIFIED_FILE remains changed.
+
+CONTINUATION: SECOND PRIORITY-RANKED BATCH
+-------------------------------------------
+Changed branch/field
+--------------------
+Branch: priority-ranked continuation after the first 10,000 candidate pages.
+Field: discovery now supports output/checkpoint paths, exclusion of a previous candidate index, `--new-only`, and reuse of artist-page checkpoints when the artist limit grows; the second batch uses current ACG/pop and 2026-2012 ranking order with artist popular top 200.
+
+Four artifacts (reopened and updated)
+-------------------------------------
+MODIFIED_FILE: /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/MODIFIED_FILE
+DIFF_FILE: /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/DIFF_FILE
+VERIFICATION.txt: /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/VERIFICATION.txt
+ROLLBACK.sh: /Users/minjiehuang/Code/_side_proj/joysound-helper/.codex-verification/ROLLBACK.sh
+
+BASELINE
+--------
+Command: set -o pipefail; bun run lint && bun run test && bun run build 2>&1 | tee /tmp/joysound-next10k-baseline.log; rc=${pipestatus[1]}; printf '\\nBASELINE_EXIT_STATUS=%s\\n' "$rc"; exit "$rc"
+Input: current repository worktree before the second-batch discovery-script and documentation edits.
+Literal output/result:
+$ eslint .
+$ vitest run
+Test Files  26 passed (26)
+Tests  91 passed (91)
+$ tsc -b && vite build
+dist/assets/index-CyhHkykY.css       7.92 kB │ gzip:     2.40 kB
+dist/assets/index-DXwG2RD7.js   9,171.64 kB │ gzip: 1,378.73 kB
+✓ built in 643ms
+BASELINE_EXIT_STATUS=0
+exit status: 0
+
+MODIFIED
+--------
+Command: set -o pipefail; bun run lint && bun run test && bun run build 2>&1 | tee /tmp/joysound-next10k-modified.log; rc=${pipestatus[1]}; printf '\\nMODIFIED_EXIT_STATUS=%s\\n' "$rc"; exit "$rc"
+Input: current worktree with second-batch discovery options, second-batch generated data, production promotion, CRAWLER.md, GOAL.md, TODO.md, and generated-data README updates.
+Literal output/result:
+$ eslint .
+$ vitest run
+Test Files  26 passed (26)
+Tests  91 passed (91)
+$ tsc -b && vite build
+dist/assets/index-CyhHkykY.css       7.92 kB │ gzip:     2.40 kB
+dist/assets/index-DWsxVmrX.js   10,024.18 kB │ gzip: 1,507.77 kB
+✓ built in 697ms
+MODIFIED_EXIT_STATUS=0
+exit status: 0
+
+Discovery command: bun run discover:priority -- --target=10000 --artist-limit=200 --exclude-index=src/data/generated/joysound-priority-ranked-candidates.json --output=src/data/generated/joysound-priority-ranked-next-candidates.json --checkpoint=.cache/joysound-priority-ranked-next/checkpoint.json --confirm-authorized-discovery
+Discovery input: copied first priority discovery checkpoint plus the first 10,000-candidate index for exclusion; official ranking and artist pages; 5-7 second request spacing and 45-60 second cooling per 50 requests.
+Literal output/result:
+入口页面：成功 29/29，不可用 0
+歌曲页面：10000，ACG 2125，流行 7875，待新增 3054
+歌手入口：281
+exit status: 0
+
+Crawl command: bun run crawl:joysound -- --input-index=src/data/generated/joysound-priority-ranked-next-candidates.json --new-only --limit=10000 --delay-ms=5000 --jitter-ms=2000 --batch-size=100 --batch-pause-min-ms=45000 --batch-pause-max-ms=60000 --output=src/data/generated/joysound-priority-ranked-next-songs.json --checkpoint=.cache/joysound-priority-ranked-next/crawler-checkpoint.json --confirm-authorized-large-run
+Crawl input: 3054 production-missing candidate pages from the second-batch index.
+Literal output/result:
+输入来源：/Users/minjiehuang/Code/_side_proj/joysound-helper/src/data/generated/joysound-priority-ranked-next-candidates.json（仅生产曲库未收录项）
+发现 3054 个官方歌曲页面
+首轮终态检查点：items=3054, success=2821, no-x1=230, error=3
+已生成 2821 首歌曲：/Users/minjiehuang/Code/_side_proj/joysound-helper/src/data/generated/joysound-priority-ranked-next-songs.json
+exit status: 0
+
+Retry command: bun run crawl:joysound -- --input-index=src/data/generated/joysound-priority-ranked-next-candidates.json --new-only --limit=10000 --delay-ms=5000 --jitter-ms=2000 --batch-size=100 --batch-pause-min-ms=45000 --batch-pause-max-ms=60000 --output=src/data/generated/joysound-priority-ranked-next-songs.json --checkpoint=.cache/joysound-priority-ranked-next/crawler-checkpoint.json --confirm-authorized-large-run
+Retry input: the same authoritative 3054-page index and checkpoint; the three parse-error entries were re-requested without changing the range.
+Literal output/result:
+已生成 2824 首歌曲：/Users/minjiehuang/Code/_side_proj/joysound-helper/src/data/generated/joysound-priority-ranked-next-songs.json
+最终检查点：items=3054, success=2824, no-x1=230, error=0
+exit status: 0
+
+Audit command: bun run audit:joysound -- --index=src/data/generated/joysound-priority-ranked-next-candidates.json --new-only --checkpoint=.cache/joysound-priority-ranked-next/crawler-checkpoint.json --baseline=production --output=src/data/generated/joysound-priority-ranked-next-catalog.json --require-complete
+Audit input: final second-batch checkpoint with production baseline.
+Literal output/result:
+采集覆盖：3054/3054 (100%)，待处理 0
+页面状态：成功 2824，无 X1 230，不可用 0，错误 0
+合并结果：31135 首、41171 个版本，新增 2824 首，冲突 0 项
+采集验收：通过
+exit status: 0
+
+Review command: bun run review:joysound -- --input=src/data/generated/joysound-priority-ranked-next-songs.json --output=src/data/generated/joysound-priority-ranked-next-review-sample.json
+Review input: final 2824-song generated output.
+Literal output/result: sampleSize=20, passed=true, all 20 samples matched with differences=[]; inputSha256=6938185d08e15f1d6a699de833fe94d0e2bcc41694a6a082988dd6722ffbfc25
+exit status: 0
+
+Promotion command: bun run promote:joysound -- --catalog=src/data/generated/joysound-priority-ranked-next-catalog.json --generated-songs=src/data/generated/joysound-priority-ranked-next-songs.json --review=src/data/generated/joysound-priority-ranked-next-review-sample.json --output=src/data/generated/joysound-production-catalog.json
+Promotion input: final strict second-batch audit catalog, final generated songs, final 20-sample review.
+Literal output/result:
+发布结果：31135 首、41171 个版本
+详情进度：3054/3054，待处理 0
+发布类型：完整轮次
+exit status: 0
+
+Rollback
+--------
+Command: .codex-verification/ROLLBACK.sh .codex-verification/rollback-test-next/package.json .codex-verification/rollback-test-next/original-package.json
+Input: mutated rollback-test-next/package.json plus its original-package.json backup.
+Literal output/result:
+restored .codex-verification/rollback-test-next/package.json from .codex-verification/rollback-test-next/original-package.json
+ROLLBACK_EXIT_STATUS=0
+CMP_EXIT_STATUS=0
+Restored behavior/status: rollback-test-next/package.json is byte-identical to original-package.json; current .codex-verification/MODIFIED_FILE remains the changed discovery script.
+
+Final verified second-batch state
+---------------------------------
+Candidate index: 10,000 unique pages, 0 overlap with the first candidate index, 29/29 ranking sources successful, 6,946 already in production and 3,054 new pages.
+Detail checkpoint: 3,054/3,054 processed; 2,824 success, 230 no-X1, 0 unavailable, 0 error.
+Audit/promotion: productionReady=true, partialRelease=false, 31,135 songs, 41,171 versions, 20/20 source review passed.
