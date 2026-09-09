@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-09T23:42:33.747Z",
+  "inputPath": "src/data/generated/joysound-priority-ranked-2000-next-songs.json",
+  "inputSha256": "52d0b2d4968b18a68ba8fa7a7ddc170de1648621264ff9a3de9f89d6c2e1dc90",
+  "sampleMethod": "按生成曲库位置等距抽取",
+  "delayPolicy": {
+    "delayMs": 5000,
+    "jitterMs": 2000,
+    "concurrency": 1
+  },
+  "sampleSize": 20,
+  "passed": true,
+  "samples": [
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/10013",
+      "title": "Find My Way",
+      "artist": "スターダスト・レビュー",
+      "songNumbers": [
+        "10016"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:40:20.326Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/108923",
+      "title": "Surrender",
+      "artist": "アンジェラ・アキ",
+      "songNumbers": [
+        "57948"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:40:28.253Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/1167049",
+      "title": "Darling",
+      "artist": "SPYAIR",
+      "songNumbers": [
+        "646650"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:40:36.175Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/133083",
+      "title": "capsule",
+      "artist": "シド",
+      "songNumbers": [
+        "136332",
+        "912641"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:40:42.549Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/163700",
+      "title": "Cocoa",
+      "artist": "ピノキオピー",
+      "songNumbers": [
+        "106501"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:40:49.186Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/192688",
+      "title": "One Night Rose",
+      "artist": "スターダスト・レビュー",
+      "songNumbers": [
+        "920832"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:40:56.341Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/221718",
+      "title": "All for you",
+      "artist": "倖田來未",
+      "songNumbers": [
+        "30645"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:41:03.563Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/254477",
+      "title": "Tik Tak",
+      "artist": "ClariS",
+      "songNumbers": [
+        "725720"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:41:09.987Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/30303",
+      "title": "赤い靴のマリア",
+      "artist": "ザ・ワイルド・ワンズ",
+      "songNumbers": [
+        "34806"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:41:18.111Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/406094",
+      "title": "みあげれば",
+      "artist": "TOKIO",
+      "songNumbers": [
+        "312262"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:41:27.361Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/43980",
+      "title": "明日は明日の風が吹く",
+      "artist": "TOKIO",
+      "songNumbers": [
+        "62044"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:41:33.972Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/52635",
+      "title": "クラスメイト以上…。",
+      "artist": "I WiSH",
+      "songNumbers": [
+        "71751"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:41:40.521Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/5851484",
+      "title": "月光 (Live at 中野サンプラザホール 2016.11.4)",
+      "artist": "鬼束ちひろ",
+      "songNumbers": [
+        "851484"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:41:47.070Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/5883363",
+      "title": "にゃんにゃんおやつクッキング (feat. Hanon & Kotoha)",
+      "artist": "HoneyWorks",
+      "songNumbers": [
+        "883437"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:41:53.413Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/64287",
+      "title": "タブー(禁じられた愛)",
+      "artist": "郷ひろみ",
+      "songNumbers": [
+        "86709"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:41:59.999Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/696663",
+      "title": "EDENへ",
+      "artist": "UVERworld",
+      "songNumbers": [
+        "431523"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:42:06.374Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/7586",
+      "title": "Maybe Tomorrow",
+      "artist": "光GENJI",
+      "songNumbers": [
+        "7586"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:42:13.450Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/8404",
+      "title": "夕映えの恋人",
+      "artist": "加山雄三",
+      "songNumbers": [
+        "8404"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:42:19.836Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/93562",
+      "title": "倖田來未メドレー4",
+      "artist": "倖田來未",
+      "songNumbers": [
+        "55668"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:42:26.873Z",
+      "differences": []
+    },
+    {
+      "sourceUrl": "https://www.joysound.com/web/search/song/999827",
+      "title": "ゴースト・イン・カンサイ",
+      "artist": "犬飼",
+      "songNumbers": [
+        "621577"
+      ],
+      "matched": true,
+      "checkedAt": "2026-09-09T23:42:33.738Z",
+      "differences": []
+    }
+  ]
+}
