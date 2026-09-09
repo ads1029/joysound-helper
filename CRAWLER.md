@@ -243,7 +243,7 @@ bun run discover:priority -- \
   --confirm-authorized-discovery
 
 bun run crawl:joysound -- \
-  --input-index=src/data/generated/joysound-priority-ranked-2000-next-feature-candidates.json \
+  --input-index=src/data/generated/joysound-priority-ranked-2000-next-feature-pending-candidates.json \
   --new-only \
   --limit=20000 \
   --delay-ms=5000 \
@@ -251,12 +251,12 @@ bun run crawl:joysound -- \
   --batch-size=100 \
   --batch-pause-min-ms=45000 \
   --batch-pause-max-ms=60000 \
-  --output=src/data/generated/joysound-priority-ranked-2000-next-feature-songs.json \
-  --checkpoint=.cache/joysound-priority-ranked-2000-next-feature/crawler-checkpoint.json \
+  --output=src/data/generated/joysound-priority-ranked-2000-next-feature-pending-songs.json \
+  --checkpoint=.cache/joysound-priority-ranked-2000-next-feature-pending/crawler-checkpoint.json \
   --confirm-authorized-large-run
 ```
 
-当前已固化的一阶段来源扩展为 `joysound-priority-ranked-2000-next-expansion-candidates.json`：10,087 个候选、4,486 个生产未收录页面；对应的阶段审计报告为 `joysound-priority-ranked-2000-next-expansion-audit.json`，在详情采集开始前覆盖率为 0/4,486。更广来源已固化为 `joysound-priority-ranked-2000-next-feature-candidates.json`：20,000 个候选，原始索引有 15,991 个生产未收录页面，年份范围 2016～2026，与前两轮候选零重叠；111 个来源中 69 个成功、42 个历史入口不可用。首批 3,086 页已使用独立的 `joysound-priority-ranked-2000-next` 检查点完成采集，结果为成功 3,000、无 X1 85、不可用 1、错误 0，审计、20 首来源复核和阶段性晋级均已通过；当前生产曲库已收录其中 3,000 页，20,000 页索引剩余 13,481 页待采集。下一阶段必须使用 `joysound-priority-ranked-2000-next-feature` 的独立详情输出和检查点，不能混用两个详情分母。
+当前已固化的一阶段来源扩展为 `joysound-priority-ranked-2000-next-expansion-candidates.json`：10,087 个候选、4,486 个生产未收录页面；对应的阶段审计报告为 `joysound-priority-ranked-2000-next-expansion-audit.json`，在详情采集开始前覆盖率为 0/4,486。更广来源已固化为 `joysound-priority-ranked-2000-next-feature-candidates.json`：20,000 个候选，原始索引有 15,991 个生产未收录页面，年份范围 2016～2026，与前两轮候选零重叠；111 个来源中 69 个成功、42 个历史入口不可用。首批 3,086 页已使用独立的 `joysound-priority-ranked-2000-next` 检查点完成采集，结果为成功 3,000、无 X1 85、不可用 1、错误 0，审计、20 首来源复核和阶段性晋级均已通过；当前生产曲库已收录其中 3,000 页，剩余 13,481 页已固化为 `joysound-priority-ranked-2000-next-feature-pending-candidates.json`，使用独立的 `joysound-priority-ranked-2000-next-feature-pending` 输出和检查点继续采集，不能混用两个详情分母。
 
 默认歌曲结果写入 `src/data/generated/joysound-songs.json`，检查点写入 `.cache/joysound-crawler/checkpoint.json`。`--index-only` 只固化 Sitemap 中的候选链接和 `lastmod`，不请求歌曲详情页。重复执行详情采集会复用 `lastmod` 未变化的成功记录；使用 `--refresh` 可强制重新获取。
 

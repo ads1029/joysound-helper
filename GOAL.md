@@ -91,6 +91,9 @@
 - `src/data/generated/joysound-full-artist-songs.json`：保存全曲目详情采集结果，当前处理 17,987 页、成功 17,667、无 X1 320、错误 0；当前内容指纹已通过 20 首来源复核并晋级生产。
 - `src/data/generated/joysound-full-artist-catalog.json`：以原 5,620 首稳定曲库为基线生成的渐进式详情审计结果。
 - `src/data/generated/joysound-full-artist-review-sample.json`：保存当前全曲目生成歌曲的 20 首来源复核结果及输入 SHA-256 指纹。
+- `src/data/generated/joysound-priority-ranked-2000-next-feature-candidates.json`：保存第三轮年份过滤后的 20,000 个候选页面，年份范围 2016～2026，与前两轮候选零重叠。
+- `src/data/generated/joysound-priority-ranked-2000-next-feature-pending-candidates.json`：以第三轮首批晋级后的生产曲库为基线重新固化的 13,481 个待采集页面，年份范围 2020～2026。
+- `src/data/generated/joysound-priority-ranked-2000-next-feature-pending-songs.json`：第三轮剩余待采集页面的进行中详情结果，使用独立检查点。
 - `src/data/generated/joysound-production-catalog.json`：通过晋级门禁生成的精简前端生产曲库，不包含待处理 URL 和审计明细。
 - `src/data/manual-songs.ts`：保存人工维护的核心歌曲，作为后续合并基线。
 - `src/data/songs.ts`：前端生产入口，只导出审计通过的合并曲库。
