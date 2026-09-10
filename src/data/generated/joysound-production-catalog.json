@@ -6,7 +6,7 @@
   "source": {
     "catalogPath": "src/data/generated/joysound-priority-ranked-2000-next-audit.json",
     "catalogGeneratedAt": "2026-09-09T23:40:07.906Z",
-    "catalogSha256": "316d7dc7027da2f710f3ecbdbbc14d712e569761321ccf84df1562fd3ab6e720",
+    "catalogSha256": "d753b18781cc0fbe327169a0e3bfd11a7538549156a9abae480e577b6f6a6df7",
     "generatedSongsPath": "src/data/generated/joysound-priority-ranked-2000-next-songs.json",
     "generatedSongsSha256": "52d0b2d4968b18a68ba8fa7a7ddc170de1648621264ff9a3de9f89d6c2e1dc90",
     "reviewPath": "src/data/generated/joysound-priority-ranked-2000-next-review-sample.json",
